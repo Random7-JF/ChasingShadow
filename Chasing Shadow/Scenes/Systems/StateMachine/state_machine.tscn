@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bdur6q2vs7ra8"]
+
+[node name="StateMachine" type="Node"]
