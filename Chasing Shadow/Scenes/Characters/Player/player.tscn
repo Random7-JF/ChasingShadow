@@ -103,19 +103,19 @@ libraries = {
 "": SubResource("AnimationLibrary_mffh5")
 }
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_it107")
-state = NodePath("PlayerWalk")
+starting_state = NodePath("Walk")
 
-[node name="PlayerWalk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animator")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle")]
 script = ExtResource("18_mgjqw")
-player = NodePath("../..")
-animator = NodePath("../../AnimationPlayer")
+idle = NodePath("../Idle")
+animation_name = "walk"
 
-[node name="PlayerIdle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animator")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk")]
 script = ExtResource("4_ualmn")
-player = NodePath("../..")
-animator = NodePath("../../AnimationPlayer")
+walk = NodePath("../Walk")
+animation_name = "idle"
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8

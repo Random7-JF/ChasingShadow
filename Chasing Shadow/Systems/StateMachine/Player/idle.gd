@@ -1,19 +1,30 @@
 class_name PlayerIdle
-extends State 
+extends State
 
-@export var player: Player
-@export var animator: AnimationPlayer
+@export var walk: PlayerWalk
+@export var jump: State
+@export var attack: State
 
-func _enter_state() -> void:
+func enter() -> void:
+	super()
 	state_name = "Idle"
-	animator.play("idle")
+	#Stop all movement on the X axis
+	parent.velocity.x = 0
 
-func _exit_state() -> void:
+func exit() -> void:
 	pass
 
-func _update_state() -> void:
-	pass
+func process(_delta: float) -> State:
+	return null
+	
+func process_physics(delta: float) -> State:
+	#fall to the ground
+	parent.velocity.y += gravity * delta
+	parent.move_and_slide()
+	return null
 
-func _process_state() -> void:
-	if player.velocity != Vector2.ZERO:
-		_exit_state()
+func process_input(_event: InputEvent) -> State:
+	#Leave idle if any controls are pressed.
+	if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right"):
+		return walk
+	return null
