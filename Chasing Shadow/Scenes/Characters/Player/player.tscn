@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cywoo6cilrv81"]
+[gd_scene load_steps=28 format=3 uid="uid://cywoo6cilrv81"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_an5xb"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://h8djny2rynfh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0016.png" id="16_j2evx"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/walk.gd" id="18_mgjqw"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/StateLabel.gd" id="19_1tv77"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Player/jump.gd" id="21_t0c6y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ggoe"]
 radius = 43.0
@@ -107,15 +108,23 @@ libraries = {
 script = ExtResource("3_it107")
 starting_state = NodePath("Walk")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "jump")]
 script = ExtResource("18_mgjqw")
 idle = NodePath("../Idle")
+jump = NodePath("../Jump")
 animation_name = "walk"
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "jump")]
 script = ExtResource("4_ualmn")
 walk = NodePath("../Walk")
+jump = NodePath("../Jump")
 animation_name = "idle"
+
+[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "idle")]
+script = ExtResource("21_t0c6y")
+walk = NodePath("../Walk")
+idle = NodePath("../Idle")
+jump_velocity = 400.0
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8

@@ -2,7 +2,7 @@ class_name PlayerWalk
 extends State
 
 @export var idle: PlayerIdle
-@export var jump: State
+@export var jump: PlayerJump
 @export var attack: State
 
 func enter() -> void:
@@ -29,4 +29,6 @@ func process_physics(delta: float) -> State:
 	return null
 
 func process_input(_event: InputEvent) -> State:
+	if Input.is_action_just_pressed("jump"):
+		return jump
 	return null
