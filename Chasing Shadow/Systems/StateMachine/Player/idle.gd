@@ -9,8 +9,6 @@ extends State
 func enter() -> void:
 	super()
 	state_name = "Idle"
-	#Stop all movement on the X axis
-	parent.velocity.x = 0
 
 func exit() -> void:
 	pass
@@ -21,7 +19,18 @@ func process(_delta: float) -> State:
 func process_physics(delta: float) -> State:
 	#fall to the ground
 	parent.velocity.y += gravity * delta
+	
+	## get the direction in idle, incase the keys are being held.
+	## send to run state if they are
+	var direction = Input.get_axis("move_left", "move_right") * parent.speed
+	if direction != 0:
+		return run
+	## Dirty get_node, maybe switch to a function
+	parent.get_node("Sprite").flip_h = direction < 0
+	parent.velocity.x = direction
+
 	parent.move_and_slide()
+
 	return null
 
 func process_input(_event: InputEvent) -> State:

@@ -17,9 +17,9 @@ func change_state(new_state: State) -> void:
 	current_state = new_state
 	current_state.enter()
 
-##Pass through functions called by parent of state machine
-##If the return a new State, the change_state function is called
-##This allows the old state to cleanup and then enter the new state.
+## Pass through functions called by parent of state machine
+## If the return a new State, the change_state function is called
+## This allows the old state to cleanup and then enter the new state.
 func process(delta: float) -> void:
 	var new_state = current_state.process(delta)
 	if new_state:

@@ -4,6 +4,8 @@ extends State
 @export var walk: PlayerWalk
 @export var run: PlayerRun
 @export var idle: PlayerIdle
+@export var fall: PlayerFall
+@export var double_jump: PlayerDoubleJump
 @export var attack: State
 
 
@@ -23,7 +25,7 @@ func process_physics(delta: float) -> State:
 	#fall to the ground
 	parent.velocity.y += gravity * delta
 	if parent.velocity.y > 0 :
-		pass
+		return fall
 	#Air control
 	var direction = Input.get_axis("move_left", "move_right") * parent.speed
 	if direction != 0:
@@ -38,4 +40,7 @@ func process_physics(delta: float) -> State:
 	return null
 
 func process_input(_event: InputEvent) -> State:
+	if Input.is_action_just_pressed("jump"):
+		parent.can_double_jump = false 
+		return double_jump
 	return null

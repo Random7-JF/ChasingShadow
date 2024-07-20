@@ -7,6 +7,8 @@ extends CharacterBody2D
 @export var jump_velocity: float = 400
 @export var speed: float = 500
 
+var can_double_jump: bool = true
+
 func _ready():
 	state_machine.init(self, animator)
 
