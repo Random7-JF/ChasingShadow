@@ -30,9 +30,24 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8efb329169ffd520",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Chasing Shadow/Player/State Machine.canvas",
+                "viewState": {
+                  "x": 38.36952455858187,
+                  "y": -298.8552913947993,
+                  "zoom": 0.6666666666666666
+                }
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chasing Shadow/Chasing Shadow.md",
+                "file": "Chasing Shadow/Player/State Machine.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chasing Shadow/Chasing Shadow.md",
+                "file": "Chasing Shadow/Player/State Machine.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chasing Shadow/Chasing Shadow.md"
+                "file": "Chasing Shadow/Player/State Machine.canvas"
               }
             }
           }
@@ -159,11 +174,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8b0a2fa2d452d591",
+  "active": "8efb329169ffd520",
   "lastOpenFiles": [
-    "Chasing Shadow/Assets.md",
-    "Chasing Shadow/Chasing Shadow.md",
+    "Untitled.md",
+    "Chasing Shadow/Player/State Machine.canvas",
     "Game Ideas.md",
+    "Chasing Shadow/Player",
+    "Chasing Shadow/Chasing Shadow.md",
+    "Chasing Shadow/Assets.md",
     "Chasing Shadow",
     "Godot_v4.2.2-stable_win64.exe.zip",
     "Welcome.md"

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cywoo6cilrv81"]
+[gd_scene load_steps=5 format=3 uid="uid://cywoo6cilrv81"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_an5xb"]
+[ext_resource type="PackedScene" uid="uid://bdur6q2vs7ra8" path="res://Scenes/Systems/StateMachine/state_machine.tscn" id="2_qgh54"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ggoe"]
 radius = 43.0
@@ -10,7 +11,10 @@ height = 128.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_an5xb")
 
+[node name="StateMachine" parent="." instance=ExtResource("2_qgh54")]
+
 [node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 2
 texture = ExtResource("1_8qh15")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
