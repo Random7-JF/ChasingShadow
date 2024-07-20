@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cywoo6cilrv81"]
+[gd_scene load_steps=24 format=3 uid="uid://cywoo6cilrv81"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_an5xb"]
@@ -13,14 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://5204aru2s5yu" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0008.png" id="9_hq3md"]
 [ext_resource type="Texture2D" uid="uid://d0wpo7h3en0yi" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0009.png" id="10_6kgqc"]
 [ext_resource type="Texture2D" uid="uid://bq0iw70aaj7en" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0010.png" id="11_esb48"]
-[ext_resource type="Texture2D" uid="uid://ctxp4i1fslab2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0011.png" id="12_2vxji"]
 [ext_resource type="Texture2D" uid="uid://dq6kwol7bffd1" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0012.png" id="12_clnqs"]
 [ext_resource type="Texture2D" uid="uid://cumq36k5rt87y" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0013.png" id="13_cijkl"]
 [ext_resource type="Texture2D" uid="uid://cp1p2rd5lkoc1" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0014.png" id="14_iw6j5"]
 [ext_resource type="Texture2D" uid="uid://b1o65e5gr6jio" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0015.png" id="15_r4ohp"]
 [ext_resource type="Texture2D" uid="uid://h8djny2rynfh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0016.png" id="16_j2evx"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/walk.gd" id="18_mgjqw"]
-[ext_resource type="Script" path="res://Scenes/Characters/Player/StateLabel.gd" id="19_1tv77"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ggoe"]
 radius = 43.0
@@ -74,7 +71,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("10_6kgqc"), ExtResource("11_esb48"), ExtResource("12_2vxji"), ExtResource("12_clnqs"), ExtResource("13_cijkl"), ExtResource("14_iw6j5"), ExtResource("15_r4ohp"), ExtResource("16_j2evx")]
+"values": [ExtResource("10_6kgqc"), ExtResource("11_esb48"), ExtResource("4_qx5ka"), ExtResource("12_clnqs"), ExtResource("13_cijkl"), ExtResource("14_iw6j5"), ExtResource("15_r4ohp"), ExtResource("16_j2evx")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mffh5"]
@@ -105,12 +102,7 @@ libraries = {
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("state")]
 script = ExtResource("3_it107")
-state = NodePath("PlayerWalk")
-
-[node name="PlayerWalk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animator")]
-script = ExtResource("18_mgjqw")
-player = NodePath("../..")
-animator = NodePath("../../AnimationPlayer")
+state = NodePath("PlayerIdle")
 
 [node name="PlayerIdle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animator")]
 script = ExtResource("4_ualmn")
@@ -133,4 +125,3 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 25
 text = "TEST"
 horizontal_alignment = 1
-script = ExtResource("19_1tv77")
