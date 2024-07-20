@@ -131,31 +131,28 @@ libraries = {
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_it107")
-starting_state = NodePath("Idle")
+starting_state = NodePath("Walk")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "run", "jump")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "jump")]
 script = ExtResource("18_mgjqw")
 idle = NodePath("../Idle")
-run = NodePath("../Run")
 jump = NodePath("../Jump")
 animation_name = "walk"
 
-[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "walk", "jump")]
+[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "jump")]
 script = ExtResource("28_kqtyb")
 idle = NodePath("../Idle")
-walk = NodePath("../Walk")
 jump = NodePath("../Jump")
 animation_name = "run"
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "run", "jump")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "jump")]
 script = ExtResource("4_ualmn")
 walk = NodePath("../Walk")
-run = NodePath("../Run")
 jump = NodePath("../Jump")
 animation_name = "idle"
 
-[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "run", "idle")]
+[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "idle")]
 script = ExtResource("21_t0c6y")
 walk = NodePath("../Walk")
-run = NodePath("../Run")
 idle = NodePath("../Idle")
+animation_name = null

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cywoo6cilrv81"]
+[gd_scene load_steps=27 format=3 uid="uid://cywoo6cilrv81"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_an5xb"]
@@ -19,17 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cp1p2rd5lkoc1" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0014.png" id="14_iw6j5"]
 [ext_resource type="Texture2D" uid="uid://b1o65e5gr6jio" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0015.png" id="15_r4ohp"]
 [ext_resource type="Texture2D" uid="uid://h8djny2rynfh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0016.png" id="16_j2evx"]
-[ext_resource type="Texture2D" uid="uid://cjubl40usvufr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0017.png" id="18_0abg1"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/walk.gd" id="18_mgjqw"]
-[ext_resource type="Texture2D" uid="uid://byyf633edm7ru" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0018.png" id="19_m7or6"]
-[ext_resource type="Texture2D" uid="uid://b2cwqruilg5cn" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0019.png" id="20_3dmvv"]
-[ext_resource type="Texture2D" uid="uid://3kfommylb0d3" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0020.png" id="21_1jsik"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/jump.gd" id="21_t0c6y"]
-[ext_resource type="Texture2D" uid="uid://qbmxqf6xeit1" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0021.png" id="22_7fkin"]
-[ext_resource type="Texture2D" uid="uid://ch8uwv3wtbvwh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0022.png" id="23_mmu3l"]
-[ext_resource type="Texture2D" uid="uid://dfjigr5r47lgw" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0023.png" id="24_0war6"]
-[ext_resource type="Texture2D" uid="uid://b6it83rtxas0r" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0024.png" id="25_d32ys"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/run.gd" id="28_kqtyb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ggoe"]
 radius = 43.0
@@ -70,8 +61,9 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_fquag"]
 resource_name = "walk"
-length = 0.8
+length = 1.6
 loop_mode = 1
+step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -79,39 +71,22 @@ tracks/0/path = NodePath("../Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("10_6kgqc"), ExtResource("11_esb48"), ExtResource("12_2vxji"), ExtResource("12_clnqs"), ExtResource("13_cijkl"), ExtResource("14_iw6j5"), ExtResource("15_r4ohp"), ExtResource("16_j2evx")]
-}
-
-[sub_resource type="Animation" id="Animation_obco4"]
-resource_name = "run"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("18_0abg1"), ExtResource("19_m7or6"), ExtResource("20_3dmvv"), ExtResource("21_1jsik"), ExtResource("22_7fkin"), ExtResource("23_mmu3l"), ExtResource("24_0war6"), ExtResource("25_d32ys")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mffh5"]
 _data = {
 "RESET": SubResource("Animation_ya6vq"),
 "idle": SubResource("Animation_jxt35"),
-"run": SubResource("Animation_obco4"),
 "walk": SubResource("Animation_fquag")
 }
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_an5xb")
+jump_velocity = 400.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 2
@@ -131,31 +106,21 @@ libraries = {
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_it107")
-starting_state = NodePath("Idle")
+starting_state = NodePath("Walk")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "run", "jump")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "jump")]
 script = ExtResource("18_mgjqw")
 idle = NodePath("../Idle")
-run = NodePath("../Run")
 jump = NodePath("../Jump")
 animation_name = "walk"
 
-[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "walk", "jump")]
-script = ExtResource("28_kqtyb")
-idle = NodePath("../Idle")
-walk = NodePath("../Walk")
-jump = NodePath("../Jump")
-animation_name = "run"
-
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "run", "jump")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "jump")]
 script = ExtResource("4_ualmn")
 walk = NodePath("../Walk")
-run = NodePath("../Run")
 jump = NodePath("../Jump")
 animation_name = "idle"
 
-[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "run", "idle")]
+[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "idle")]
 script = ExtResource("21_t0c6y")
 walk = NodePath("../Walk")
-run = NodePath("../Run")
 idle = NodePath("../Idle")

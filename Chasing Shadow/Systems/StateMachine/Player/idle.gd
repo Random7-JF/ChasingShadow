@@ -2,6 +2,7 @@ class_name PlayerIdle
 extends State
 
 @export var walk: PlayerWalk
+@export var run: PlayerRun
 @export var jump: PlayerJump
 @export var attack: State
 
@@ -25,8 +26,11 @@ func process_physics(delta: float) -> State:
 
 func process_input(_event: InputEvent) -> State:
 	#Leave idle if any controls are pressed.
-	if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right"):
+	if Input.is_action_just_pressed("walk"):
 		return walk
 	if Input.is_action_just_pressed("jump"):
 		return jump
+	if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right"):
+		return run
+
 	return null

@@ -11,11 +11,14 @@
             "id": "463b34433d4e37a4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Chasing Shadow/Chasing Shadow.md",
-                "mode": "source",
-                "source": false
+                "file": "Chasing Shadow/Player/State Machine.canvas",
+                "viewState": {
+                  "x": 188.5,
+                  "y": -233,
+                  "zoom": 0
+                }
               }
             }
           },
@@ -43,8 +46,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md",
+                "file": "Chasing Shadow/Player/State Machine.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md",
+                "file": "Chasing Shadow/Player/State Machine.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md"
+                "file": "Chasing Shadow/Player/State Machine.canvas"
               }
             }
           }
@@ -171,7 +173,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8efb329169ffd520",
+  "active": "463b34433d4e37a4",
   "lastOpenFiles": [
     "Chasing Shadow/Chasing Shadow.md",
     "Chasing Shadow/Assets and Learning Material.md",

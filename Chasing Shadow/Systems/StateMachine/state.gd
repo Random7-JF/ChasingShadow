@@ -2,7 +2,6 @@ class_name State
 extends Node
 
 @export var animation_name: String
-@export var speed: float = 500
 
 var parent: CharacterBody2D
 var animator: AnimationPlayer
