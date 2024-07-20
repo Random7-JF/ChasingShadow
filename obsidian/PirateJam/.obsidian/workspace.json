@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "712b7119ebfa8813",
+    "type": "split",
+    "children": [
+      {
+        "id": "093f13f156e143bd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "463b34433d4e37a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chasing Shadow.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "759f14dab7bdd987",
+    "type": "split",
+    "children": [
+      {
+        "id": "8a365e58c1bbff34",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "57d4c95321857f08",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d526c26570853c9a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "dcbbb5ab64323639",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c651b983fca270ce",
+    "type": "split",
+    "children": [
+      {
+        "id": "b2ecdef0263770d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a873d8c1df405019",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Chasing Shadow.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b721ff0278847251",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Chasing Shadow.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "20c595821ed23698",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "24f1bbb51854803e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Chasing Shadow.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "463b34433d4e37a4",
+  "lastOpenFiles": [
+    "Chasing Shadow.md",
+    "Game Ideas.md",
+    "Godot_v4.2.2-stable_win64.exe.zip",
+    "Welcome.md"
+  ]
+}
