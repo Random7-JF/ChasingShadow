@@ -4,7 +4,7 @@ extends Node
 @export var starting_state: State
 var current_state: State
 
-func init(new_parent: CharacterBody2D, new_animator: AnimationPlayer):
+func init(new_parent: Player, new_animator: AnimationPlayer):
 	for child in get_children():
 		child.parent = new_parent
 		child.animator = new_animator

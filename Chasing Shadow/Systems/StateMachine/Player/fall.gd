@@ -4,6 +4,7 @@ extends State
 @export var idle: PlayerIdle
 @export var jump: PlayerJump
 @export var double_jump: PlayerDoubleJump
+@export var wall_slide: PlayerWallSlide
 @export var attack: State
 
 func enter() -> void:
@@ -17,8 +18,13 @@ func process(_delta: float) -> State:
 	
 func process_physics(delta: float) -> State:
 	if parent.is_on_floor():
-		parent.can_double_jump = true
+		parent.can_double_jump = true 
+		parent.can_wall_slide = true
 		return idle
+		
+	if parent.is_on_wall() and parent.can_wall_slide:
+		parent.can_wall_slide = false
+		return wall_slide
 	#fall to the ground
 	parent.velocity.y += gravity * delta
 	parent.move_and_slide()

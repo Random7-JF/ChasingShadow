@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://de6j3tt3ku3rh"]
+[gd_scene load_steps=9 format=3 uid="uid://de6j3tt3ku3rh"]
 
 [ext_resource type="Texture2D" uid="uid://beh3itmlcsj0r" path="res://Assets/Stick Figure Character Sprites 2D/Extras/ground.png" id="1_t10n0"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="2_jhnlb"]
-[ext_resource type="Script" path="res://Scenes/UI/Debug/StateLabel.gd" id="3_2ickf"]
-[ext_resource type="Script" path="res://Scenes/UI/Debug/Stats Label.gd" id="4_1iy2f"]
-[ext_resource type="Script" path="res://Scenes/UI/Debug/Jump Label.gd" id="5_livqh"]
+[ext_resource type="Script" path="res://Scenes/UI/Debug/state.gd" id="3_2ickf"]
+[ext_resource type="Script" path="res://Scenes/UI/Debug/velocity.gd" id="4_1iy2f"]
+[ext_resource type="Script" path="res://Scenes/UI/Debug/jump.gd" id="5_livqh"]
+[ext_resource type="Script" path="res://Scenes/UI/Debug/wall.gd" id="6_nep3c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1m3lq"]
-size = Vector2(768, 165)
+size = Vector2(769, 165)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj5o1"]
+size = Vector2(767, 168)
 
 [node name="World" type="Node2D"]
 
@@ -23,18 +27,18 @@ position = Vector2(-3, 12.5)
 shape = SubResource("RectangleShape2D_1m3lq")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(-739, 263)
+position = Vector2(-731, 264)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
 texture_filter = 2
 texture = ExtResource("1_t10n0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-3, 12.5)
+position = Vector2(-0.5, 12.5)
 shape = SubResource("RectangleShape2D_1m3lq")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(766, 264)
+position = Vector2(795, 264)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
 texture_filter = 2
@@ -63,19 +67,35 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="State Label" type="Label" parent="CanvasLayer/Debug/VBoxContainer" node_paths=PackedStringArray("player")]
+[node name="State" type="Label" parent="CanvasLayer/Debug/VBoxContainer" node_paths=PackedStringArray("player")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "TEST"
 script = ExtResource("3_2ickf")
 player = NodePath("../../../../Player")
 
-[node name="Stats Label" type="Label" parent="CanvasLayer/Debug/VBoxContainer" node_paths=PackedStringArray("player")]
+[node name="Velocity" type="Label" parent="CanvasLayer/Debug/VBoxContainer" node_paths=PackedStringArray("player")]
 layout_mode = 2
 script = ExtResource("4_1iy2f")
 player = NodePath("../../../../Player")
 
-[node name="Jump Label" type="Label" parent="CanvasLayer/Debug/VBoxContainer" node_paths=PackedStringArray("player")]
+[node name="Jump" type="Label" parent="CanvasLayer/Debug/VBoxContainer" node_paths=PackedStringArray("player")]
 layout_mode = 2
 script = ExtResource("5_livqh")
 player = NodePath("../../../../Player")
+
+[node name="Wall" type="Label" parent="CanvasLayer/Debug/VBoxContainer" node_paths=PackedStringArray("player")]
+layout_mode = 2
+script = ExtResource("6_nep3c")
+player = NodePath("../../../../Player")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(-1180, -193)
+rotation = 1.57471
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D4"]
+texture = ExtResource("1_t10n0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(0.499985, 10)
+shape = SubResource("RectangleShape2D_aj5o1")

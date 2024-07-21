@@ -5,6 +5,7 @@ extends State
 @export var run: PlayerRun
 @export var idle: PlayerIdle
 @export var fall: PlayerFall
+@export var wall_slide: PlayerWallSlide
 @export var double_jump: PlayerDoubleJump
 @export var attack: State
 
@@ -33,6 +34,10 @@ func process_physics(delta: float) -> State:
 	parent.velocity.x = direction
 	parent.move_and_slide()
 	
+	if parent.is_on_wall() and parent.can_wall_slide:
+		parent.can_wall_slide = false
+		return wall_slide
+
 	if parent.is_on_floor():
 		if direction != 0:
 			return run

@@ -6,7 +6,9 @@ extends CharacterBody2D
 
 @export var jump_velocity: float = 400
 @export var speed: float = 500
+@export var wall_grip: float = 0.50
 
+var can_wall_slide: bool = true
 var can_double_jump: bool = true
 
 func _ready():
