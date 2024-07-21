@@ -4,8 +4,6 @@ extends State
 @export var jump: PlayerJump
 @export var idle: PlayerIdle
 
-var attack_complete: bool = false
-
 func enter() -> void:
 	super()
 	state_name = "Attack"
@@ -17,32 +15,31 @@ func process(_delta: float) -> State:
 	return null
 	
 func process_physics(delta: float) -> State:
-	parent.current_attack_combo_delay += delta
-	if parent.attack_combo_count <= 3:
-		parent.attack_combo_count =0
-	if attack_complete:
-		return idle
 	return null
 
 func process_input(_event: InputEvent) -> State:
-	if Input.is_action_just_pressed("attack") and parent.current_attack_combo_delay > parent.attack_combo_delay and parent.attack_combo:
-		parent.attack_combo_count += 1
-	else:
-		parent.attack_combo = false
-		parent.attack_combo_count = 0
+	if Input.is_action_just_pressed("attack") and parent.attack_can_combo:
+		parent.attack_combo += 1
 	return null
 
 func attack_finished():
-	if parent.attack_combo_count == 1:
+	
+	if parent.attack_combo == 0 and parent.attack_can_combo:
+		animation_name = "attack_1"
+	elif parent.attack_combo == 1 and parent.attack_can_combo:
 		animation_name = "attack_2"
 		animator.play(animation_name)
-	elif  parent.attack_combo_count == 2:
+	elif parent.attack_combo == 2 and parent.attack_can_combo:
 		animation_name = "attack_3"
 		animator.play(animation_name)
-		parent.attack_combo_count = 0
+		parent.attack_combo = 0
 	else:
-		attack_complete = true
 		animation_name = "attack_1"
-
+		parent.attack_combo = 0
+		
+	parent.attack_can_combo = false
+	print("attack finished")
+	
 func attack_hit():
-	print("attack hit")
+	parent.attack_can_combo = true
+	print("attack count", str(parent.attack_combo))

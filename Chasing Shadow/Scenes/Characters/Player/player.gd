@@ -11,10 +11,8 @@ extends CharacterBody2D
 var can_wall_slide: bool = true
 var can_double_jump: bool = true
 
-var attack_combo: bool = false
-var attack_combo_count: int = 0
-var current_attack_combo_delay: float = 0
-var attack_combo_delay: float = 0.3
+var attack_can_combo: bool = false
+var attack_combo: int = 0
 
 func _ready():
 	state_machine.init(self, animator)
