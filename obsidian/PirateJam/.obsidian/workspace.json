@@ -11,11 +11,54 @@
             "id": "463b34433d4e37a4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban-view",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md",
-                "mode": "source",
-                "source": false
+                "file": "Chasing Shadow/Work.md"
+              }
+            }
+          },
+          {
+            "id": "112ccbf4fed466c1",
+            "type": "leaf",
+            "state": {
+              "type": "kanban-view",
+              "state": {
+                "file": "Chasing Shadow/Work.md"
+              }
+            }
+          },
+          {
+            "id": "03fecc04af36c07f",
+            "type": "leaf",
+            "state": {
+              "type": "kanban-view",
+              "state": {
+                "file": "Chasing Shadow/Work.md"
+              }
+            }
+          },
+          {
+            "id": "357c21f936c709be",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Chasing Shadow/Player/State Machine.canvas",
+                "viewState": {
+                  "x": 202.5,
+                  "y": -300,
+                  "zoom": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "5478bae995862533",
+            "type": "leaf",
+            "state": {
+              "type": "kanban-view",
+              "state": {
+                "file": "Chasing Shadow/Work.md"
               }
             }
           },
@@ -43,7 +86,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -72,7 +116,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#soonish",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md",
+                "file": "Chasing Shadow/Work.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +170,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md",
+                "file": "Chasing Shadow/Work.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +193,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md"
+                "file": "Chasing Shadow/Work.md"
               }
             }
           }
@@ -170,13 +214,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "463b34433d4e37a4",
+  "active": "5478bae995862533",
   "lastOpenFiles": [
-    "Chasing Shadow/Chasing Shadow.md",
+    "Untitled.canvas",
+    "Chasing Shadow/Player/Jump State.md",
     "Chasing Shadow/Player/State Machine.canvas",
-    "Chasing Shadow/Assets and Learning Material.md",
-    "Untitled.md",
+    "Chasing Shadow/Player/Fall State.md",
+    "Chasing Shadow/Player/Attack State.md",
     "Game Ideas.md",
+    "Chasing Shadow/Work.md",
+    "Chasing Shadow/Chasing Shadow.md",
+    "Chasing Shadow/Player/Wall Slide State.md",
+    "Chasing Shadow/Assets and Learning Material.md",
     "Chasing Shadow/Player",
     "Chasing Shadow",
     "Godot_v4.2.2-stable_win64.exe.zip",

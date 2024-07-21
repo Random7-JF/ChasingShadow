@@ -12,7 +12,10 @@
   "knownTags": {
     "Engine": 1,
     "Other": 2,
-    "Art": 3
+    "Art": 3,
+    "later": 4,
+    "soonish": 5,
+    "tomorrow": 6
   },
   "_version": 3
 }
