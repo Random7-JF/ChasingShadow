@@ -68,8 +68,12 @@
             "id": "ff24f3dc1030c57a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Chasing Shadow/Chasing Shadow.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -163,6 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Chasing Shadow/Chasing Shadow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,6 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Chasing Shadow/Chasing Shadow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,7 +206,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Chasing Shadow/Chasing Shadow.md"
+              }
             }
           },
           {
@@ -230,6 +238,7 @@
   },
   "active": "ff24f3dc1030c57a",
   "lastOpenFiles": [
+    "Chasing Shadow/Assets and Learning Material.md",
     "Untitled.canvas",
     "Chasing Shadow/Chasing Shadow.md",
     "Chasing Shadow/Player/State Machine.canvas",
@@ -244,7 +253,6 @@
     "Chasing Shadow/Work Board.md",
     "Game Ideas.md",
     "Daily Notes",
-    "Chasing Shadow/Assets and Learning Material.md",
     "Chasing Shadow/Player",
     "Chasing Shadow",
     "Godot_v4.2.2-stable_win64.exe.zip",
