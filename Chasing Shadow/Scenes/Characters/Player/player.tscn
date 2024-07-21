@@ -197,9 +197,8 @@ run = NodePath("../Run")
 jump = NodePath("../Jump")
 animation_name = "idle"
 
-[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "run", "idle", "fall", "wall_slide", "double_jump")]
+[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("run", "idle", "fall", "wall_slide", "double_jump")]
 script = ExtResource("21_t0c6y")
-walk = NodePath("../Walk")
 run = NodePath("../Run")
 idle = NodePath("../Idle")
 fall = NodePath("../Fall")
@@ -213,10 +212,9 @@ fall = NodePath("../Fall")
 idle = NodePath("../Idle")
 wall_slide = NodePath("../Wall Slide")
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "jump", "double_jump", "wall_slide")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "double_jump", "wall_slide")]
 script = ExtResource("32_qhwg1")
 idle = NodePath("../Idle")
-jump = NodePath("../Jump")
 double_jump = NodePath("../Double Jump")
 wall_slide = NodePath("../Wall Slide")
 

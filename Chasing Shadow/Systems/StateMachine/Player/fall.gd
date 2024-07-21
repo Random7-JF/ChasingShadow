@@ -2,7 +2,6 @@ class_name PlayerFall
 extends State
 
 @export var idle: PlayerIdle
-@export var jump: PlayerJump
 @export var double_jump: PlayerDoubleJump
 @export var wall_slide: PlayerWallSlide
 @export var attack: State

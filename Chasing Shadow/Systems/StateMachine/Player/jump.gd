@@ -1,7 +1,6 @@
 class_name PlayerJump
 extends State
 
-@export var walk: PlayerWalk
 @export var run: PlayerRun
 @export var idle: PlayerIdle
 @export var fall: PlayerFall
