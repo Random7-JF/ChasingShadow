@@ -68,11 +68,9 @@
             "id": "ff24f3dc1030c57a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban-view",
               "state": {
-                "file": "Chasing Shadow/Chasing Shadow.md",
-                "mode": "source",
-                "source": false
+                "file": "Chasing Shadow/Work Board.md"
               }
             }
           },
@@ -130,7 +128,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Engine",
+                "query": "tag:#soonish",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -167,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chasing Shadow/Chasing Shadow.md",
+                "file": "Chasing Shadow/Work Board.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chasing Shadow/Chasing Shadow.md",
+                "file": "Chasing Shadow/Work Board.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -207,7 +205,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chasing Shadow/Chasing Shadow.md"
+                "file": "Chasing Shadow/Work Board.md"
               }
             }
           },
@@ -220,7 +218,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -238,20 +236,20 @@
   },
   "active": "ff24f3dc1030c57a",
   "lastOpenFiles": [
+    "Game Ideas.md",
+    "Chasing Shadow/Player/States/Attack State.md",
+    "Chasing Shadow/Player/State Machine.canvas",
+    "Daily Notes/2024-07-21.md",
+    "Daily Notes/2024-07-31.md",
+    "Itch.md",
+    "Chasing Shadow/Chasing Shadow.md",
     "Chasing Shadow/Assets and Learning Material.md",
     "Untitled.canvas",
-    "Chasing Shadow/Chasing Shadow.md",
-    "Chasing Shadow/Player/State Machine.canvas",
     "Chasing Shadow/Player/States",
-    "Daily Notes/2024-07-21.md",
     "Chasing Shadow/Player/States/Wall Slide State.md",
-    "Daily Notes/2024-07-31.md",
     "Chasing Shadow/Player/States/Jump State.md",
-    "Chasing Shadow/Player/States/Attack State.md",
     "Chasing Shadow/Player/States/Fall State.md",
-    "Itch.md",
     "Chasing Shadow/Work Board.md",
-    "Game Ideas.md",
     "Daily Notes",
     "Chasing Shadow/Player",
     "Chasing Shadow",
