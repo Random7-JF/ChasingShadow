@@ -40,4 +40,6 @@ func process_input(_event: InputEvent) -> State:
 		parent.velocity.y = 0
 		parent.can_double_jump = false 
 		return double_jump
+	if Input.is_action_just_pressed("attack"):
+		return attack_1
 	return null

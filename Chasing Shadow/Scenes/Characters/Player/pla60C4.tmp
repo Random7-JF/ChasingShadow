@@ -63,12 +63,11 @@
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/attack_2.gd" id="52_vnpcj"]
 [ext_resource type="Texture2D" uid="uid://csb0mdm4r0sgr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0050.png" id="52_xok3e"]
 [ext_resource type="Texture2D" uid="uid://bxujnx2urhwx0" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0051.png" id="53_g4ft4"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/attack_3.gd" id="57_5rm05"]
+[ext_resource type="Script" path="res://Systems/StateMachine/attack_3.gd" id="53_gtkv0"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/hit.gd" id="59_tyrpc"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_injqa"]
-radius = 32.3724
-height = 124.948
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7h5t"]
+size = Vector2(83.4867, 127.923)
 
 [sub_resource type="Animation" id="Animation_jxt35"]
 resource_name = "idle"
@@ -327,7 +326,7 @@ texture = ExtResource("2_s4ss8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 43)
 scale = Vector2(1.17384, 1.34456)
-shape = SubResource("CapsuleShape2D_injqa")
+shape = SubResource("RectangleShape2D_k7h5t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../StateMachine")
@@ -356,7 +355,7 @@ attack_3 = NodePath("../Attack 3")
 animation_name = "attack_2"
 
 [node name="Attack 3" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle")]
-script = ExtResource("57_5rm05")
+script = ExtResource("53_gtkv0")
 jump = NodePath("../Jump")
 run = NodePath("../Run")
 idle = NodePath("../Idle")
@@ -411,7 +410,6 @@ idle = NodePath("../Idle")
 double_jump = NodePath("../Double Jump")
 wall_slide = NodePath("../Wall Slide")
 attack_1 = NodePath("../Attack 1")
-animation_name = "jump"
 
 [node name="Wall Slide" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "idle", "attack_1")]
 script = ExtResource("36_tyfa3")

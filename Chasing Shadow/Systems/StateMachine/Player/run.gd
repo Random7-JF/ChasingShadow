@@ -34,4 +34,6 @@ func process_input(_event: InputEvent) -> State:
 		return walk
 	if Input.is_action_just_pressed("jump"):
 		return jump
+	if Input.is_action_just_pressed("attack"):
+		return attack_1
 	return null

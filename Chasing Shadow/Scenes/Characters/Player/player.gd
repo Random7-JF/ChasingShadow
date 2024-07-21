@@ -16,6 +16,8 @@ var in_combo: bool = false
 var attack_finished: bool = false
 var next_attack: bool = false
 
+var hit: bool = false
+
 func _ready():
 	state_machine.init(self, animator)
 

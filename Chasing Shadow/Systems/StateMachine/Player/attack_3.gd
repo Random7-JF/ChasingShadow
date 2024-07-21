@@ -19,7 +19,11 @@ func exit() -> void:
 func process(_delta: float) -> State:
 	return null
 	
-func process_physics(_delta: float) -> State:
+func process_physics(delta: float) -> State:
+	#fall to the ground
+	parent.velocity.y += gravity * delta
+	parent.move_and_slide()
+
 	if parent.attack_finished:
 		return idle
 	return null

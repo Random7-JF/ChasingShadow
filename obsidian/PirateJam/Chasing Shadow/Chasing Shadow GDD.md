@@ -89,14 +89,14 @@ Boss health bottom middle once we reach him.
 | Feature of Function  | Type    | Status | Notes                                                                   |
 | -------------------- | ------- | ------ | ----------------------------------------------------------------------- |
 | Design Document      | #Other  | WIP    |                                                                         |
-| Basic Player         | #Engine |        | Need a character with basic animations and controllers                  |
-| Basic Level          | #Engine |        |                                                                         |
-| Main Menu            | #Engine |        |                                                                         |
-| Pause Menu           | #Engine |        |                                                                         |
-| Game Assets - Player | #Art    |        |                                                                         |
-| Game Assets - Shadow | #Art    |        |                                                                         |
-| Game Assets - Levels | #Art    |        |                                                                         |
-| Game Assets - UI     | #Art    |        |                                                                         |
-| Game Assets - Audio  | #Art    |        |                                                                         |
-| Game Loop            | #Engine |        | Timer for each level, Health for player, Save check points and buffs.   |
-| Shadow Chase         | #Engine |        | Shadow runs the path and the player gets to watch before ever map start |
+| Basic Player         | #Engine | 60%    | Need a character with basic animations and controllers                  |
+| Basic Level          | #Engine | 0%     |                                                                         |
+| Main Menu            | #Engine | 0%     |                                                                         |
+| Pause Menu           | #Engine | 0%     |                                                                         |
+| Game Assets - Player | #Art    | 80%    | Player assets are mostly provided.                                      |
+| Game Assets - Shadow | #Art    | 20%    | will colour modulate or alter player assets to fill this.               |
+| Game Assets - Levels | #Art    | 0%     |                                                                         |
+| Game Assets - UI     | #Art    | 0%     |                                                                         |
+| Game Assets - Audio  | #Art    | 0%     |                                                                         |
+| Game Loop            | #Engine | 0%     | Timer for each level, Health for player, Save check points and buffs.   |
+| Shadow Chase         | #Engine | 0%     | Shadow runs the path and the player gets to watch before ever map start |
