@@ -4,7 +4,7 @@ extends State
 @export var walk: PlayerWalk
 @export var run: PlayerRun
 @export var jump: PlayerJump
-@export var attack: State
+@export var attack: PlayerAttack
 
 func enter() -> void:
 	super()
@@ -45,5 +45,8 @@ func process_input(_event: InputEvent) -> State:
 	## needs more testing.
 	if Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
 		return run
+	
+	if Input.is_action_just_pressed("attack"):
+		return attack
 
 	return null
