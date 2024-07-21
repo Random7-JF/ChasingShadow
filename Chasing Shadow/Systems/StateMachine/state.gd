@@ -22,3 +22,9 @@ func process_physics(_delta: float) -> State:
 
 func process_input(_event: InputEvent) -> State:
 	return null
+	
+func animation_action() -> void:
+	pass
+
+func animation_ended() -> void:
+	pass

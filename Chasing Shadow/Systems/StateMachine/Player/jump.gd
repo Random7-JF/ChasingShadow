@@ -6,7 +6,7 @@ extends State
 @export var fall: PlayerFall
 @export var wall_slide: PlayerWallSlide
 @export var double_jump: PlayerDoubleJump
-@export var attack: PlayerAttack
+@export var attack_1: PlayerAttack1
 
 
 func enter() -> void:

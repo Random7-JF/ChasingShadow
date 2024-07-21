@@ -4,7 +4,7 @@ extends State
 @export var idle: PlayerIdle
 @export var run: PlayerRun
 @export var jump: PlayerJump
-@export var attack: PlayerAttack
+@export var attack_1: PlayerAttack1
 
 func enter() -> void:
 	super()

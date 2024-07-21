@@ -4,102 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "093f13f156e143bd",
+        "id": "acaf7c9526e71e9d",
         "type": "tabs",
         "children": [
           {
             "id": "463b34433d4e37a4",
             "type": "leaf",
             "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
-            "id": "112ccbf4fed466c1",
-            "type": "leaf",
-            "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
-            "id": "03fecc04af36c07f",
-            "type": "leaf",
-            "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
-            "id": "357c21f936c709be",
-            "type": "leaf",
-            "state": {
               "type": "canvas",
               "state": {
                 "file": "Chasing Shadow/Player/State Machine.canvas",
                 "viewState": {
-                  "x": 202.5,
-                  "y": -300,
+                  "x": 96.5,
+                  "y": -385.21807987546794,
                   "zoom": 0
                 }
               }
             }
-          },
-          {
-            "id": "5478bae995862533",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Daily Notes/2024-07-21.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ff24f3dc1030c57a",
-            "type": "leaf",
-            "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
-            "id": "8b0a2fa2d452d591",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chasing Shadow/Chasing Shadow.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8efb329169ffd520",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -165,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chasing Shadow/Work Board.md",
+                "file": "Chasing Shadow/Player/State Machine.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chasing Shadow/Work Board.md",
+                "file": "Chasing Shadow/Player/State Machine.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chasing Shadow/Work Board.md"
+                "file": "Chasing Shadow/Player/State Machine.canvas"
               }
             }
           },
@@ -234,22 +157,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ff24f3dc1030c57a",
+  "active": "463b34433d4e37a4",
   "lastOpenFiles": [
-    "Game Ideas.md",
-    "Chasing Shadow/Player/States/Attack State.md",
+    "Chasing Shadow/Work Board.md",
+    "Chasing Shadow/Chasing Shadow.md",
     "Chasing Shadow/Player/State Machine.canvas",
+    "Game Ideas.md",
+    "Itch.md",
+    "Chasing Shadow/Assets and Learning Material.md",
+    "Chasing Shadow/Player/States/Fall State.md",
+    "Chasing Shadow/Player/States/Attack State.md",
     "Daily Notes/2024-07-21.md",
     "Daily Notes/2024-07-31.md",
-    "Itch.md",
-    "Chasing Shadow/Chasing Shadow.md",
-    "Chasing Shadow/Assets and Learning Material.md",
     "Untitled.canvas",
     "Chasing Shadow/Player/States",
     "Chasing Shadow/Player/States/Wall Slide State.md",
     "Chasing Shadow/Player/States/Jump State.md",
-    "Chasing Shadow/Player/States/Fall State.md",
-    "Chasing Shadow/Work Board.md",
     "Daily Notes",
     "Chasing Shadow/Player",
     "Chasing Shadow",

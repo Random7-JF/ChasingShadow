@@ -12,11 +12,9 @@ var can_wall_slide: bool = true
 @export var jump_velocity: float = 400
 var can_double_jump: bool = true
 
-var attack_can_combo: bool = false
-var attack_combo: int = 0
-var attacking: bool = false
-var attack_time_since: float = 0
-@export var attack_delay: float = 0.3
+var in_combo: bool = false
+var attack_finished: bool = false
+var next_attack: bool = false
 
 func _ready():
 	state_machine.init(self, animator)
