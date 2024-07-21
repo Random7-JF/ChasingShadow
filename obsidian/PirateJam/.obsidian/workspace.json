@@ -13,7 +13,7 @@
             "state": {
               "type": "kanban-view",
               "state": {
-                "file": "Chasing Shadow/Work.md"
+                "file": "Chasing Shadow/Work Board.md"
               }
             }
           },
@@ -23,7 +23,7 @@
             "state": {
               "type": "kanban-view",
               "state": {
-                "file": "Chasing Shadow/Work.md"
+                "file": "Chasing Shadow/Work Board.md"
               }
             }
           },
@@ -33,7 +33,7 @@
             "state": {
               "type": "kanban-view",
               "state": {
-                "file": "Chasing Shadow/Work.md"
+                "file": "Chasing Shadow/Work Board.md"
               }
             }
           },
@@ -56,10 +56,20 @@
             "id": "5478bae995862533",
             "type": "leaf",
             "state": {
-              "type": "kanban-view",
+              "type": "markdown",
               "state": {
-                "file": "Chasing Shadow/Work.md"
+                "file": "Daily Notes/2024-07-21.md",
+                "mode": "source",
+                "source": false
               }
+            }
+          },
+          {
+            "id": "ff24f3dc1030c57a",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -87,7 +97,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -116,7 +126,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#soonish",
+                "query": "tag:#Engine",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -153,7 +163,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chasing Shadow/Work.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +179,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chasing Shadow/Work.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,17 +200,23 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Chasing Shadow/Work.md"
-              }
+              "state": {}
+            }
+          },
+          {
+            "id": "ec655ad1cad3d2b3",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -214,17 +228,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5478bae995862533",
+  "active": "ff24f3dc1030c57a",
   "lastOpenFiles": [
     "Untitled.canvas",
-    "Chasing Shadow/Player/Jump State.md",
-    "Chasing Shadow/Player/State Machine.canvas",
-    "Chasing Shadow/Player/Fall State.md",
-    "Chasing Shadow/Player/Attack State.md",
-    "Game Ideas.md",
-    "Chasing Shadow/Work.md",
     "Chasing Shadow/Chasing Shadow.md",
-    "Chasing Shadow/Player/Wall Slide State.md",
+    "Chasing Shadow/Player/State Machine.canvas",
+    "Chasing Shadow/Player/States",
+    "Daily Notes/2024-07-21.md",
+    "Chasing Shadow/Player/States/Wall Slide State.md",
+    "Daily Notes/2024-07-31.md",
+    "Chasing Shadow/Player/States/Jump State.md",
+    "Chasing Shadow/Player/States/Attack State.md",
+    "Chasing Shadow/Player/States/Fall State.md",
+    "Itch.md",
+    "Chasing Shadow/Work Board.md",
+    "Game Ideas.md",
+    "Daily Notes",
     "Chasing Shadow/Assets and Learning Material.md",
     "Chasing Shadow/Player",
     "Chasing Shadow",

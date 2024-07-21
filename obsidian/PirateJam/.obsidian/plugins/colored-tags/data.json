@@ -15,7 +15,8 @@
     "Art": 3,
     "later": 4,
     "soonish": 5,
-    "tomorrow": 6
+    "tomorrow": 6,
+    "Testing": 7
   },
   "_version": 3
 }
