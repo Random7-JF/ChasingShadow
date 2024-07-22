@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn2dq6ipscam"]
+
+[ext_resource type="Texture2D" uid="uid://s76eilmrifu8" path="res://Assets/Assets 1024 Cave/Floor/platform2.png" id="1_rs078"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnabm"]
+size = Vector2(357, 55)
+
+[node name="cave_platform 2" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rnabm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.682353, 0.682353, 0.682353, 1)
+texture = ExtResource("1_rs078")
+region_rect = Rect2(494, 20, 384, 128)

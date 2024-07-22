@@ -1,152 +1,27 @@
-[gd_scene load_steps=10 format=3 uid="uid://de6j3tt3ku3rh"]
+[gd_scene load_steps=21 format=3 uid="uid://de6j3tt3ku3rh"]
 
-[ext_resource type="Texture2D" uid="uid://beh3itmlcsj0r" path="res://Assets/Stick Figure Character Sprites 2D/Extras/ground.png" id="1_t10n0"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="2_jhnlb"]
 [ext_resource type="Script" path="res://Scenes/UI/Debug/state.gd" id="3_2ickf"]
 [ext_resource type="Script" path="res://Scenes/UI/Debug/velocity.gd" id="4_1iy2f"]
 [ext_resource type="Script" path="res://Scenes/UI/Debug/jump.gd" id="5_livqh"]
 [ext_resource type="Script" path="res://Scenes/UI/Debug/wall.gd" id="6_nep3c"]
 [ext_resource type="Script" path="res://Scenes/UI/Debug/attack.gd" id="7_6b0vk"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1m3lq"]
-size = Vector2(769, 165)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj5o1"]
-size = Vector2(767, 168)
+[ext_resource type="PackedScene" uid="uid://l4n5vsrmlimt" path="res://Scenes/Environment/cave_long_platform_1.tscn" id="7_ih434"]
+[ext_resource type="PackedScene" uid="uid://526e0f8kkoal" path="res://Scenes/Environment/cave_platform_1.tscn" id="8_qr8aj"]
+[ext_resource type="PackedScene" uid="uid://dn2dq6ipscam" path="res://Scenes/Environment/cave_platform_2.tscn" id="9_ws4od"]
+[ext_resource type="Texture2D" uid="uid://i7vwfe1nk12u" path="res://Assets/Assets 1024 Cave/Blocks/block4.png" id="10_mykak"]
+[ext_resource type="Texture2D" uid="uid://cykool3stgofj" path="res://Assets/Assets 1024 Cave/Blocks/block1.png" id="11_0ecvr"]
+[ext_resource type="Texture2D" uid="uid://cjoc20b0xbso" path="res://Assets/Assets 1024 Cave/Blocks/block2.png" id="12_0u5sq"]
+[ext_resource type="Texture2D" uid="uid://bqcqvyiwfrrpr" path="res://Assets/Assets 1024 Cave/Blocks/block3.png" id="13_7lv12"]
+[ext_resource type="Texture2D" uid="uid://bbu5aoqgt6vjh" path="res://Assets/Assets 1024 Cave/Blocks/block5.png" id="14_vrnod"]
+[ext_resource type="Texture2D" uid="uid://42xko7vw0e7a" path="res://Assets/Assets 1024 Cave/Blocks/block6.png" id="15_wolsq"]
+[ext_resource type="Texture2D" uid="uid://e1v0gwme4nbm" path="res://Assets/Assets 1024 Cave/Blocks/block7.png" id="16_nmnad"]
+[ext_resource type="Texture2D" uid="uid://g0555ihwlnb3" path="res://Assets/Assets 1024 Cave/Blocks/block8.png" id="17_2lc7q"]
+[ext_resource type="Texture2D" uid="uid://cq0u4uysbxh47" path="res://Assets/Assets 1024 Cave/Blocks/block9.png" id="18_v34v1"]
+[ext_resource type="Texture2D" uid="uid://bgc7nr46uqvub" path="res://Assets/Assets 1024 Cave/Blocks/block10.png" id="19_y4uli"]
+[ext_resource type="Texture2D" uid="uid://b46aunclyl30p" path="res://Assets/Assets 1024 Cave/Blocks/block11.png" id="20_7m7gn"]
 
 [node name="World" type="Node2D"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(26, 264)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-3, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(-731, 264)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-0.5, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(795, 264)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(-3, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
-position = Vector2(354, -404)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
-position = Vector2(-3, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="."]
-position = Vector2(-403, -404)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
-position = Vector2(-0.5, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="."]
-position = Vector2(1123, -404)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
-position = Vector2(-3, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="."]
-position = Vector2(-139, -923)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D8"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
-position = Vector2(-3, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D9" type="StaticBody2D" parent="."]
-position = Vector2(-896, -923)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D9"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9"]
-position = Vector2(-0.5, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D10" type="StaticBody2D" parent="."]
-position = Vector2(630, -923)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D10"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10"]
-position = Vector2(-3, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D11" type="StaticBody2D" parent="."]
-position = Vector2(185, -1697)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D11"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11"]
-position = Vector2(-3, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D12" type="StaticBody2D" parent="."]
-position = Vector2(-572, -1697)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D12"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12"]
-position = Vector2(-0.5, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
-
-[node name="StaticBody2D13" type="StaticBody2D" parent="."]
-position = Vector2(954, -1697)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D13"]
-texture_filter = 2
-texture = ExtResource("1_t10n0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13"]
-position = Vector2(-3, 12.5)
-shape = SubResource("RectangleShape2D_1m3lq")
 
 [node name="Player" parent="." instance=ExtResource("2_jhnlb")]
 position = Vector2(-2, 8)
@@ -194,46 +69,94 @@ layout_mode = 2
 script = ExtResource("7_6b0vk")
 player = NodePath("../../../../Player")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2(-1180, -193)
-rotation = 1.57471
+[node name="Map" type="Node2D" parent="."]
 
-[node name="Ground" type="Sprite2D" parent="StaticBody2D4"]
-texture = ExtResource("1_t10n0")
+[node name="cave_long_platform_1" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(0, 471)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2(0.499985, 10)
-shape = SubResource("RectangleShape2D_aj5o1")
+[node name="cave_long_platform_8" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(-1717, 547)
 
-[node name="StaticBody2D14" type="StaticBody2D" parent="."]
-position = Vector2(-1353, -1382)
-rotation = 1.57471
+[node name="cave_long_platform_2" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(674, 903)
 
-[node name="Ground" type="Sprite2D" parent="StaticBody2D14"]
-texture = ExtResource("1_t10n0")
+[node name="cave_long_platform_3" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(-307, 902)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14"]
-position = Vector2(0.499985, 10)
-shape = SubResource("RectangleShape2D_aj5o1")
+[node name="cave_long_platform_4" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(2636, 904)
 
-[node name="StaticBody2D15" type="StaticBody2D" parent="."]
-position = Vector2(1850, -1418)
-rotation = 1.57471
+[node name="cave_long_platform_5" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(1655, 903)
 
-[node name="Ground" type="Sprite2D" parent="StaticBody2D15"]
-texture = ExtResource("1_t10n0")
+[node name="cave_long_platform_6" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(-1288, 902)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15"]
-position = Vector2(0.499985, 10)
-shape = SubResource("RectangleShape2D_aj5o1")
+[node name="cave_long_platform_7" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(-2269, 901)
 
-[node name="StaticBody2D16" type="StaticBody2D" parent="."]
-position = Vector2(1850, -648)
-rotation = 1.57471
+[node name="cave_platform" parent="Map" instance=ExtResource("8_qr8aj")]
+position = Vector2(945, 690)
 
-[node name="Ground" type="Sprite2D" parent="StaticBody2D16"]
-texture = ExtResource("1_t10n0")
+[node name="cave_platform 2" parent="Map" instance=ExtResource("9_ws4od")]
+position = Vector2(1441, 507)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D16"]
-position = Vector2(0.499985, 10)
-shape = SubResource("RectangleShape2D_aj5o1")
+[node name="cave_platform 3" parent="Map" instance=ExtResource("9_ws4od")]
+position = Vector2(1934, 500)
+
+[node name="cave_platform2" parent="Map" instance=ExtResource("8_qr8aj")]
+position = Vector2(2674, 3)
+
+[node name="cave_platform 4" parent="Map" instance=ExtResource("9_ws4od")]
+position = Vector2(3167, 632)
+
+[node name="cave_platform 5" parent="Map" instance=ExtResource("9_ws4od")]
+position = Vector2(2469, 352)
+
+[node name="Block4" type="Sprite2D" parent="Map"]
+position = Vector2(-2863, 1413)
+texture = ExtResource("10_mykak")
+
+[node name="Block1" type="Sprite2D" parent="Map"]
+position = Vector2(-182, 1325)
+texture = ExtResource("11_0ecvr")
+
+[node name="Block2" type="Sprite2D" parent="Map"]
+position = Vector2(-473, 1331)
+texture = ExtResource("12_0u5sq")
+
+[node name="Block3" type="Sprite2D" parent="Map"]
+position = Vector2(-1291, 1398)
+texture = ExtResource("13_7lv12")
+
+[node name="Block5" type="Sprite2D" parent="Map"]
+position = Vector2(-2317, 1416)
+texture = ExtResource("10_mykak")
+
+[node name="Block6" type="Sprite2D" parent="Map"]
+position = Vector2(-1633, 1416)
+texture = ExtResource("14_vrnod")
+
+[node name="Block7" type="Sprite2D" parent="Map"]
+position = Vector2(-769, 1412)
+texture = ExtResource("15_wolsq")
+
+[node name="Block8" type="Sprite2D" parent="Map"]
+position = Vector2(1089, 2021)
+texture = ExtResource("16_nmnad")
+
+[node name="Block9" type="Sprite2D" parent="Map"]
+position = Vector2(817, 2276)
+texture = ExtResource("17_2lc7q")
+
+[node name="Block10" type="Sprite2D" parent="Map"]
+position = Vector2(325, 2219)
+texture = ExtResource("18_v34v1")
+
+[node name="Block11" type="Sprite2D" parent="Map"]
+position = Vector2(1445, 2185)
+texture = ExtResource("19_y4uli")
+
+[node name="Block12" type="Sprite2D" parent="Map"]
+position = Vector2(2248, 2129)
+texture = ExtResource("20_7m7gn")

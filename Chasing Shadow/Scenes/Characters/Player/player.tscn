@@ -66,9 +66,9 @@
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/attack_3.gd" id="57_5rm05"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/hit.gd" id="59_tyrpc"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_injqa"]
-radius = 32.3724
-height = 124.948
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ofvm"]
+radius = 18.316
+height = 107.099
 
 [sub_resource type="Animation" id="Animation_jxt35"]
 resource_name = "idle"
@@ -325,9 +325,9 @@ texture_filter = 2
 texture = ExtResource("2_s4ss8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-6, 43)
+position = Vector2(-0.499999, 53)
 scale = Vector2(1.17384, 1.34456)
-shape = SubResource("CapsuleShape2D_injqa")
+shape = SubResource("CapsuleShape2D_7ofvm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../StateMachine")
