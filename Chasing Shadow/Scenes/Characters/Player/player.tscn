@@ -70,11 +70,8 @@
 radius = 18.316
 height = 107.099
 
-[sub_resource type="Animation" id="Animation_jxt35"]
-resource_name = "idle"
-length = 1.6
-loop_mode = 1
-step = 0.2
+[sub_resource type="Animation" id="Animation_wve0h"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -82,77 +79,10 @@ tracks/0/path = NodePath("../Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_8qh15"), ExtResource("3_whs4h"), ExtResource("4_qx5ka"), ExtResource("5_nicnh"), ExtResource("6_ae4wl"), ExtResource("7_q7q8v"), ExtResource("8_8d5es"), ExtResource("9_hq3md")]
-}
-
-[sub_resource type="Animation" id="Animation_fquag"]
-resource_name = "walk"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("10_6kgqc"), ExtResource("11_esb48"), ExtResource("12_2vxji"), ExtResource("12_clnqs"), ExtResource("13_cijkl"), ExtResource("14_iw6j5"), ExtResource("15_r4ohp"), ExtResource("16_j2evx")]
-}
-
-[sub_resource type="Animation" id="Animation_obco4"]
-resource_name = "run"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("18_0abg1"), ExtResource("19_m7or6"), ExtResource("20_3dmvv"), ExtResource("21_1jsik"), ExtResource("22_7fkin"), ExtResource("23_mmu3l"), ExtResource("24_0war6"), ExtResource("25_d32ys")]
-}
-
-[sub_resource type="Animation" id="Animation_1jobo"]
-resource_name = "jump"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("26_u5x8b"), ExtResource("27_4x77l"), ExtResource("28_67x4n")]
-}
-
-[sub_resource type="Animation" id="Animation_2d42m"]
-resource_name = "wall_slide"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("29_mqkd5"), ExtResource("29_re0ts")]
+"values": [ExtResource("2_s4ss8")]
 }
 
 [sub_resource type="Animation" id="Animation_ya6vq"]
@@ -185,21 +115,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"animation_ended"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_wve0h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_s4ss8")]
 }
 
 [sub_resource type="Animation" id="Animation_248ka"]
@@ -299,6 +214,91 @@ tracks/1/keys = {
 "args": [],
 "method": &"animation_ended"
 }]
+}
+
+[sub_resource type="Animation" id="Animation_jxt35"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_8qh15"), ExtResource("3_whs4h"), ExtResource("4_qx5ka"), ExtResource("5_nicnh"), ExtResource("6_ae4wl"), ExtResource("7_q7q8v"), ExtResource("8_8d5es"), ExtResource("9_hq3md")]
+}
+
+[sub_resource type="Animation" id="Animation_1jobo"]
+resource_name = "jump"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("26_u5x8b"), ExtResource("27_4x77l"), ExtResource("28_67x4n")]
+}
+
+[sub_resource type="Animation" id="Animation_obco4"]
+resource_name = "run"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("18_0abg1"), ExtResource("19_m7or6"), ExtResource("20_3dmvv"), ExtResource("21_1jsik"), ExtResource("22_7fkin"), ExtResource("23_mmu3l"), ExtResource("24_0war6"), ExtResource("25_d32ys")]
+}
+
+[sub_resource type="Animation" id="Animation_fquag"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("10_6kgqc"), ExtResource("11_esb48"), ExtResource("12_2vxji"), ExtResource("12_clnqs"), ExtResource("13_cijkl"), ExtResource("14_iw6j5"), ExtResource("15_r4ohp"), ExtResource("16_j2evx")]
+}
+
+[sub_resource type="Animation" id="Animation_2d42m"]
+resource_name = "wall_slide"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("29_mqkd5"), ExtResource("29_re0ts")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mffh5"]

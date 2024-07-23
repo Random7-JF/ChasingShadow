@@ -16,7 +16,8 @@
     "later": 4,
     "soonish": 5,
     "tomorrow": 6,
-    "Testing": 7
+    "Testing": 7,
+    "Fixes": 8
   },
   "_version": 3
 }

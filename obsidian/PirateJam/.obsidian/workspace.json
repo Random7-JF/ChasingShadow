@@ -11,9 +11,11 @@
             "id": "7524ba0cdc723794",
             "type": "leaf",
             "state": {
-              "type": "kanban-view",
+              "type": "markdown",
               "state": {
-                "file": "Chasing Shadow/Work Board.md"
+                "file": "Daily Notes/2024-07-21.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chasing Shadow/Work Board.md",
+                "file": "Daily Notes/2024-07-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chasing Shadow/Work Board.md",
+                "file": "Daily Notes/2024-07-21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chasing Shadow/Work Board.md"
+                "file": "Daily Notes/2024-07-21.md"
               }
             }
           },
@@ -154,22 +156,22 @@
   },
   "active": "7524ba0cdc723794",
   "lastOpenFiles": [
+    "Daily Notes/2024-07-31.md",
+    "Daily Notes/2024-07-21.md",
+    "Chasing Shadow/Work Board.md",
+    "Chasing Shadow/Chasing Shadow GDD.md",
     "Chasing Shadow/Player/Attack Movement.md",
     "Untitled.md",
     "Chasing Shadow/Player/Damage.md",
-    "Chasing Shadow/Work Board.md",
     "Chasing Shadow/World/Assets.md",
     "Itch.md",
     "Untitled",
     "Chasing Shadow/World",
     "Game Ideas.md",
-    "Chasing Shadow/Chasing Shadow GDD.md",
     "Chasing Shadow/Player/States/Attack State.md",
-    "Daily Notes/2024-07-21.md",
     "Chasing Shadow/Player/State Machine.canvas",
     "Chasing Shadow/Assets and Learning Material.md",
     "Chasing Shadow/Player/States/Fall State.md",
-    "Daily Notes/2024-07-31.md",
     "Untitled.canvas",
     "Chasing Shadow/Player/States",
     "Chasing Shadow/Player/States/Wall Slide State.md",

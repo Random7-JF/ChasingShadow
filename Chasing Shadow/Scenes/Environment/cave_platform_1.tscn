@@ -1,16 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://526e0f8kkoal"]
+[gd_scene load_steps=2 format=3 uid="uid://526e0f8kkoal"]
 
 [ext_resource type="Texture2D" uid="uid://bnj2wtvkgaoib" path="res://Assets/Assets 1024 Cave/Floor/platform1.png" id="1_fgjsf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnabm"]
-size = Vector2(357, 55)
-
 [node name="cave_platform" type="StaticBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_rnabm")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.682353, 0.682353, 0.682353, 1)
 texture = ExtResource("1_fgjsf")
 region_rect = Rect2(64, 20, 384, 128)

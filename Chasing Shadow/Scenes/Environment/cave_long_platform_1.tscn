@@ -1,18 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://l4n5vsrmlimt"]
+[gd_scene load_steps=2 format=3 uid="uid://l4n5vsrmlimt"]
 
 [ext_resource type="Texture2D" uid="uid://c6knryegcyptt" path="res://Assets/Assets 1024 Cave/Cave - Floor.png" id="1_xxb30"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnabm"]
-size = Vector2(981, 47)
-
 [node name="cave_long_platform_1" type="StaticBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6.5, -1.5)
-shape = SubResource("RectangleShape2D_rnabm")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.333333, 0.333333, 0.333333, 1)
 texture = ExtResource("1_xxb30")
 region_enabled = true
 region_rect = Rect2(46, 340, 1024, 128)
