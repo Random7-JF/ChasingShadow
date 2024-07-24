@@ -1,3 +1,3 @@
-- [ ] Get world Assets - Foreground #later 
-- [ ] Get world Assets - Background #later 
-- [ ] Build Level 1 #soonish 
+- [x] Get world Assets - Foreground #later 
+- [ ] Get world Assets - Background #soonish #after
+- [ ] Build Level 1 #next

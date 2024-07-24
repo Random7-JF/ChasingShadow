@@ -17,7 +17,10 @@
     "soonish": 5,
     "tomorrow": 6,
     "Testing": 7,
-    "Fixes": 8
+    "Fixes": 8,
+    "afeter": 9,
+    "after": 10,
+    "next": 11
   },
   "_version": 3
 }

@@ -4,5 +4,5 @@ Attack 1 -> Attack 2 -> Attack 3
 All 3 states fall back to Idle if the next state is not triggered.
 
 - [x] Fix Attack for player #later 
-- [ ] Add Attack state to other states #tomorrow
+- [ ] Add Attack state to other states  #next
 [[State Machine.canvas|State Machine]]

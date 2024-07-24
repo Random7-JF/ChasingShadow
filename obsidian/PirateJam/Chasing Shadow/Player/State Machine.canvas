@@ -1,17 +1,17 @@
 {
 	"nodes":[
 		{"id":"f105047d833dbe2a","type":"text","text":"Idle","x":-485,"y":-400,"width":250,"height":60,"color":"4"},
-		{"id":"9ce39d0084b6c12c","type":"text","text":"[[Attack State]]","x":140,"y":-700,"width":250,"height":60},
+		{"id":"9ce39d0084b6c12c","type":"text","text":"[[Attack State]]","x":140,"y":-700,"width":250,"height":60,"color":"4"},
 		{"id":"ad144a1e31c1f35c","type":"text","text":"Jump","x":-80,"y":-260,"width":250,"height":60,"color":"4"},
 		{"id":"f528d907392d88e5","type":"text","text":"Double Jump","x":390,"y":-260,"width":250,"height":60,"color":"4"},
-		{"id":"76b58da10a70d0af","type":"text","text":"Hit","x":390,"y":-540,"width":250,"height":60},
+		{"id":"76b58da10a70d0af","type":"text","text":"Hit","x":390,"y":-540,"width":250,"height":60,"color":"4"},
 		{"id":"c88f44f13ed0f44a","type":"text","text":"Run","x":-160,"y":-400,"width":250,"height":60,"color":"4"},
 		{"id":"af706c2e021aa491","type":"text","text":"Walk","x":70,"y":-510,"width":250,"height":60,"color":"4"},
 		{"id":"96da27c0b83a022f","type":"text","text":"Fall","x":-80,"y":-80,"width":250,"height":60,"color":"4"},
 		{"id":"4472477112bd19a4","type":"text","text":"Wall Slide","x":-80,"y":60,"width":250,"height":60,"color":"4"},
 		{"id":"efc05f422b67ab3b","type":"text","text":"Dead","x":640,"y":-720,"width":250,"height":60},
-		{"id":"8815d1a088e2ba72","x":390,"y":-980,"width":250,"height":60,"type":"text","text":"Attack 3"},
-		{"id":"4db643ed5432d3f4","x":265,"y":-840,"width":250,"height":60,"type":"text","text":"Attack 2"}
+		{"id":"8815d1a088e2ba72","type":"text","text":"Attack 3","x":390,"y":-980,"width":250,"height":60,"color":"4"},
+		{"id":"4db643ed5432d3f4","type":"text","text":"Attack 2","x":265,"y":-840,"width":250,"height":60,"color":"4"}
 	],
 	"edges":[
 		{"id":"ee2972097bc86389","fromNode":"f105047d833dbe2a","fromSide":"right","toNode":"c88f44f13ed0f44a","toSide":"left","fromEnd":"arrow","color":"5"},

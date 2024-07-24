@@ -1,1 +1,1 @@
-- [ ] Being able to attack when moving or not? #soonish 
+- [ ] Being able to attack when moving or not? #after

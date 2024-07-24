@@ -29,8 +29,10 @@
 [sub_resource type="Environment" id="Environment_0g5o4"]
 background_mode = 3
 tonemap_mode = 3
+tonemap_exposure = 0.75
 glow_enabled = true
 glow_normalized = true
+glow_blend_mode = 0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pysns"]
 size = Vector2(903, 38)
@@ -127,14 +129,13 @@ range_z_max = 1
 shadow_color = Color(0.0196078, 0.0196078, 0.0196078, 0.905882)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-620, -1784)
-energy = 1.8
+position = Vector2(-945, -2041)
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.85098)
 shadow_filter = 1
 shadow_filter_smooth = 2.0
 texture = ExtResource("1_rhlxg")
-texture_scale = 8.0
+texture_scale = 15.96
 
 [node name="Player" parent="." instance=ExtResource("2_jhnlb")]
 position = Vector2(-2, 8)

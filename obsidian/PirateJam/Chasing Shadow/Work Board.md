@@ -1,4 +1,4 @@
 ---
-kanban_plugin: '{"columns":["Later","Soonish","Tomorrow","Pending"],"scope":"folder","showFilepath":true}'
+kanban_plugin: '{"columns":["Next","After","Later","Pending"],"scope":"folder","showFilepath":true}'
 ---
 
