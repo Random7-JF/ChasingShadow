@@ -1,5 +1,6 @@
-[gd_scene load_steps=30 format=3 uid="uid://de6j3tt3ku3rh"]
+[gd_scene load_steps=53 format=3 uid="uid://de6j3tt3ku3rh"]
 
+[ext_resource type="Texture2D" uid="uid://b7snkagaa0sct" path="res://Assets/FREE Textures Of Light/512x512/512x512 textures (82).png" id="1_rhlxg"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="2_jhnlb"]
 [ext_resource type="Script" path="res://Scenes/UI/Debug/state.gd" id="3_2ickf"]
 [ext_resource type="Script" path="res://Scenes/UI/Debug/velocity.gd" id="4_1iy2f"]
@@ -20,6 +21,16 @@
 [ext_resource type="Texture2D" uid="uid://cq0u4uysbxh47" path="res://Assets/Assets 1024 Cave/Blocks/block9.png" id="18_v34v1"]
 [ext_resource type="Texture2D" uid="uid://dvgtyem5qelgq" path="res://Assets/Assets 1024 Cave/Floor/stone4.png" id="19_42fqa"]
 [ext_resource type="Texture2D" uid="uid://ctw4ieo8xjhr6" path="res://Assets/Assets 1024 Cave/Floor/stone1.png" id="20_6sfcr"]
+[ext_resource type="Texture2D" uid="uid://daf366amol1it" path="res://Assets/Assets 1024 Cave/Floor/stone_wall1.png" id="20_jfhbw"]
+[ext_resource type="Texture2D" uid="uid://0qce12ftbqac" path="res://Assets/Assets 1024 Cave/Floor/stone_plat1.png" id="22_mvcob"]
+[ext_resource type="Texture2D" uid="uid://cbju8cbeyc8e6" path="res://Assets/Assets 1024 Cave/Floor/stone_plat4.png" id="23_biexx"]
+[ext_resource type="Texture2D" uid="uid://dugfba7q3er83" path="res://Assets/Assets 1024 Cave/Floor/stone_wall2.png" id="25_eui7p"]
+
+[sub_resource type="Environment" id="Environment_0g5o4"]
+background_mode = 3
+tonemap_mode = 3
+glow_enabled = true
+glow_normalized = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pysns"]
 size = Vector2(903, 38)
@@ -39,16 +50,91 @@ size = Vector2(262.5, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_527p7"]
 size = Vector2(380.002, 42.8663)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j641q"]
+polygon = PackedVector2Array(-191, -43, -187, 44, 185, 45, 187, -43)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fw76"]
 size = Vector2(376, 85)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68h0n"]
 size = Vector2(169, 323)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ebbyh"]
+polygon = PackedVector2Array(-81, -166, -80, 154, 84, 158, 85, -166)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7heg"]
 size = Vector2(286, 299)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_um4yf"]
+polygon = PackedVector2Array(-143, -144, -142, 147, 147, 150, 136, -145)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chnk1"]
+size = Vector2(1240, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6533"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vps8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlypj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j23h"]
+size = Vector2(961, 39.0001)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51hrp"]
+size = Vector2(807.486, 41.7678)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0hv3"]
+size = Vector2(960, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wejal"]
+size = Vector2(957.298, 38.2817)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0roj6"]
+size = Vector2(1066.64, 49.3143)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlkp5"]
+size = Vector2(899.888, 41.1476)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lose4"]
+size = Vector2(962, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0a3ry"]
+size = Vector2(231.009, 37.9381)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okmav"]
+size = Vector2(372.109, 37.9999)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_f1ty2"]
+polygon = PackedVector2Array(-1180, -1783, -490, -1446, -1437, -1441, -1475, -1203, -1489, -822, -1480, -118, -875, -90, -918, 566, 314, 580, 789, 357, 1161, 276, 1917, 310, 2122, 243, 2064, -4, 2707, -590, 3078, -699, 3164, -1432, 1969, -1507, 1256, -1494, 148, -1398, 110, -1850, 3958, -1774, 3962, 1152, -3335, 1133, -3335, -1788)
+
 [node name="World" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3332.0
+offset_top = -1790.0
+offset_right = -3285.0
+offset_bottom = -1750.0
+scale = Vector2(155.187, 88.1104)
+color = Color(0.170354, 0.115279, 0.0133338, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0g5o4")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.592157, 0.368627, 0.160784, 0.317647)
+blend_mode = 2
+range_z_max = 1
+shadow_color = Color(0.0196078, 0.0196078, 0.0196078, 0.905882)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-620, -1784)
+energy = 1.8
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.85098)
+shadow_filter = 1
+shadow_filter_smooth = 2.0
+texture = ExtResource("1_rhlxg")
+texture_scale = 8.0
 
 [node name="Player" parent="." instance=ExtResource("2_jhnlb")]
 position = Vector2(-2, 8)
@@ -100,14 +186,31 @@ player = NodePath("../../../../Player")
 [node name="Map" type="Node2D" parent="."]
 
 [node name="Square-Black" type="Sprite2D" parent="Map"]
-position = Vector2(314.5, 469)
-scale = Vector2(6.5918, 1.03906)
+position = Vector2(-663.5, 673)
+scale = Vector2(10.4121, 1.83594)
 texture = ExtResource("7_3031y")
 
 [node name="Square-Black2" type="Sprite2D" parent="Map"]
-position = Vector2(-1126, 30)
-scale = Vector2(0.75, 0.769531)
+position = Vector2(-2130.5, 30)
+scale = Vector2(4.67383, 0.769531)
 texture = ExtResource("7_3031y")
+
+[node name="Square-Black3" type="Sprite2D" parent="Map"]
+position = Vector2(-2372, -963)
+scale = Vector2(3.74219, 3.22266)
+texture = ExtResource("7_3031y")
+
+[node name="Polygon2D3" type="Polygon2D" parent="Map"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(2849, -1774, 2844, -1388, 2978, -1342, 2986, -774, 2983, -728, 2012, -713, 2019, 165, 1960, 253, 1971, 1153, 3948, 1156, 3958, -1779)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Map"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(9, -1311, 893, -1307, 1840, -1457, 2867, -1305, 2877, -1785, -2, -1788)
+
+[node name="Polygon2D" type="Polygon2D" parent="Map"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-1221, -1788, -501, -1442, -515, -1428, -973, -1428, -1419, -1434, -1419, -1788)
 
 [node name="cave_long_platform_1" parent="Map" instance=ExtResource("7_ih434")]
 position = Vector2(-431, 193)
@@ -156,6 +259,9 @@ shape = SubResource("RectangleShape2D_527p7")
 position = Vector2(-198, -252)
 texture = ExtResource("18_v34v1")
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Block9"]
+occluder = SubResource("OccluderPolygon2D_j641q")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="Map/Block9"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Block9/StaticBody2D"]
@@ -172,6 +278,9 @@ texture = ExtResource("15_wolsq")
 position = Vector2(2.5, -4.5)
 shape = SubResource("RectangleShape2D_68h0n")
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Block6"]
+occluder = SubResource("OccluderPolygon2D_ebbyh")
+
 [node name="Block3" type="Sprite2D" parent="Map"]
 position = Vector2(1126, -559)
 texture = ExtResource("13_7lv12")
@@ -181,6 +290,9 @@ texture = ExtResource("13_7lv12")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Block3/StaticBody2D"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_w7heg")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Block3"]
+occluder = SubResource("OccluderPolygon2D_um4yf")
 
 [node name="StonePlat2" type="Sprite2D" parent="Map"]
 position = Vector2(-435, 302)
@@ -234,18 +346,6 @@ texture = ExtResource("12_0rqpg")
 position = Vector2(-1197, -114)
 texture = ExtResource("12_0rqpg")
 
-[node name="StoneWall3" type="Sprite2D" parent="Map"]
-position = Vector2(-1333, 49)
-texture = ExtResource("13_m0dub")
-
-[node name="StoneWall5" type="Sprite2D" parent="Map"]
-position = Vector2(-1342, 375)
-texture = ExtResource("13_m0dub")
-
-[node name="StoneWall6" type="Sprite2D" parent="Map"]
-position = Vector2(-1362, 566)
-texture = ExtResource("13_m0dub")
-
 [node name="Stone2" type="Sprite2D" parent="Map"]
 position = Vector2(-889, 654)
 texture = ExtResource("18_daw0p")
@@ -254,6 +354,209 @@ texture = ExtResource("18_daw0p")
 position = Vector2(258, 554)
 texture = ExtResource("19_42fqa")
 
+[node name="cave_platform 4" parent="Map" instance=ExtResource("9_ws4od")]
+position = Vector2(-1393, -275)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_platform 4"]
+position = Vector2(-501, 9.5)
+shape = SubResource("RectangleShape2D_chnk1")
+
+[node name="cave_platform 5" parent="Map" instance=ExtResource("9_ws4od")]
+position = Vector2(-1406, -608)
+rotation = 1.58565
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_platform 5"]
+shape = SubResource("RectangleShape2D_a6533")
+
+[node name="cave_platform 6" parent="Map" instance=ExtResource("9_ws4od")]
+position = Vector2(-1395, -877)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_platform 6"]
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_7vps8")
+
+[node name="cave_platform 7" parent="Map" instance=ExtResource("9_ws4od")]
+position = Vector2(-1408, -1210)
+rotation = 1.58565
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_platform 7"]
+shape = SubResource("RectangleShape2D_dlypj")
+
+[node name="StoneWall5" type="Sprite2D" parent="Map"]
+position = Vector2(-1447.5, -257.5)
+texture = ExtResource("11_mal15")
+
+[node name="StoneWall6" type="Sprite2D" parent="Map"]
+position = Vector2(-1466.5, -1188.5)
+texture = ExtResource("11_mal15")
+
+[node name="StoneWall1" type="Sprite2D" parent="Map"]
+position = Vector2(-1482.5, -862.5)
+texture = ExtResource("20_jfhbw")
+
+[node name="StoneWall2" type="Sprite2D" parent="Map"]
+position = Vector2(-1497.5, -548.5)
+texture = ExtResource("20_jfhbw")
+
 [node name="Stone1" type="Sprite2D" parent="Map"]
-position = Vector2(1283, 431)
+position = Vector2(1270.5, 425.5)
 texture = ExtResource("20_6sfcr")
+
+[node name="cave_long_platform_4" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(-938, -1408)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_long_platform_4"]
+position = Vector2(-2.5, 9.5)
+shape = SubResource("RectangleShape2D_4j23h")
+
+[node name="cave_long_platform_5" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(-868, -1651)
+rotation = 0.449635
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_long_platform_5"]
+position = Vector2(71.7174, 10.8839)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_51hrp")
+
+[node name="cave_long_platform_6" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(469, -1282)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_long_platform_6"]
+position = Vector2(14, 8)
+shape = SubResource("RectangleShape2D_s0hv3")
+
+[node name="cave_long_platform_7" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(1363, -1350)
+rotation = -3.29635
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_long_platform_7"]
+position = Vector2(18.115, 9.14038)
+shape = SubResource("RectangleShape2D_wejal")
+
+[node name="cave_long_platform_8" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(2308, -1370)
+rotation = -3.02997
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_long_platform_8"]
+position = Vector2(-33.604, 14.6573)
+shape = SubResource("RectangleShape2D_0roj6")
+
+[node name="StonePlat1" type="Sprite2D" parent="Map"]
+position = Vector2(719, -1362)
+texture = ExtResource("22_mvcob")
+
+[node name="StonePlat14" type="Sprite2D" parent="Map"]
+position = Vector2(171, -1308)
+texture = ExtResource("23_biexx")
+
+[node name="StonePlat15" type="Sprite2D" parent="Map"]
+position = Vector2(1177, -1362)
+rotation = -0.19542
+scale = Vector2(1, 1)
+texture = ExtResource("23_biexx")
+
+[node name="StonePlat16" type="Sprite2D" parent="Map"]
+position = Vector2(1823, -1448)
+texture = ExtResource("22_mvcob")
+
+[node name="StonePlat17" type="Sprite2D" parent="Map"]
+position = Vector2(2171, -1412)
+rotation = 0.146588
+texture = ExtResource("23_biexx")
+
+[node name="StonePlat18" type="Sprite2D" parent="Map"]
+position = Vector2(2497, -1380)
+texture = ExtResource("23_biexx")
+
+[node name="StonePlat19" type="Sprite2D" parent="Map"]
+position = Vector2(2771, -1333)
+texture = ExtResource("23_biexx")
+
+[node name="Stone5" type="Sprite2D" parent="Map"]
+position = Vector2(643, -1632)
+rotation = -3.12964
+texture = ExtResource("19_42fqa")
+
+[node name="Stone3" type="Sprite2D" parent="Map"]
+position = Vector2(1437, -1551)
+rotation = 2.89651
+scale = Vector2(1, 1)
+texture = ExtResource("20_6sfcr")
+
+[node name="StoneWall3" type="Sprite2D" parent="Map"]
+position = Vector2(38, -1494)
+texture = ExtResource("13_m0dub")
+
+[node name="StoneWall7" type="Sprite2D" parent="Map"]
+position = Vector2(43, -1666)
+texture = ExtResource("13_m0dub")
+
+[node name="cave_long_platform_9" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(1998, -243)
+rotation = -1.5845
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_long_platform_9"]
+position = Vector2(35.8184, 10.5745)
+shape = SubResource("RectangleShape2D_qlkp5")
+
+[node name="cave_long_platform_10" parent="Map" instance=ExtResource("7_ih434")]
+position = Vector2(2459, -731)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_long_platform_10"]
+position = Vector2(3, 7.5)
+shape = SubResource("RectangleShape2D_lose4")
+
+[node name="cave_platform2" parent="Map" instance=ExtResource("8_qr8aj")]
+position = Vector2(2954, -885)
+rotation = -1.5693
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_platform2"]
+position = Vector2(-29.5149, 3.07178)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_0a3ry")
+
+[node name="cave_platform 8" parent="Map" instance=ExtResource("9_ws4od")]
+position = Vector2(2952, -1161)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_platform 8"]
+position = Vector2(-4.21533, 5)
+shape = SubResource("RectangleShape2D_okmav")
+
+[node name="StoneWall8" type="Sprite2D" parent="Map"]
+position = Vector2(3003, -892)
+texture = ExtResource("13_m0dub")
+
+[node name="StonePlat20" type="Sprite2D" parent="Map"]
+position = Vector2(2803, -631)
+texture = ExtResource("17_sayig")
+
+[node name="StoneWall9" type="Sprite2D" parent="Map"]
+position = Vector2(3081, -1248)
+texture = ExtResource("25_eui7p")
+
+[node name="StoneWall10" type="Sprite2D" parent="Map"]
+position = Vector2(2034, -165)
+texture = ExtResource("13_m0dub")
+
+[node name="Stone6" type="Sprite2D" parent="Map"]
+position = Vector2(2533, -378)
+texture = ExtResource("19_42fqa")
+
+[node name="Stone7" type="Sprite2D" parent="Map"]
+position = Vector2(2850, 630)
+texture = ExtResource("18_daw0p")
+
+[node name="Stone8" type="Sprite2D" parent="Map"]
+position = Vector2(3506, 149)
+texture = ExtResource("19_42fqa")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map"]
+visible = false
+position = Vector2(-67, 67)
+occluder = SubResource("OccluderPolygon2D_f1ty2")
