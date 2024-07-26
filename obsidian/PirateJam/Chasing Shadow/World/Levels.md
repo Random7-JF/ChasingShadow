@@ -1,0 +1,26 @@
+Wants:
+-  5 Levels
+	- [ ] Level 1
+		-  Tutorial level
+		-  Explain controls
+		-  Mossy cave
+	- [ ] Level 2
+		- Easy Level 
+		- Couple chests, Power ups
+		- Mossy into Cave
+	- [ ] Level 3
+		- Medium Level
+		- More chests and power ups
+		- More Vertical to this level.
+		- Cave
+	- [ ] Level 4
+		- Hard Level
+		- Chests and power ups
+		- Vertical and hidden room
+		- Cave with mossy spots
+	- [ ] Level 5
+		- Simple level, small arena
+		- few platforms
+		- one enemy
+		- cave
+	
