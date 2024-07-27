@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://l4n5vsrmlimt"]
+[gd_scene load_steps=3 format=3 uid="uid://l4n5vsrmlimt"]
 
 [ext_resource type="Texture2D" uid="uid://c6knryegcyptt" path="res://Assets/Assets 1024 Cave/Cave - Floor.png" id="1_xxb30"]
 
-[node name="cave_long_platform_1" type="StaticBody2D"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_go1s8"]
+polygon = PackedVector2Array(-482, 13, -311, 6, -301, 23, -255, 9, -22, 10, 73, 12, 146, 10, 244, 10, 395, 10, 492, 13, 475, 26, 443, 37, 152, 28, 44, 30, -283, 36, -381, 29)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D"]
 texture = ExtResource("1_xxb30")
 region_enabled = true
 region_rect = Rect2(46, 340, 1024, 128)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_go1s8")

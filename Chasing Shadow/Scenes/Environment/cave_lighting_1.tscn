@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://mum2tdvx8ub"]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D"]
+color = Color(0.592157, 0.368627, 0.160784, 0.317647)
+blend_mode = 2
+range_z_max = 1
+shadow_color = Color(0.0196078, 0.0196078, 0.0196078, 0.905882)

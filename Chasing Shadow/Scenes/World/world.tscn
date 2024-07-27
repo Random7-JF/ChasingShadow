@@ -1,6 +1,7 @@
 [gd_scene load_steps=53 format=3 uid="uid://de6j3tt3ku3rh"]
 
 [ext_resource type="Texture2D" uid="uid://b7snkagaa0sct" path="res://Assets/FREE Textures Of Light/512x512/512x512 textures (82).png" id="1_rhlxg"]
+[ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_xi5wx"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="2_jhnlb"]
 [ext_resource type="Script" path="res://Scenes/UI/Debug/state.gd" id="3_2ickf"]
 [ext_resource type="Script" path="res://Scenes/UI/Debug/velocity.gd" id="4_1iy2f"]
@@ -25,14 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://0qce12ftbqac" path="res://Assets/Assets 1024 Cave/Floor/stone_plat1.png" id="22_mvcob"]
 [ext_resource type="Texture2D" uid="uid://cbju8cbeyc8e6" path="res://Assets/Assets 1024 Cave/Floor/stone_plat4.png" id="23_biexx"]
 [ext_resource type="Texture2D" uid="uid://dugfba7q3er83" path="res://Assets/Assets 1024 Cave/Floor/stone_wall2.png" id="25_eui7p"]
-
-[sub_resource type="Environment" id="Environment_0g5o4"]
-background_mode = 3
-tonemap_mode = 3
-tonemap_exposure = 0.75
-glow_enabled = true
-glow_normalized = true
-glow_blend_mode = 0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pysns"]
 size = Vector2(903, 38)
@@ -119,8 +112,7 @@ offset_bottom = -1750.0
 scale = Vector2(155.187, 88.1104)
 color = Color(0.170354, 0.115279, 0.0133338, 1)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_0g5o4")
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_xi5wx")]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.592157, 0.368627, 0.160784, 0.317647)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://cywoo6cilrv81"]
+[gd_scene load_steps=80 format=3 uid="uid://cywoo6cilrv81"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_an5xb"]
@@ -65,7 +65,17 @@
 [ext_resource type="Texture2D" uid="uid://bxujnx2urhwx0" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0051.png" id="53_g4ft4"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/attack_3.gd" id="57_5rm05"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/hit.gd" id="59_tyrpc"]
-[ext_resource type="Texture2D" uid="uid://co8xbr6ukingm" path="res://Assets/FREE Textures Of Light/256x256/256x256 textures (29).png" id="66_pmhot"]
+
+[sub_resource type="Gradient" id="Gradient_rov1h"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ns55h"]
+gradient = SubResource("Gradient_rov1h")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.4, 0)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ofvm"]
 radius = 18.316
@@ -326,7 +336,7 @@ color = Color(0.696285, 0.607647, 0.209257, 1)
 energy = 1.8
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.815686)
-texture = ExtResource("66_pmhot")
+texture = SubResource("GradientTexture2D_ns55h")
 texture_scale = 2.0
 
 [node name="Sprite" type="Sprite2D" parent="."]

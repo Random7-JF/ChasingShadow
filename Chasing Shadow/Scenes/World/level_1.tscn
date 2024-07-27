@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cglqycpxsnt6m"]
+
+[ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_bnq16"]
+[ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_1caof"]
+[ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="3_tlqhi"]
+
+[node name="Level_1" type="Node2D"]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_bnq16")]
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2016.0
+offset_top = -1240.5
+offset_right = 2016.0
+offset_bottom = 1240.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 0, 0, 1)
+
+[node name="DirectionalLight2D" parent="." instance=ExtResource("2_1caof")]
+
+[node name="Player" parent="." instance=ExtResource("3_tlqhi")]

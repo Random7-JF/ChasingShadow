@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://yl66eg00ysg1"]
+
+[ext_resource type="Texture2D" uid="uid://cbju8cbeyc8e6" path="res://Assets/Assets 1024 Cave/Floor/stone_plat4.png" id="1_b1kju"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_iqxje"]
+polygon = PackedVector2Array(-165, -28, -138, -28, -109, -24, -90, -12, -49, -13, 8, -22, 37, -24, 77, -26, 126, -25, 170, -27, 144, -45, 105, -49, 60, -45, 11, -53, -77, -44, -147, -54, -194, -31)
+
+[node name="Rock_Wall_Down_2" type="Sprite2D"]
+texture = ExtResource("1_b1kju")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_iqxje")
