@@ -1,8 +1,93 @@
-[gd_scene load_steps=4 format=3 uid="uid://cglqycpxsnt6m"]
+[gd_scene load_steps=47 format=3 uid="uid://cglqycpxsnt6m"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_bnq16"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_1caof"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="3_tlqhi"]
+[ext_resource type="Texture2D" uid="uid://dq3umj8ybrahv" path="res://Assets/Assets 1024 Cave/Floor/long_stone1.png" id="4_p6ad8"]
+[ext_resource type="Texture2D" uid="uid://cufj4faejwour" path="res://Assets/Assets 1024 Cave/Floor/long_platform.png" id="4_spdof"]
+[ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="4_tnkjw"]
+[ext_resource type="Texture2D" uid="uid://cpvc637ps5c6v" path="res://Assets/Assets 1024 Cave/Floor/long_stone2.png" id="4_yp615"]
+[ext_resource type="Texture2D" uid="uid://daf366amol1it" path="res://Assets/Assets 1024 Cave/Floor/stone_wall1.png" id="7_eibo7"]
+[ext_resource type="Texture2D" uid="uid://dmyowvmm0fk17" path="res://Assets/Assets 1024 Cave/Floor/stone_wall4.png" id="8_eluoi"]
+[ext_resource type="Texture2D" uid="uid://ctw4ieo8xjhr6" path="res://Assets/Assets 1024 Cave/Floor/stone1.png" id="10_76gk0"]
+[ext_resource type="Texture2D" uid="uid://dybmxylvolqfl" path="res://Assets/Assets 1024 Cave/Floor/stone2.png" id="11_70jhr"]
+[ext_resource type="PackedScene" uid="uid://c76081mgddrd4" path="res://Scenes/Environment/block_1.tscn" id="12_ch1nf"]
+[ext_resource type="PackedScene" uid="uid://l4n5vsrmlimt" path="res://Scenes/Environment/cave_long_platform_1.tscn" id="12_ensho"]
+[ext_resource type="PackedScene" uid="uid://526e0f8kkoal" path="res://Scenes/Environment/cave_platform_1.tscn" id="13_icbh4"]
+[ext_resource type="PackedScene" uid="uid://bxlue2br0kgd3" path="res://Scenes/Environment/block_3.tscn" id="14_1v5gy"]
+[ext_resource type="Texture2D" uid="uid://elmo2oaliatj" path="res://Assets/Assets 1024 Cave/Floor/stone_wall3.png" id="16_8oedu"]
+[ext_resource type="Texture2D" uid="uid://dugfba7q3er83" path="res://Assets/Assets 1024 Cave/Floor/stone_wall2.png" id="17_8a62y"]
+[ext_resource type="Texture2D" uid="uid://6m8io1254ao7" path="res://Assets/Assets 1024 Cave/Floor/stone3.png" id="18_3knoc"]
+[ext_resource type="Texture2D" uid="uid://bnj2wtvkgaoib" path="res://Assets/Assets 1024 Cave/Floor/platform1.png" id="19_00ybk"]
+[ext_resource type="PackedScene" uid="uid://dao2m7dt8adi7" path="res://Scenes/Environment/platform_3.tscn" id="20_6ybin"]
+[ext_resource type="PackedScene" uid="uid://6gk1pwyr2eif" path="res://Scenes/Environment/platform_5.tscn" id="21_7r55b"]
+[ext_resource type="Texture2D" uid="uid://cf0oxnlp6gsha" path="res://Assets/Assets 1024 Cave/Floor/platform4.png" id="21_o34wl"]
+[ext_resource type="PackedScene" uid="uid://pbheq8q3y0om" path="res://Scenes/Environment/block_9.tscn" id="22_vn426"]
+[ext_resource type="Texture2D" uid="uid://dvgtyem5qelgq" path="res://Assets/Assets 1024 Cave/Floor/stone4.png" id="23_os7xb"]
+[ext_resource type="Texture2D" uid="uid://ctba20q3nme6c" path="res://Assets/Assets 1024 Cave/Floor/stone_plat2.png" id="24_gfhnt"]
+[ext_resource type="Texture2D" uid="uid://0qce12ftbqac" path="res://Assets/Assets 1024 Cave/Floor/stone_plat1.png" id="25_v0a1m"]
+[ext_resource type="Texture2D" uid="uid://d4ncxrhwbg0dd" path="res://Assets/Assets 1024 Cave/Square - Black.jpg" id="27_edc8i"]
+[ext_resource type="Script" path="res://Scenes/World/Fall Dead Zone.gd" id="28_q4dhn"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qqa46"]
+polygon = PackedVector2Array(713, 34.9999, 677, 66.9999, 613, 92.9999, 428, 112, 238, 103, -97, 125, -300, 112, -561, 108, -661, 67.0001, -695, 31.0001, -540, 46.0001, -412, 33.0001, -212, 38, -30, 37, 162, 45.9999, 389, 39.9999, 549, 54.9999, 636, -13.0001, 691, 3.99988)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_iv6nd"]
+polygon = PackedVector2Array(723, 6.99988, 498, 8.99994, 166, 15.9999, -200, 9, -602, 15.0001, -702, -22.9999, -735, -3.99988, -702, 22.0001, -597, 41.0001, -348, 54.0001, -23, 54, 347, 46.9999, 613, 44.9999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpq0o"]
+size = Vector2(1555, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uuprs"]
+size = Vector2(1321, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wf7y0"]
+size = Vector2(70, 1129.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpu8w"]
+size = Vector2(23, 335)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3s510"]
+size = Vector2(44, 942)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3d6hn"]
+size = Vector2(20, 349)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5uc5"]
+size = Vector2(689, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwtea"]
+size = Vector2(726, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt34r"]
+size = Vector2(40, 934)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihmqm"]
+size = Vector2(1512, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l4f2"]
+size = Vector2(10534, 178)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5kljj"]
+polygon = PackedVector2Array(1983, -797, 1681, -823, 1483, -820, 1219, -823, 890, -811, 635, -811, 533, -808, 671, -861, 863, -861, 1028, -861, 1207, -849, 1336, -849, 1483, -873, 1624, -876, 1717, -864, 1792, -864, 1898, -840, 1983, -815)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cfrp7"]
+polygon = PackedVector2Array(-310, -151, -167, -160, 66, -156, 223, -161, 426, -154, 615, -149, 610, -309, 594, -448, 542, -475, 537, -564, 544, -655, 526, -801, 588, -824, 849, -828, 1303, -830, 1788, -824, 1927, -821, 1486, -1230, -87, -1234, -351, -1223)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uwa6l"]
+polygon = PackedVector2Array(-288, 170, 86, 172, 347, 176, 714, 165, 1166, 163, 1216, 164, 1206, 651, 267, 638, -285, 650)
+
+[sub_resource type="Gradient" id="Gradient_5wnfp"]
+offsets = PackedFloat32Array(0, 0.00578035, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0.0367347, 0.0367347, 0.0367347, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tl072"]
+gradient = SubResource("Gradient_5wnfp")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.217949, 0.495726)
 
 [node name="Level_1" type="Node2D"]
 
@@ -15,15 +100,427 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -2016.0
-offset_top = -1240.5
-offset_right = 2016.0
-offset_bottom = 1240.5
+offset_top = -1240.0
+offset_right = 6993.0
+offset_bottom = 3189.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-color = Color(0, 0, 0, 1)
+color = Color(0.168627, 0.113725, 0.0117647, 1)
 
 [node name="DirectionalLight2D" parent="." instance=ExtResource("2_1caof")]
 
 [node name="Player" parent="." instance=ExtResource("3_tlqhi")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.5, 0.5)
+
+[node name="World" type="Node2D" parent="."]
+position = Vector2(-172, -59)
+
+[node name="Map" type="Node" parent="World"]
+
+[node name="LongStone3" type="Sprite2D" parent="World/Map"]
+position = Vector2(3117, -825)
+rotation = -3.14159
+texture = ExtResource("4_yp615")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongStone3"]
+occluder = SubResource("OccluderPolygon2D_qqa46")
+
+[node name="LongStone1" type="Sprite2D" parent="World/Map"]
+position = Vector2(1253, -808)
+rotation = -3.14159
+texture = ExtResource("4_p6ad8")
+
+[node name="LongStone2" type="Sprite2D" parent="World/Map"]
+position = Vector2(4375, -851)
+rotation = -3.14159
+texture = ExtResource("4_p6ad8")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongStone2"]
+occluder = SubResource("OccluderPolygon2D_iv6nd")
+
+[node name="LongPlatform" type="Sprite2D" parent="World/Map"]
+position = Vector2(185, -141)
+rotation = 3.14159
+texture = ExtResource("4_spdof")
+
+[node name="LongPlatform2" type="Sprite2D" parent="World/Map"]
+position = Vector2(104, 161)
+texture = ExtResource("4_tnkjw")
+
+[node name="LongPlatform3" type="Sprite2D" parent="World/Map"]
+position = Vector2(853, 161)
+texture = ExtResource("4_tnkjw")
+
+[node name="StoneWall1" type="Sprite2D" parent="World/Map"]
+position = Vector2(559, -645)
+texture = ExtResource("7_eibo7")
+
+[node name="StoneWall4" type="Sprite2D" parent="World/Map"]
+position = Vector2(617, -330)
+texture = ExtResource("8_eluoi")
+
+[node name="Stone1" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(81, -291)
+texture = ExtResource("10_76gk0")
+
+[node name="LongStone4" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(470, 539)
+texture = ExtResource("4_yp615")
+
+[node name="Stone2" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(171, -731)
+texture = ExtResource("11_70jhr")
+
+[node name="long_plat" parent="World/Map" instance=ExtResource("12_ensho")]
+position = Vector2(1914, 393)
+
+[node name="cave_platform_1" parent="World/Map" instance=ExtResource("13_icbh4")]
+position = Vector2(2575, 396)
+
+[node name="Block3" parent="World/Map" instance=ExtResource("14_1v5gy")]
+
+[node name="Block1" parent="World/Map" instance=ExtResource("12_ch1nf")]
+
+[node name="StoneWall5" type="Sprite2D" parent="World/Map"]
+position = Vector2(1228, 350)
+texture = ExtResource("8_eluoi")
+
+[node name="StoneWall2" type="Sprite2D" parent="World/Map"]
+position = Vector2(1187, 675)
+texture = ExtResource("7_eibo7")
+
+[node name="StoneWall3" type="Sprite2D" parent="World/Map"]
+position = Vector2(1189, 907)
+texture = ExtResource("7_eibo7")
+
+[node name="StoneWall6" type="Sprite2D" parent="World/Map"]
+position = Vector2(1214, 1150)
+texture = ExtResource("8_eluoi")
+
+[node name="StoneWall7" type="Sprite2D" parent="World/Map"]
+position = Vector2(1501, 789)
+texture = ExtResource("16_8oedu")
+
+[node name="StoneWall8" type="Sprite2D" parent="World/Map"]
+position = Vector2(1490, 1110)
+texture = ExtResource("16_8oedu")
+
+[node name="StoneWall9" type="Sprite2D" parent="World/Map"]
+position = Vector2(1460, 556)
+texture = ExtResource("16_8oedu")
+
+[node name="StoneWall10" type="Sprite2D" parent="World/Map"]
+position = Vector2(3425.5, 908)
+texture = ExtResource("16_8oedu")
+
+[node name="StoneWall12" type="Sprite2D" parent="World/Map"]
+position = Vector2(3479.5, 1185)
+texture = ExtResource("17_8a62y")
+
+[node name="StoneWall11" type="Sprite2D" parent="World/Map"]
+position = Vector2(3536.5, 979)
+texture = ExtResource("17_8a62y")
+
+[node name="long_plat2" parent="World/Map" instance=ExtResource("12_ensho")]
+position = Vector2(3935, 754)
+
+[node name="cave_platform_2" parent="World/Map" instance=ExtResource("13_icbh4")]
+position = Vector2(4596, 757)
+
+[node name="Stone4" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(4162, 981)
+texture = ExtResource("10_76gk0")
+
+[node name="Stone3" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(2080, 1060)
+texture = ExtResource("18_3knoc")
+
+[node name="StoneWall13" type="Sprite2D" parent="World/Map"]
+position = Vector2(2732, 594)
+texture = ExtResource("8_eluoi")
+
+[node name="StoneWall14" type="Sprite2D" parent="World/Map"]
+position = Vector2(2710, 933)
+texture = ExtResource("8_eluoi")
+
+[node name="StoneWall15" type="Sprite2D" parent="World/Map"]
+position = Vector2(2725, 1201)
+texture = ExtResource("8_eluoi")
+
+[node name="Platform1" type="Sprite2D" parent="World/Map"]
+position = Vector2(4764, 941)
+rotation = 1.5708
+texture = ExtResource("19_00ybk")
+
+[node name="Platform2" type="Sprite2D" parent="World/Map"]
+position = Vector2(4758, 1067)
+rotation = 1.5708
+texture = ExtResource("19_00ybk")
+
+[node name="LongPlatform4" type="Sprite2D" parent="World/Map"]
+position = Vector2(5159, 1265)
+texture = ExtResource("4_tnkjw")
+
+[node name="LongPlatform5" type="Sprite2D" parent="World/Map"]
+position = Vector2(5806, 1254)
+texture = ExtResource("4_spdof")
+
+[node name="Platform3" parent="World/Map" instance=ExtResource("20_6ybin")]
+
+[node name="LongPlatform6" type="Sprite2D" parent="World/Map"]
+position = Vector2(6695.5, 329.5)
+texture = ExtResource("4_tnkjw")
+
+[node name="LongPlatform7" type="Sprite2D" parent="World/Map"]
+position = Vector2(6698.5, -19.5)
+rotation = 3.14159
+texture = ExtResource("4_tnkjw")
+
+[node name="Platform5" parent="World/Map" instance=ExtResource("21_7r55b")]
+
+[node name="Block9" parent="World/Map" instance=ExtResource("22_vn426")]
+
+[node name="LongPlatform8" type="Sprite2D" parent="World/Map"]
+position = Vector2(6306, 715)
+rotation = -1.5708
+texture = ExtResource("4_tnkjw")
+
+[node name="Platform4" type="Sprite2D" parent="World/Map"]
+position = Vector2(6298, 1110)
+rotation = -1.5708
+texture = ExtResource("21_o34wl")
+
+[node name="LongStone5" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(6261, 1490)
+texture = ExtResource("4_yp615")
+
+[node name="Stone5" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(6970, 623)
+texture = ExtResource("23_os7xb")
+
+[node name="StonePlat2" type="Sprite2D" parent="World/Map"]
+position = Vector2(4906, 1364)
+texture = ExtResource("24_gfhnt")
+
+[node name="StonePlat1" type="Sprite2D" parent="World/Map"]
+position = Vector2(6494, 409)
+rotation = 3.14159
+texture = ExtResource("25_v0a1m")
+
+[node name="LongPlatform9" type="Sprite2D" parent="World/Map"]
+position = Vector2(6065, -429)
+rotation = -2.14049
+texture = ExtResource("4_spdof")
+
+[node name="StonePlat3" type="Sprite2D" parent="World/Map"]
+position = Vector2(5214, -794)
+texture = ExtResource("25_v0a1m")
+
+[node name="StonePlat4" type="Sprite2D" parent="World/Map"]
+position = Vector2(5495, -789)
+texture = ExtResource("25_v0a1m")
+
+[node name="StonePlat5" type="Sprite2D" parent="World/Map"]
+position = Vector2(5652, -774)
+texture = ExtResource("25_v0a1m")
+
+[node name="Square-Black" type="Sprite2D" parent="World/Map"]
+position = Vector2(7758, 974)
+scale = Vector2(3.00391, 8.60938)
+texture = ExtResource("27_edc8i")
+
+[node name="Background" type="Node" parent="World"]
+
+[node name="Polygon2D" type="Polygon2D" parent="World/Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-327, -156, 94, -166, 413, -169, 608, -156, 598, -452, 587, -506, 578, -680, 575, -789, 578, -808, 686, -835, 1930, -832, 1839, -1226, -371, -1239)
+
+[node name="Polygon2D2" type="Polygon2D" parent="World/Background"]
+position = Vector2(-0.000244141, 977.788)
+scale = Vector2(1, 1.78854)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-329, -1240, -293, -634.478, -302, -616.027, -288, -464.507, -281, -441.583, -298, -166, -307, -126, -290, 140, -282, 190, -278, 1238, -1168.17, 1238, -2009, 1238, -2012, -1235)
+
+[node name="Polygon2D3" type="Polygon2D" parent="World/Background"]
+position = Vector2(-37, -357.334)
+scale = Vector2(0.981761, 2.89194)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-313, 182, 1266, 186, 1277, 1237, 476.629, 1233.46, -306, 1230)
+
+[node name="Polygon2D4" type="Polygon2D" parent="World/Background"]
+position = Vector2(162.761, -927.138)
+scale = Vector2(0.926996, 3.30059)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1435, 405, 1437, 1248, 2750, 1243, 2748.5, 822.777, 2747, 403)
+
+[node name="Polygon2D5" type="Polygon2D" parent="World/Background"]
+position = Vector2(4, 14)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(3443, 748, 4127, 753, 4760, 763, 4776, 1341, 3551, 1344, 3550, 1132, 3621, 1131, 3608, 815, 3446, 806)
+
+[node name="Polygon2D7" type="Polygon2D" parent="World/Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(2408, -866, 2600, -1240, 6987, -1240, 6995, -43, 6342, -43, 5821, -858, 5047, -858, 4714, -904, 3688, -889, 2812, -923)
+
+[node name="Polygon2D6" type="Polygon2D" parent="World/Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(3503, 1355, 3500, 1753, 3509, 3165, 6990, 3181, 6992, 1758, 6988, 338, 6657, 334, 6642, 464, 6574, 480, 6321, 482, 6314, 1278, 5067, 1278, 5045, 1443, 4789, 1439, 4763, 1349)
+
+[node name="Collision" type="Node" parent="World"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Collision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D"]
+position = Vector2(475.5, 165)
+shape = SubResource("RectangleShape2D_kpq0o")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="World/Collision"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Collision/StaticBody2D2"]
+visible = false
+polygon = PackedVector2Array(-304, -151, 644, -151, 622, -796, 1963, -793, 1841, -1236, 0, -1238)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="World/Collision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D3"]
+position = Vector2(2090.5, 404.5)
+shape = SubResource("RectangleShape2D_uuprs")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(2019, 369)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D4"]
+position = Vector2(2090.5, 404.5)
+shape = SubResource("RectangleShape2D_uuprs")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(1234, 747)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D5"]
+position = Vector2(-16, 1.75)
+shape = SubResource("RectangleShape2D_wf7y0")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(-315, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D6"]
+position = Vector2(1.5, 16.5)
+shape = SubResource("RectangleShape2D_kpu8w")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(2730, 872)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D7"]
+position = Vector2(-1, 30)
+shape = SubResource("RectangleShape2D_3s510")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(1453, 872)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D8"]
+position = Vector2(-1, 30)
+shape = SubResource("RectangleShape2D_3s510")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(3428, 1188)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D9"]
+position = Vector2(-1, 30)
+shape = SubResource("RectangleShape2D_3s510")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(4749, 1241)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D10"]
+position = Vector2(-1, 30)
+shape = SubResource("RectangleShape2D_3s510")
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(7008, 163)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D15"]
+position = Vector2(9, 3.5)
+shape = SubResource("RectangleShape2D_3d6hn")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(6698, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D14"]
+position = Vector2(-35.5, 0)
+shape = SubResource("RectangleShape2D_j5uc5")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(6698, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D13"]
+position = Vector2(-54, 1)
+shape = SubResource("RectangleShape2D_iwtea")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(6299, 790)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D12"]
+position = Vector2(2, 18)
+shape = SubResource("RectangleShape2D_dt34r")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(5515, 1250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D11"]
+position = Vector2(10, 7.5)
+shape = SubResource("RectangleShape2D_ihmqm")
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(4387, -844)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Collision/StaticBody2D16"]
+visible = false
+polygon = PackedVector2Array(-1974, -4, -1774, -395, 2601, -392, 2617, 828, 1935, 837, 1433, 28, 601, -11, -805, -17)
+
+[node name="Fall Dead Zone" type="Area2D" parent="World/Collision"]
+position = Vector2(2438, 2318)
+script = ExtResource("28_q4dhn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/Fall Dead Zone"]
+position = Vector2(826, 79)
+shape = SubResource("RectangleShape2D_8l4f2")
+
+[node name="Lighting" type="Node" parent="World"]
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="World/Lighting"]
+occluder = SubResource("OccluderPolygon2D_5kljj")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="World/Lighting"]
+occluder = SubResource("OccluderPolygon2D_cfrp7")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="World/Lighting"]
+occluder = SubResource("OccluderPolygon2D_uwa6l")
+
+[node name="PointLight2D" type="PointLight2D" parent="World/Lighting"]
+position = Vector2(-822.5, 24)
+scale = Vector2(1.00659, 1)
+energy = 2.57
+shadow_enabled = true
+shadow_filter = 2
+texture = SubResource("GradientTexture2D_tl072")
+texture_scale = 8.0
+
+[node name="PointLight2D2" type="PointLight2D" parent="World/Lighting"]
+position = Vector2(2148, -980)
+shadow_enabled = true
+shadow_filter = 2
+texture = SubResource("GradientTexture2D_tl072")
+texture_scale = 8.0
+
+[connection signal="body_entered" from="World/Collision/Fall Dead Zone" to="World/Collision/Fall Dead Zone" method="_on_body_entered"]

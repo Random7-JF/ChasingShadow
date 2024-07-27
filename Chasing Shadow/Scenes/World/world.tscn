@@ -411,7 +411,6 @@ rotation = 0.449635
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_long_platform_5"]
 position = Vector2(71.7174, 10.8839)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_51hrp")
 
 [node name="cave_long_platform_6" parent="Map" instance=ExtResource("7_ih434")]
@@ -449,7 +448,6 @@ texture = ExtResource("23_biexx")
 [node name="StonePlat15" type="Sprite2D" parent="Map"]
 position = Vector2(1177, -1362)
 rotation = -0.19542
-scale = Vector2(1, 1)
 texture = ExtResource("23_biexx")
 
 [node name="StonePlat16" type="Sprite2D" parent="Map"]
@@ -477,7 +475,6 @@ texture = ExtResource("19_42fqa")
 [node name="Stone3" type="Sprite2D" parent="Map"]
 position = Vector2(1437, -1551)
 rotation = 2.89651
-scale = Vector2(1, 1)
 texture = ExtResource("20_6sfcr")
 
 [node name="StoneWall3" type="Sprite2D" parent="Map"]
@@ -506,11 +503,9 @@ shape = SubResource("RectangleShape2D_lose4")
 [node name="cave_platform2" parent="Map" instance=ExtResource("8_qr8aj")]
 position = Vector2(2954, -885)
 rotation = -1.5693
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/cave_platform2"]
 position = Vector2(-29.5149, 3.07178)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0a3ry")
 
 [node name="cave_platform 8" parent="Map" instance=ExtResource("9_ws4od")]

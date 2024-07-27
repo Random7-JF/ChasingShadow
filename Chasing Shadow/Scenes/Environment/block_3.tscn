@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxlue2br0kgd3"]
+
+[ext_resource type="Texture2D" uid="uid://bqcqvyiwfrrpr" path="res://Assets/Assets 1024 Cave/Blocks/block3.png" id="1_e6auk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rteob"]
+size = Vector2(289, 289)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_m8oau"]
+polygon = PackedVector2Array(-145, -136, 143, -139, 147, 146, -143, 147)
+
+[node name="Block3" type="Sprite2D"]
+position = Vector2(3132, 173)
+texture = ExtResource("1_e6auk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.5, 3.5)
+shape = SubResource("RectangleShape2D_rteob")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_m8oau")
