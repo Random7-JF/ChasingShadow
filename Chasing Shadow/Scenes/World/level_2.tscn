@@ -1,0 +1,148 @@
+[gd_scene load_steps=15 format=3 uid="uid://da3dygi5nrfpe"]
+
+[ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_kkgvp"]
+[ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="1_x6ygq"]
+[ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_par2c"]
+[ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="4_iyt3f"]
+[ext_resource type="Texture2D" uid="uid://cufj4faejwour" path="res://Assets/Assets 1024 Cave/Floor/long_platform.png" id="5_edy4n"]
+[ext_resource type="Texture2D" uid="uid://bnj2wtvkgaoib" path="res://Assets/Assets 1024 Cave/Floor/platform1.png" id="6_y3d2e"]
+[ext_resource type="Texture2D" uid="uid://s76eilmrifu8" path="res://Assets/Assets 1024 Cave/Floor/platform2.png" id="7_2s6p6"]
+[ext_resource type="Texture2D" uid="uid://be4h65jh0q86x" path="res://Assets/Assets 1024 Cave/Floor/platform7.png" id="8_41wc7"]
+[ext_resource type="Texture2D" uid="uid://b46aunclyl30p" path="res://Assets/Assets 1024 Cave/Blocks/block11.png" id="9_cpa6t"]
+[ext_resource type="Texture2D" uid="uid://bqcqvyiwfrrpr" path="res://Assets/Assets 1024 Cave/Blocks/block3.png" id="10_lbjec"]
+[ext_resource type="Texture2D" uid="uid://g0555ihwlnb3" path="res://Assets/Assets 1024 Cave/Blocks/block8.png" id="11_43f1i"]
+[ext_resource type="Texture2D" uid="uid://bgc7nr46uqvub" path="res://Assets/Assets 1024 Cave/Blocks/block10.png" id="12_pvhq5"]
+[ext_resource type="PackedScene" uid="uid://mnhdtn3l02e" path="res://Scenes/Triggers/fall_dead_zone.tscn" id="13_6lneu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3yd0"]
+size = Vector2(13185, 182)
+
+[node name="Level 2" type="Node2D"]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_kkgvp")]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_top = -3337.0
+offset_right = 13203.0
+offset_bottom = 3401.0
+color = Color(0.168627, 0.113725, 0.0117647, 1)
+
+[node name="DirectionalLight2D" parent="." instance=ExtResource("2_par2c")]
+
+[node name="Player" parent="." instance=ExtResource("1_x6ygq")]
+position = Vector2(183, -3)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.5, 0.5)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Map" type="Node2D" parent="World"]
+
+[node name="Block3" type="Sprite2D" parent="World/Map"]
+position = Vector2(3229, 1520)
+texture = ExtResource("10_lbjec")
+
+[node name="Block8" type="Sprite2D" parent="World/Map"]
+position = Vector2(3709, 2241)
+texture = ExtResource("11_43f1i")
+
+[node name="Block10" type="Sprite2D" parent="World/Map"]
+position = Vector2(2370, 1143)
+texture = ExtResource("12_pvhq5")
+
+[node name="LongPlatform14" type="Sprite2D" parent="World/Map"]
+position = Vector2(2441, 2788)
+rotation = 1.06506
+texture = ExtResource("4_iyt3f")
+
+[node name="LongPlatform12" type="Sprite2D" parent="World/Map"]
+position = Vector2(2299, 847)
+rotation = 2.20492
+texture = ExtResource("4_iyt3f")
+
+[node name="Platform3" type="Sprite2D" parent="World/Map"]
+position = Vector2(367, 1329)
+rotation = 1.5708
+texture = ExtResource("7_2s6p6")
+
+[node name="Platform7" type="Sprite2D" parent="World/Map"]
+position = Vector2(460, 1601)
+rotation = 0.98421
+texture = ExtResource("8_41wc7")
+
+[node name="LongPlatform8" type="Sprite2D" parent="World/Map"]
+position = Vector2(1780.5, 1701)
+texture = ExtResource("5_edy4n")
+
+[node name="LongPlatform9" type="Sprite2D" parent="World/Map"]
+position = Vector2(913.5, 1701)
+texture = ExtResource("4_iyt3f")
+
+[node name="LongPlatform10" type="Sprite2D" parent="World/Map"]
+position = Vector2(1620.5, 1140)
+rotation = 3.14159
+texture = ExtResource("5_edy4n")
+
+[node name="LongPlatform11" type="Sprite2D" parent="World/Map"]
+position = Vector2(753.5, 1140)
+rotation = 3.14159
+texture = ExtResource("4_iyt3f")
+
+[node name="LongPlatform2" type="Sprite2D" parent="World/Map"]
+position = Vector2(392, 165)
+texture = ExtResource("4_iyt3f")
+
+[node name="LongPlatform" type="Sprite2D" parent="World/Map"]
+position = Vector2(1267.5, 503)
+texture = ExtResource("5_edy4n")
+
+[node name="Platform1" type="Sprite2D" parent="World/Map"]
+position = Vector2(768, 348)
+rotation = 1.5708
+texture = ExtResource("6_y3d2e")
+
+[node name="LongPlatform3" type="Sprite2D" parent="World/Map"]
+position = Vector2(2142.5, 514)
+texture = ExtResource("4_iyt3f")
+
+[node name="LongPlatform4" type="Sprite2D" parent="World/Map"]
+position = Vector2(3568, 511)
+texture = ExtResource("5_edy4n")
+
+[node name="LongPlatform5" type="Sprite2D" parent="World/Map"]
+position = Vector2(5416, 526)
+texture = ExtResource("4_iyt3f")
+
+[node name="Platform2" type="Sprite2D" parent="World/Map"]
+position = Vector2(5961, 527)
+texture = ExtResource("7_2s6p6")
+
+[node name="LongPlatform6" type="Sprite2D" parent="World/Map"]
+position = Vector2(4340, 1666)
+texture = ExtResource("4_iyt3f")
+
+[node name="LongPlatform13" type="Sprite2D" parent="World/Map"]
+position = Vector2(2264, 2101)
+rotation = 1.5708
+texture = ExtResource("4_iyt3f")
+
+[node name="Block11" type="Sprite2D" parent="World/Map"]
+position = Vector2(2530, 1982)
+texture = ExtResource("9_cpa6t")
+
+[node name="LongPlatform7" type="Sprite2D" parent="World/Map"]
+position = Vector2(5193, 1661)
+texture = ExtResource("5_edy4n")
+
+[node name="Collision" type="Node2D" parent="World"]
+
+[node name="Fall Dead Zone" parent="World/Collision" instance=ExtResource("13_6lneu")]
+position = Vector2(6524, 3127)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/Fall Dead Zone"]
+position = Vector2(73, 174)
+shape = SubResource("RectangleShape2D_e3yd0")
