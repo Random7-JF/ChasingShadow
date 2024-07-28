@@ -1,8 +1,9 @@
-[gd_scene load_steps=112 format=3 uid="uid://da3dygi5nrfpe"]
+[gd_scene load_steps=113 format=3 uid="uid://da3dygi5nrfpe"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_kkgvp"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="1_x6ygq"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_par2c"]
+[ext_resource type="PackedScene" uid="uid://b6tir47hjqhyc" path="res://Scenes/Characters/Enemy/enemy.tscn" id="4_el2ni"]
 [ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="4_iyt3f"]
 [ext_resource type="Texture2D" uid="uid://cufj4faejwour" path="res://Assets/Assets 1024 Cave/Floor/long_platform.png" id="5_edy4n"]
 [ext_resource type="Texture2D" uid="uid://bnj2wtvkgaoib" path="res://Assets/Assets 1024 Cave/Floor/platform1.png" id="6_y3d2e"]
@@ -304,6 +305,9 @@ process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
+[node name="enemy" parent="." instance=ExtResource("4_el2ni")]
+position = Vector2(1536, 347)
+
 [node name="World" type="Node2D" parent="."]
 
 [node name="Map" type="Node2D" parent="World"]
@@ -598,13 +602,11 @@ texture = ExtResource("4_iyt3f")
 [node name="Platform4" type="Sprite2D" parent="World/Map"]
 position = Vector2(10689, 2623)
 rotation = -1.57844
-scale = Vector2(1, 1)
 texture = ExtResource("7_2s6p6")
 
 [node name="Platform5" type="Sprite2D" parent="World/Map"]
 position = Vector2(10688, 2457)
 rotation = -1.57844
-scale = Vector2(1, 1)
 texture = ExtResource("7_2s6p6")
 
 [node name="LongPlatform24" type="Sprite2D" parent="World/Map"]
@@ -625,13 +627,11 @@ texture = ExtResource("4_iyt3f")
 [node name="LongPlatform27" type="Sprite2D" parent="World/Map"]
 position = Vector2(9922, 1486)
 rotation = -1.50335
-scale = Vector2(1, 1)
 texture = ExtResource("5_edy4n")
 
 [node name="Platform6" type="Sprite2D" parent="World/Map"]
 position = Vector2(9923, 2131)
 rotation = -1.64223
-scale = Vector2(1, 1)
 texture = ExtResource("6_y3d2e")
 
 [node name="Block7" type="Sprite2D" parent="World/Map"]
@@ -901,7 +901,6 @@ texture = ExtResource("5_edy4n")
 [node name="LongPlatform31" type="Sprite2D" parent="World/Map"]
 position = Vector2(6591, 657)
 rotation = -1.68445
-scale = Vector2(1, 1)
 texture = ExtResource("4_iyt3f")
 
 [node name="LongPlatform32" type="Sprite2D" parent="World/Map"]
@@ -917,13 +916,11 @@ texture = ExtResource("4_iyt3f")
 [node name="LongPlatform34" type="Sprite2D" parent="World/Map"]
 position = Vector2(8385, 1147)
 rotation = 2.0494
-scale = Vector2(1, 1)
 texture = ExtResource("4_iyt3f")
 
 [node name="Platform10" type="Sprite2D" parent="World/Map"]
 position = Vector2(7440, 209)
 rotation = -0.342068
-scale = Vector2(1, 1)
 texture = ExtResource("6_y3d2e")
 
 [node name="Platform11" type="Sprite2D" parent="World/Map"]
@@ -939,7 +936,6 @@ texture = ExtResource("6_y3d2e")
 [node name="Platform13" type="Sprite2D" parent="World/Map"]
 position = Vector2(9942, 3182)
 rotation = -1.57871
-scale = Vector2(1, 1)
 texture = ExtResource("17_iqyyv")
 
 [node name="Platform14" type="Sprite2D" parent="World/Map"]
@@ -1087,7 +1083,6 @@ occluder = SubResource("OccluderPolygon2D_q1i6r")
 [node name="LongPlatform39" type="Sprite2D" parent="World/Map"]
 position = Vector2(8515, -1785)
 rotation = 2.8875
-scale = Vector2(1, 1)
 texture = ExtResource("4_iyt3f")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform39"]
@@ -1226,6 +1221,11 @@ z_index = 1
 position = Vector2(1839, 1972)
 texture = ExtResource("28_33rrr")
 
+[node name="Square-Black" type="Sprite2D" parent="World/Map"]
+position = Vector2(13860.5, 310.5)
+scale = Vector2(2.77539, 14.5566)
+texture = ExtResource("24_0q6uq")
+
 [node name="Collision" type="Node2D" parent="World"]
 
 [node name="Fall Dead Zone" parent="World/Collision" instance=ExtResource("13_6lneu")]
@@ -1307,7 +1307,6 @@ position = Vector2(1410, 959)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D4"]
 position = Vector2(899.559, -127.724)
 rotation = -0.958365
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0njpy")
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="World/Collision"]
@@ -1448,8 +1447,3 @@ occluder = SubResource("OccluderPolygon2D_vsp1e")
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="World/Lighting"]
 occluder = SubResource("OccluderPolygon2D_1sq4p")
-
-[node name="Square-Black" type="Sprite2D" parent="."]
-position = Vector2(13860.5, 310.5)
-scale = Vector2(2.77539, 14.5566)
-texture = ExtResource("24_0q6uq")

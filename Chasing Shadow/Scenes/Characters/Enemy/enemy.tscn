@@ -1,12 +1,12 @@
-[gd_scene load_steps=80 format=3 uid="uid://cywoo6cilrv81"]
+[gd_scene load_steps=75 format=3 uid="uid://b6tir47hjqhyc"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
-[ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_an5xb"]
+[ext_resource type="Script" path="res://Scenes/Characters/Enemy/enemy.gd" id="1_klbah"]
+[ext_resource type="Script" path="res://Scenes/Characters/Enemy/state.gd" id="2_apncr"]
 [ext_resource type="Texture2D" uid="uid://6tix1l5lgu71" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0074.png" id="2_s4ss8"]
 [ext_resource type="Script" path="res://Systems/StateMachine/state_machine.gd" id="3_it107"]
 [ext_resource type="Texture2D" uid="uid://dog8mtuhailw2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0002.png" id="3_whs4h"]
 [ext_resource type="Texture2D" uid="uid://d03agj0sxtxs2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0003.png" id="4_qx5ka"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/idle.gd" id="4_ualmn"]
 [ext_resource type="Texture2D" uid="uid://cohxeeyq545jy" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0004.png" id="5_nicnh"]
 [ext_resource type="Texture2D" uid="uid://b1k21r1de0mwr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0005.png" id="6_ae4wl"]
 [ext_resource type="Texture2D" uid="uid://c45npv2ck44pf" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0006.png" id="7_q7q8v"]
@@ -29,11 +29,9 @@
 [ext_resource type="Texture2D" uid="uid://h8djny2rynfh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0016.png" id="16_j2evx"]
 [ext_resource type="Texture2D" uid="uid://dwo0ju1wux23" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0082.png" id="17_gnup8"]
 [ext_resource type="Texture2D" uid="uid://cjubl40usvufr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0017.png" id="18_0abg1"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/walk.gd" id="18_mgjqw"]
 [ext_resource type="Texture2D" uid="uid://byyf633edm7ru" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0018.png" id="19_m7or6"]
 [ext_resource type="Texture2D" uid="uid://b2cwqruilg5cn" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0019.png" id="20_3dmvv"]
 [ext_resource type="Texture2D" uid="uid://3kfommylb0d3" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0020.png" id="21_1jsik"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/jump.gd" id="21_t0c6y"]
 [ext_resource type="Texture2D" uid="uid://qbmxqf6xeit1" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0021.png" id="22_7fkin"]
 [ext_resource type="Texture2D" uid="uid://ch8uwv3wtbvwh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0022.png" id="23_mmu3l"]
 [ext_resource type="Texture2D" uid="uid://dfjigr5r47lgw" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0023.png" id="24_0war6"]
@@ -41,12 +39,8 @@
 [ext_resource type="Texture2D" uid="uid://dyjovu6mudknm" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_jump_0043.png" id="26_u5x8b"]
 [ext_resource type="Texture2D" uid="uid://c7cqx3dbqhhcu" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_jump_0044.png" id="27_4x77l"]
 [ext_resource type="Texture2D" uid="uid://cvueuu82fbih8" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_jump_0045.png" id="28_67x4n"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/run.gd" id="28_kqtyb"]
 [ext_resource type="Texture2D" uid="uid://270bdm5jrjdy" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_wallslide0083.png" id="29_mqkd5"]
 [ext_resource type="Texture2D" uid="uid://dqwhdsbcvl74b" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_wallslide0084.png" id="29_re0ts"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/double_jump.gd" id="31_jvlet"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/fall.gd" id="32_qhwg1"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/wall_slide.gd" id="36_tyfa3"]
 [ext_resource type="Texture2D" uid="uid://0lgfqoqcihji" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0068.png" id="40_oc48u"]
 [ext_resource type="Texture2D" uid="uid://dk7o5sdytl7mx" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0069.png" id="41_0jedi"]
 [ext_resource type="Texture2D" uid="uid://buberjr0a07bh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0070.png" id="42_foioi"]
@@ -58,13 +52,12 @@
 [ext_resource type="Texture2D" uid="uid://cl1xuybqkttht" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0066.png" id="48_88bqw"]
 [ext_resource type="Texture2D" uid="uid://b7llr4uwjjlvc" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0067.png" id="49_hslu2"]
 [ext_resource type="Texture2D" uid="uid://jv1r2pj6p15" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0048.png" id="50_a5rmm"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/attack_1.gd" id="51_75yhr"]
 [ext_resource type="Texture2D" uid="uid://jl8f70e308yk" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0049.png" id="51_o8vdf"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/attack_2.gd" id="52_vnpcj"]
 [ext_resource type="Texture2D" uid="uid://csb0mdm4r0sgr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0050.png" id="52_xok3e"]
 [ext_resource type="Texture2D" uid="uid://bxujnx2urhwx0" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0051.png" id="53_g4ft4"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/attack_3.gd" id="57_5rm05"]
-[ext_resource type="Script" path="res://Systems/StateMachine/Player/hit.gd" id="59_tyrpc"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/idle.gd" id="55_sjqah"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/pursue.gd" id="56_ape2j"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/attack.gd" id="57_0n8hj"]
 
 [sub_resource type="Gradient" id="Gradient_rov1h"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -326,13 +319,36 @@ _data = {
 "wall_slide": SubResource("Animation_2d42m")
 }
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
-script = ExtResource("1_an5xb")
-wall_grip = 0.4
-jump_velocity = 600.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbisy"]
+size = Vector2(854, 243)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ia3fv"]
+size = Vector2(156, 168)
+
+[node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_klbah")
+
+[node name="Label" type="Label" parent="." node_paths=PackedStringArray("enemy")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -88.0
+offset_right = 41.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "State"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_apncr")
+enemy = NodePath("..")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-color = Color(0.696285, 0.607647, 0.209257, 1)
+color = Color(0.484044, 0.0810157, 0.0416085, 1)
 energy = 1.8
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.815686)
@@ -340,6 +356,7 @@ texture = SubResource("GradientTexture2D_ns55h")
 texture_scale = 2.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(0.535167, 0.11942, 0.0890528, 1)
 z_index = 2
 texture_filter = 2
 texture = ExtResource("2_s4ss8")
@@ -355,92 +372,43 @@ libraries = {
 "": SubResource("AnimationLibrary_mffh5")
 }
 
+[node name="Aggro Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Aggro Range"]
+position = Vector2(1, 8.5)
+shape = SubResource("RectangleShape2D_gbisy")
+debug_color = Color(0.900887, 0.138215, 0.683167, 0.42)
+
+[node name="Attack Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack Range"]
+position = Vector2(-5, 42)
+shape = SubResource("RectangleShape2D_ia3fv")
+debug_color = Color(0.140245, 0.635116, 0.346438, 0.42)
+
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_it107")
 starting_state = NodePath("Idle")
 
-[node name="Attack 1" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle", "attack_2")]
-script = ExtResource("51_75yhr")
-jump = NodePath("../Jump")
-run = NodePath("../Run")
-idle = NodePath("../Idle")
-attack_2 = NodePath("../Attack 2")
-animation_name = "attack_1"
-
-[node name="Attack 2" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle", "attack_3")]
-script = ExtResource("52_vnpcj")
-jump = NodePath("../Jump")
-run = NodePath("../Run")
-idle = NodePath("../Idle")
-attack_3 = NodePath("../Attack 3")
-animation_name = "attack_2"
-
-[node name="Attack 3" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle")]
-script = ExtResource("57_5rm05")
-jump = NodePath("../Jump")
-run = NodePath("../Run")
-idle = NodePath("../Idle")
-animation_name = "attack_3"
-
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "run", "jump", "attack_1")]
-script = ExtResource("18_mgjqw")
-idle = NodePath("../Idle")
-run = NodePath("../Run")
-jump = NodePath("../Jump")
-attack_1 = NodePath("../Attack 1")
-animation_name = "walk"
-
-[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "walk", "jump", "attack_1")]
-script = ExtResource("28_kqtyb")
-idle = NodePath("../Idle")
-walk = NodePath("../Walk")
-jump = NodePath("../Jump")
-attack_1 = NodePath("../Attack 1")
-animation_name = "run"
-
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "run", "jump", "attack_1", "hit")]
-script = ExtResource("4_ualmn")
-walk = NodePath("../Walk")
-run = NodePath("../Run")
-jump = NodePath("../Jump")
-attack_1 = NodePath("../Attack 1")
-hit = NodePath("../Hit")
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("attack", "pursue")]
+script = ExtResource("55_sjqah")
+attack = NodePath("../Attack")
+pursue = NodePath("../Pursue")
 animation_name = "idle"
 
-[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("run", "idle", "fall", "wall_slide", "double_jump", "attack_1")]
-script = ExtResource("21_t0c6y")
-run = NodePath("../Run")
+[node name="Pursue" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "attack")]
+script = ExtResource("56_ape2j")
 idle = NodePath("../Idle")
-fall = NodePath("../Fall")
-wall_slide = NodePath("../Wall Slide")
-double_jump = NodePath("../Double Jump")
-attack_1 = NodePath("../Attack 1")
-animation_name = "jump"
+attack = NodePath("../Attack")
+animation_name = "run"
 
-[node name="Double Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall", "idle", "wall_slide", "attack_1")]
-script = ExtResource("31_jvlet")
-fall = NodePath("../Fall")
+[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "pursue")]
+script = ExtResource("57_0n8hj")
 idle = NodePath("../Idle")
-wall_slide = NodePath("../Wall Slide")
-attack_1 = NodePath("../Attack 1")
-animation_name = "jump"
+pursue = NodePath("../Pursue")
+animation_name = "attack_1"
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "double_jump", "wall_slide", "attack_1")]
-script = ExtResource("32_qhwg1")
-idle = NodePath("../Idle")
-double_jump = NodePath("../Double Jump")
-wall_slide = NodePath("../Wall Slide")
-attack_1 = NodePath("../Attack 1")
-animation_name = "jump"
-
-[node name="Wall Slide" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "idle", "attack_1")]
-script = ExtResource("36_tyfa3")
-jump = NodePath("../Jump")
-idle = NodePath("../Idle")
-attack_1 = NodePath("../Attack 1")
-animation_name = "wall_slide"
-
-[node name="Hit" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle")]
-script = ExtResource("59_tyrpc")
-idle = NodePath("../Idle")
-animation_name = "hit"
+[connection signal="body_entered" from="Aggro Range" to="." method="_on_aggro_range_body_entered"]
+[connection signal="body_exited" from="Aggro Range" to="." method="_on_aggro_range_body_exited"]
+[connection signal="body_entered" from="Attack Range" to="." method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="Attack Range" to="." method="_on_attack_range_body_exited"]
