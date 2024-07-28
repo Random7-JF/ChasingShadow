@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8eku16jig8uh"]
+
+[ext_resource type="Script" path="res://Scenes/World/Next Level Zone.gd" id="1_42sdl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuhod"]
+size = Vector2(177, 296)
+
+[node name="Next Level Zone" type="Area2D"]
+position = Vector2(6889, 170)
+script = ExtResource("1_42sdl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.5, -10)
+shape = SubResource("RectangleShape2D_yuhod")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -28,7 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://0qce12ftbqac" path="res://Assets/Assets 1024 Cave/Floor/stone_plat1.png" id="25_v0a1m"]
 [ext_resource type="Texture2D" uid="uid://d4ncxrhwbg0dd" path="res://Assets/Assets 1024 Cave/Square - Black.jpg" id="27_edc8i"]
 [ext_resource type="PackedScene" uid="uid://mnhdtn3l02e" path="res://Scenes/Triggers/fall_dead_zone.tscn" id="28_4gr1m"]
-[ext_resource type="Script" path="res://Scenes/World/Next Level Zone.gd" id="29_562e5"]
+[ext_resource type="PackedScene" uid="uid://c8eku16jig8uh" path="res://Scenes/Triggers/next_level_zone.tscn" id="29_qgxg2"]
+[ext_resource type="PackedScene" uid="uid://da3dygi5nrfpe" path="res://Scenes/World/level_2.tscn" id="30_q6fbk"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qqa46"]
 polygon = PackedVector2Array(713, 34.9999, 677, 66.9999, 613, 92.9999, 428, 112, 238, 103, -97, 125, -300, 112, -561, 108, -661, 67.0001, -695, 31.0001, -540, 46.0001, -412, 33.0001, -212, 38, -30, 37, 162, 45.9999, 389, 39.9999, 549, 54.9999, 636, -13.0001, 691, 3.99988)
@@ -69,9 +70,6 @@ size = Vector2(1512, 35)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2w4nc"]
 size = Vector2(8419, 91)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuhod"]
-size = Vector2(177, 296)
-
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5kljj"]
 polygon = PackedVector2Array(1983, -797, 1681, -823, 1483, -820, 1219, -823, 890, -811, 635, -811, 533, -808, 671, -861, 863, -861, 1028, -861, 1207, -849, 1336, -849, 1483, -873, 1624, -876, 1717, -864, 1792, -864, 1898, -840, 1983, -815)
 
@@ -81,12 +79,12 @@ polygon = PackedVector2Array(-310, -151, -167, -160, 66, -156, 223, -161, 426, -
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uwa6l"]
 polygon = PackedVector2Array(-288, 170, 86, 172, 347, 176, 714, 165, 1166, 163, 1216, 164, 1206, 651, 267, 638, -285, 650)
 
-[sub_resource type="Gradient" id="Gradient_5wnfp"]
+[sub_resource type="Gradient" id="Gradient_etjgj"]
 offsets = PackedFloat32Array(0, 0.00578035, 1)
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0.0367347, 0.0367347, 0.0367347, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_tl072"]
-gradient = SubResource("Gradient_5wnfp")
+gradient = SubResource("Gradient_etjgj")
 width = 512
 height = 512
 fill = 1
@@ -551,13 +549,8 @@ polygon = PackedVector2Array(-1974, -4, -1774, -395, 2601, -392, 2617, 828, 1935
 position = Vector2(687.5, -0.5)
 shape = SubResource("RectangleShape2D_2w4nc")
 
-[node name="Next Level Zone" type="Area2D" parent="World/Collision"]
-position = Vector2(6889, 170)
-script = ExtResource("29_562e5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/Next Level Zone"]
-position = Vector2(-9.5, -10)
-shape = SubResource("RectangleShape2D_yuhod")
+[node name="Next Level Zone" parent="World/Collision" instance=ExtResource("29_qgxg2")]
+next_level = ExtResource("30_q6fbk")
 
 [node name="Lighting" type="Node" parent="World"]
 
@@ -595,5 +588,3 @@ texture_scale = 8.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="World/Lighting"]
 occluder = SubResource("OccluderPolygon2D_hsnxh")
-
-[connection signal="body_entered" from="World/Collision/Next Level Zone" to="World/Collision/Next Level Zone" method="_on_body_entered"]

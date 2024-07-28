@@ -18,8 +18,6 @@ var next_attack: bool = false
 
 var hit: bool = false
 
-@export var map_entrance_coord: Vector2 = Vector2.ZERO
-
 func _ready():
 	state_machine.init(self, animator)
 
@@ -32,6 +30,6 @@ func _physics_process(delta):
 func _unhandled_input(event):
 	state_machine.process_input(event)
 
-func fall_death():
+func fall_death(coord: Vector2):
 	print("Player died")
-	position = map_entrance_coord
+	position = coord
