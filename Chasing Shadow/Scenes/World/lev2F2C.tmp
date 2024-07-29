@@ -311,10 +311,10 @@ start_boundary = NodePath("Start Boundary")
 end_boundary = NodePath("End Boundary")
 
 [node name="Start Boundary" type="Marker2D" parent="Enemy"]
-position = Vector2(-502, 77)
+position = Vector2(-685, 95)
 
 [node name="End Boundary" type="Marker2D" parent="Enemy"]
-position = Vector2(903, 70)
+position = Vector2(944, 95)
 
 [node name="World" type="Node2D" parent="."]
 

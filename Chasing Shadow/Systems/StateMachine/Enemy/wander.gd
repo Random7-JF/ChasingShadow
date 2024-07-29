@@ -1,17 +1,15 @@
-class_name EnemyPursue
+class_name EnemyWander
 extends State
 
 @export var idle: EnemyIdle
 @export var attack: EnemyAttack
+@export var chase: EnemyChase
 
-var player: Player
-var player_pos: Vector2 = Vector2.ZERO
 
 func enter() -> void:
 	super()
-	state_name = "Pursue"
-	player = get_tree().get_first_node_in_group("player")
-	print("Enter Pursue")
+	state_name = "Wander"
+	parent.setup_wander()
 
 func exit() -> void:
 	pass
@@ -22,18 +20,17 @@ func process(_delta: float) -> State:
 func process_physics(delta: float) -> State:
 	if parent.attack:
 		return attack
-	var direction = Vector2.ZERO
 	if parent.player_found:
-		direction = parent.position.direction_to(player.position)
-	if direction == Vector2.ZERO:
+		return chase
+	if parent.global_position.distance_to(parent.wander_coord) < 100:
 		return idle
-		
 	## fall to ground
 	parent.velocity.y += gravity * delta
 	
+	var direction =  parent.global_position.direction_to(parent.wander_coord) * (parent.speed * 0.50)
 	##Dirty get_node, maybe switch to a function
 	parent.get_node("Sprite").flip_h = direction.x < 0
-	parent.velocity.x = direction.x * parent.speed
-	parent.move_and_slide()
+	parent.velocity.x = direction.x
 	
+	parent.move_and_slide()
 	return null

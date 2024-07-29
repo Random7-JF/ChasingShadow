@@ -2,7 +2,7 @@ class_name EnemyAttack
 extends State
 
 @export var idle: EnemyIdle
-@export var pursue: EnemyPursue
+@export var chase: EnemyChase
 
 
 func enter() -> void:
@@ -18,7 +18,7 @@ func process(_delta: float) -> State:
 	
 func process_physics(delta: float) -> State:
 	if parent.attack_finished:
-		return pursue
+		return chase
 	return null
 
 func animation_action() -> void:

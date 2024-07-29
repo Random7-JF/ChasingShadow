@@ -1,7 +1,8 @@
-[gd_scene load_steps=74 format=3 uid="uid://b6tir47hjqhyc"]
+[gd_scene load_steps=76 format=3 uid="uid://b6tir47hjqhyc"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Enemy/enemy.gd" id="1_klbah"]
+[ext_resource type="Script" path="res://Scenes/Characters/Enemy/state.gd" id="2_apncr"]
 [ext_resource type="Texture2D" uid="uid://6tix1l5lgu71" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0074.png" id="2_s4ss8"]
 [ext_resource type="Script" path="res://Systems/StateMachine/state_machine.gd" id="3_it107"]
 [ext_resource type="Texture2D" uid="uid://dog8mtuhailw2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0002.png" id="3_whs4h"]
@@ -57,6 +58,7 @@
 [ext_resource type="Script" path="res://Systems/StateMachine/Enemy/idle.gd" id="55_sjqah"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Enemy/pursue.gd" id="56_ape2j"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Enemy/attack.gd" id="57_0n8hj"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/wander.gd" id="57_nede1"]
 
 [sub_resource type="Gradient" id="Gradient_rov1h"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -327,6 +329,25 @@ size = Vector2(156, 168)
 [node name="enemy" type="CharacterBody2D"]
 script = ExtResource("1_klbah")
 
+[node name="Label" type="Label" parent="." node_paths=PackedStringArray("enemy")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -88.0
+offset_right = 41.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "State"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_apncr")
+enemy = NodePath("..")
+
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.484044, 0.0810157, 0.0416085, 1)
 energy = 1.8
@@ -368,7 +389,7 @@ debug_color = Color(0.140245, 0.635116, 0.346438, 0.42)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_it107")
-starting_state = NodePath("Idle")
+starting_state = NodePath("Wander")
 
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("attack", "pursue")]
 script = ExtResource("55_sjqah")
@@ -376,11 +397,12 @@ attack = NodePath("../Attack")
 pursue = NodePath("../Pursue")
 animation_name = "idle"
 
-[node name="Pursue" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "attack")]
+[node name="Wander" type="Node" parent="StateMachine"]
+script = ExtResource("57_nede1")
+
+[node name="Pursue" type="Node" parent="StateMachine"]
 script = ExtResource("56_ape2j")
-idle = NodePath("../Idle")
-attack = NodePath("../Attack")
-animation_name = "run"
+animation_name = null
 
 [node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "pursue")]
 script = ExtResource("57_0n8hj")
