@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://cywoo6cilrv81"]
+[gd_scene load_steps=92 format=3 uid="uid://cywoo6cilrv81"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_an5xb"]
@@ -63,8 +63,18 @@
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/attack_2.gd" id="52_vnpcj"]
 [ext_resource type="Texture2D" uid="uid://csb0mdm4r0sgr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0050.png" id="52_xok3e"]
 [ext_resource type="Texture2D" uid="uid://bxujnx2urhwx0" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0051.png" id="53_g4ft4"]
+[ext_resource type="Texture2D" uid="uid://cf4od7o5byy4i" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0052.png" id="54_ue4xb"]
+[ext_resource type="Texture2D" uid="uid://dsr8gdsj8r3dk" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0053.png" id="55_nubih"]
+[ext_resource type="Texture2D" uid="uid://dke1kshpg21pg" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0054.png" id="56_osjwj"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/attack_3.gd" id="57_5rm05"]
+[ext_resource type="Texture2D" uid="uid://bot08m1vq7v3b" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0055.png" id="57_6xmve"]
+[ext_resource type="Texture2D" uid="uid://c70d6m8st12rq" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0056.png" id="58_fjsiq"]
 [ext_resource type="Script" path="res://Systems/StateMachine/Player/hit.gd" id="59_tyrpc"]
+[ext_resource type="Texture2D" uid="uid://lg40d3uvse52" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0057.png" id="59_xan7a"]
+[ext_resource type="Texture2D" uid="uid://ydgwuryceq4t" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0058.png" id="60_gbnhb"]
+[ext_resource type="Texture2D" uid="uid://cpl1w4fep7bhu" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0059.png" id="61_426c0"]
+[ext_resource type="Texture2D" uid="uid://dseyuyf30acsy" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0060.png" id="62_is2y1"]
+[ext_resource type="Texture2D" uid="uid://ox4h2amlnqqw" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0061.png" id="63_ucbh4"]
 
 [sub_resource type="Gradient" id="Gradient_rov1h"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -78,8 +88,11 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.4, 0)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ofvm"]
-radius = 18.316
+radius = 34.5021
 height = 107.099
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5iu8x"]
+size = Vector2(70.1186, 94.4547)
 
 [sub_resource type="Animation" id="Animation_wve0h"]
 length = 0.001
@@ -312,12 +325,42 @@ tracks/0/keys = {
 "values": [ExtResource("29_mqkd5"), ExtResource("29_re0ts")]
 }
 
+[sub_resource type="Animation" id="Animation_awqsh"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("54_ue4xb"), ExtResource("55_nubih"), ExtResource("56_osjwj"), ExtResource("57_6xmve"), ExtResource("58_fjsiq"), ExtResource("59_xan7a"), ExtResource("60_gbnhb"), ExtResource("61_426c0"), ExtResource("62_is2y1"), ExtResource("63_ucbh4")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"animation_action"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mffh5"]
 _data = {
 "RESET": SubResource("Animation_wve0h"),
 "attack_1": SubResource("Animation_ya6vq"),
 "attack_2": SubResource("Animation_248ka"),
 "attack_3": SubResource("Animation_bbvb8"),
+"death": SubResource("Animation_awqsh"),
 "hit": SubResource("Animation_gjn6c"),
 "idle": SubResource("Animation_jxt35"),
 "jump": SubResource("Animation_1jobo"),
@@ -348,6 +391,15 @@ texture = ExtResource("2_s4ss8")
 position = Vector2(-0.499999, 53)
 scale = Vector2(1.17384, 1.34456)
 shape = SubResource("CapsuleShape2D_7ofvm")
+
+[node name="AttackZone" type="Area2D" parent="."]
+position = Vector2(0, 50)
+scale = Vector2(1.17384, 1.34456)
+
+[node name="AttackArea" type="CollisionShape2D" parent="AttackZone"]
+position = Vector2(68.8731, 0)
+shape = SubResource("RectangleShape2D_5iu8x")
+debug_color = Color(0.889743, 0.31651, 0.209498, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../StateMachine")

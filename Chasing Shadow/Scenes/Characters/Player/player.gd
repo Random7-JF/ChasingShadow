@@ -3,6 +3,9 @@ extends CharacterBody2D
 
 @onready var state_machine: StateMachine = $StateMachine
 @onready var animator: AnimationPlayer = $AnimationPlayer
+@onready var attack_zone: Area2D = $AttackZone
+@onready var attack_area: CollisionShape2D = $"AttackZone/AttackArea"
+@onready var sprite: Sprite2D = $Sprite
 
 
 @export var speed: float = 500
@@ -33,3 +36,11 @@ func _unhandled_input(event):
 func fall_death(coord: Vector2):
 	print("Player died")
 	position = coord
+
+func flip_character(direction: float):
+	sprite.flip_h = direction < 0
+	if direction < 0:
+		attack_area.position.x = -50
+	else:
+		attack_area.position.x = 50
+	

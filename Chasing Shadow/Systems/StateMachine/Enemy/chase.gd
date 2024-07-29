@@ -3,6 +3,7 @@ extends State
 
 @export var idle: EnemyIdle
 @export var attack: EnemyAttack
+@export var hit: EnemyHit
 
 var player: Player
 var player_pos: Vector2 = Vector2.ZERO
@@ -21,6 +22,8 @@ func process(_delta: float) -> State:
 func process_physics(delta: float) -> State:
 	if parent.attack:
 		return attack
+	if parent.been_hit:
+		return hit
 	var direction = Vector2.ZERO
 	if parent.player_found:
 		direction = parent.position.direction_to(player.position)

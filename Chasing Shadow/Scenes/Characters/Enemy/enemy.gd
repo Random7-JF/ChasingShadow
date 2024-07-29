@@ -4,13 +4,17 @@ extends CharacterBody2D
 @onready var state_machine: StateMachine = $StateMachine
 @onready var animator: AnimationPlayer = $AnimationPlayer
 
+@export var dead_state: EnemyDead
 
+@export var health: int = 3
 @export var speed: float = 500
 @export var wall_grip: float = 0.50
 var can_wall_slide: bool = true
 var attack_finished: bool = false
 var player_found: bool = false
 var attack: bool = false
+var been_hit: bool = false
+var dead: bool = false
 
 @export var start_boundary: Marker2D
 @export var end_boundary: Marker2D
@@ -36,6 +40,13 @@ func setup_wander():
 	wander_time = 0
 	wander_coord = Vector2(randf_range(start_boundary.global_position.x, end_boundary.global_position.x), start_boundary.global_position.y)
 
+func take_hit():
+	been_hit = true
+	health -= 1
+	if health <= 0:
+		state_machine.change_state(dead_state)
+		$CollisionShape2D.disabled = true
+	
 func _on_aggro_range_body_entered(body):
 	if body is Player:
 		player_found = true

@@ -26,8 +26,7 @@ func process_physics(delta: float) -> State:
 		return wall_slide
 
 	var direction = Input.get_axis("move_left", "move_right") * parent.speed
-	## Dirty get_node, maybe switch to a function
-	parent.get_node("Sprite").flip_h = direction < 0
+	parent.flip_character(direction)
 	parent.velocity.x = direction
 
 	#fall to the ground

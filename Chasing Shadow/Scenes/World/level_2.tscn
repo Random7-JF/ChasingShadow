@@ -314,7 +314,29 @@ end_boundary = NodePath("End Boundary")
 position = Vector2(-502, 77)
 
 [node name="End Boundary" type="Marker2D" parent="Enemy"]
-position = Vector2(903, 70)
+position = Vector2(560, 71)
+
+[node name="Enemy2" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_el2ni")]
+position = Vector2(4498, -7)
+start_boundary = NodePath("Start Boundary")
+end_boundary = NodePath("End Boundary")
+
+[node name="Start Boundary" type="Marker2D" parent="Enemy2"]
+position = Vector2(-278, 62)
+
+[node name="End Boundary" type="Marker2D" parent="Enemy2"]
+position = Vector2(227, 69)
+
+[node name="Enemy3" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_el2ni")]
+position = Vector2(4788, 1487)
+start_boundary = NodePath("Start Boundary")
+end_boundary = NodePath("End Boundary")
+
+[node name="Start Boundary" type="Marker2D" parent="Enemy3"]
+position = Vector2(-278, 62)
+
+[node name="End Boundary" type="Marker2D" parent="Enemy3"]
+position = Vector2(227, 69)
 
 [node name="World" type="Node2D" parent="."]
 

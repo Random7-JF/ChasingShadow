@@ -1,9 +1,11 @@
 class_name EnemyIdle
 extends State
 
+@export var hit: EnemyHit
 @export var attack: EnemyAttack
 @export var chase: EnemyChase
 @export var wander: EnemyWander
+
 
 
 
@@ -23,6 +25,8 @@ func process_physics(delta: float) -> State:
 		return wander
 	if parent.player_found:
 		return chase
+	if parent.been_hit:
+		return hit
 	## fall to ground
 	parent.velocity.y += gravity * delta
 	parent.velocity.x = 0

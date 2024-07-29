@@ -1,10 +1,9 @@
-[gd_scene load_steps=90 format=3 uid="uid://b6tir47hjqhyc"]
+[gd_scene load_steps=89 format=3 uid="uid://b6tir47hjqhyc"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Enemy/enemy.gd" id="1_klbah"]
 [ext_resource type="Script" path="res://Scenes/Characters/Enemy/state.gd" id="2_apncr"]
 [ext_resource type="Texture2D" uid="uid://6tix1l5lgu71" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0074.png" id="2_s4ss8"]
-[ext_resource type="Script" path="res://Scenes/Characters/Enemy/health.gd" id="3_7txnf"]
 [ext_resource type="Script" path="res://Systems/StateMachine/state_machine.gd" id="3_it107"]
 [ext_resource type="Texture2D" uid="uid://dog8mtuhailw2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0002.png" id="3_whs4h"]
 [ext_resource type="Texture2D" uid="uid://d03agj0sxtxs2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0003.png" id="4_qx5ka"]
@@ -321,6 +320,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_awqsh"]
 resource_name = "death"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -369,9 +369,8 @@ size = Vector2(854, 243)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ia3fv"]
 size = Vector2(156, 168)
 
-[node name="enemy" type="CharacterBody2D" node_paths=PackedStringArray("dead_state")]
+[node name="enemy" type="CharacterBody2D"]
 script = ExtResource("1_klbah")
-dead_state = NodePath("StateMachine/Dead")
 wander_delay = 3.0
 
 [node name="Label" type="Label" parent="." node_paths=PackedStringArray("enemy")]
@@ -391,25 +390,6 @@ text = "State"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("2_apncr")
-enemy = NodePath("..")
-
-[node name="Label2" type="Label" parent="." node_paths=PackedStringArray("enemy")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -41.0
-offset_top = -123.0
-offset_right = 40.0
-offset_bottom = -78.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 32
-text = "State"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("3_7txnf")
 enemy = NodePath("..")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -485,15 +465,14 @@ attack = NodePath("../Attack")
 hit = NodePath("../Hit")
 animation_name = "run"
 
-[node name="Hit" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "dead")]
+[node name="Hit" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle")]
 script = ExtResource("60_vcbvt")
 idle = NodePath("../Idle")
-dead = NodePath("../Dead")
 animation_name = "hit"
 
 [node name="Dead" type="Node" parent="StateMachine"]
 script = ExtResource("71_fnn51")
-animation_name = "death"
+animation_name = "dead"
 
 [connection signal="body_entered" from="Aggro Range" to="." method="_on_aggro_range_body_entered"]
 [connection signal="body_exited" from="Aggro Range" to="." method="_on_aggro_range_body_exited"]

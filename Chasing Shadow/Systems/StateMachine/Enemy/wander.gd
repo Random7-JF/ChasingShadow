@@ -4,6 +4,7 @@ extends State
 @export var idle: EnemyIdle
 @export var attack: EnemyAttack
 @export var chase: EnemyChase
+@export var hit: EnemyHit
 
 
 func enter() -> void:
@@ -24,6 +25,8 @@ func process_physics(delta: float) -> State:
 		return chase
 	if parent.global_position.distance_to(parent.wander_coord) < 100:
 		return idle
+	if parent.been_hit:
+		return hit
 	## fall to ground
 	parent.velocity.y += gravity * delta
 	

@@ -3,12 +3,12 @@ extends State
 
 @export var idle: EnemyIdle
 @export var chase: EnemyChase
+@export var hit: EnemyHit
 
 
 func enter() -> void:
 	super()
 	state_name = "Attack"
-	print("Entering attack")
 
 func exit() -> void:
 	parent.attack_finished = false
@@ -19,11 +19,12 @@ func process(_delta: float) -> State:
 func process_physics(delta: float) -> State:
 	if parent.attack_finished:
 		return chase
+	if parent.been_hit:
+		return hit
 	return null
 
 func animation_action() -> void:
-	print("animation started")
-
+	pass
+	
 func animation_ended() -> void:
-	print("Animation ended")
 	parent.attack_finished = true
