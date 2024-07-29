@@ -22,14 +22,16 @@ func process_physics(delta: float) -> State:
 	if parent.been_hit:
 		return hit
 	#fall to the ground
-	parent.velocity.y += gravity * delta
+	if not parent.is_on_floor():
+		parent.velocity.y += gravity * delta
 	
 	## get the direction in idle, incase the keys are being held.
 	## send to run state if they are
-	#var direction = Input.get_axis("move_left", "move_right") * parent.speed
-	#if direction != 0:
-	#	return run
-	#parent.flip_character(direction)
+	var direction = Input.get_axis("move_left", "move_right")
+	if direction != 0:
+		return run
+
+	parent.move_and_slide()
 	return null
 
 func process_input(_event: InputEvent) -> State:

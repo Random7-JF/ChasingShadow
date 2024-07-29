@@ -14,6 +14,7 @@ func enter() -> void:
 	super()
 	#animator.stop()
 	state_name = "Jump"
+	parent.velocity.y = 0
 	parent.velocity.y += -parent.jump_velocity
 
 func exit() -> void:

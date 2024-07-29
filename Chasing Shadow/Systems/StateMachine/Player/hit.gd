@@ -10,7 +10,7 @@ func enter() -> void:
 	parent.been_hit = true
 
 func exit() -> void:
-	pass
+	parent.been_hit = false
 
 func process(_delta: float) -> State:
 	return null

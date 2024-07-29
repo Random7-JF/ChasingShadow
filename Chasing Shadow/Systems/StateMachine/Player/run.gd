@@ -21,8 +21,8 @@ func process(_delta: float) -> State:
 func process_physics(delta: float) -> State:
 	if parent.been_hit:
 		return hit
-	#fall to ground
-	parent.velocity.y += gravity * delta
+	if not parent.is_on_floor():
+		parent.velocity.y += gravity * delta
 
 	var direction = Input.get_axis("move_left", "move_right") * parent.speed
 	if direction == 0:

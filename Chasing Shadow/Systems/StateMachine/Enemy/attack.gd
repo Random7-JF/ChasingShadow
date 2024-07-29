@@ -5,7 +5,6 @@ extends State
 @export var chase: EnemyChase
 @export var hit: EnemyHit
 
-
 func enter() -> void:
 	super()
 	state_name = "Attack"

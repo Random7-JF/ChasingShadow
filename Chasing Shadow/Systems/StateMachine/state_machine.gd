@@ -13,9 +13,11 @@ func init(new_parent: CharacterBody2D, new_animator: AnimationPlayer):
 func change_state(new_state: State) -> void:
 	if current_state:
 		current_state.exit()
+		#print("Change from: " + str(current_state.state_name) + " to " + str(new_state.state_name))
 	
 	current_state = new_state
 	current_state.enter()
+
 
 ## Pass through functions called by parent of state machine
 ## If the return a new State, the change_state function is called

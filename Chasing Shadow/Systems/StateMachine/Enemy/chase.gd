@@ -10,7 +10,7 @@ var player_pos: Vector2 = Vector2.ZERO
 
 func enter() -> void:
 	super()
-	state_name = "Pursue"
+	state_name = "Chase"
 	player = get_tree().get_first_node_in_group("player")
 
 func exit() -> void:
@@ -25,8 +25,8 @@ func process_physics(delta: float) -> State:
 	if parent.been_hit:
 		return hit
 	var direction = Vector2.ZERO
-	if parent.player_found:
-		direction = parent.position.direction_to(player.position)
+	if parent.player_found and parent.global_position.distance_to(player.global_position) > 50:
+		direction = parent.position.direction_to(player.global_position)
 	if direction == Vector2.ZERO:
 		return idle
 		
