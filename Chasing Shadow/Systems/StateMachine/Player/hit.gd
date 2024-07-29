@@ -7,8 +7,7 @@ extends State
 func enter() -> void:
 	super()
 	state_name = "Hit"
-	parent.hit = true
-	parent.health -= 1
+	parent.been_hit = true
 
 func exit() -> void:
 	pass
@@ -17,7 +16,7 @@ func process(_delta: float) -> State:
 	return null
 	
 func process_physics(_delta: float) -> State:
-	if not parent.hit:
+	if not parent.been_hit:
 		return idle
 	return null
 
@@ -28,4 +27,4 @@ func animation_action() -> void:
 	pass
 
 func animation_ended() -> void:
-	parent.hit = false
+	parent.been_hit = false

@@ -5,6 +5,7 @@ extends State
 @export var double_jump: PlayerDoubleJump
 @export var wall_slide: PlayerWallSlide
 @export var attack_1: PlayerAttack1
+@export var hit: PlayerHit
 
 func enter() -> void:
 	state_name = "Fall"
@@ -16,6 +17,8 @@ func process(_delta: float) -> State:
 	return null
 	
 func process_physics(delta: float) -> State:
+	if parent.been_hit:
+		return hit
 	if parent.is_on_floor():
 		parent.can_double_jump = true 
 		parent.can_wall_slide = true

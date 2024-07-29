@@ -5,6 +5,7 @@ extends State
 @export var run: PlayerRun
 @export var jump: PlayerJump
 @export var attack_1: PlayerAttack1
+@export var hit: PlayerHit
 
 func enter() -> void:
 	super()
@@ -17,6 +18,8 @@ func process(_delta: float) -> State:
 	return null
 	
 func process_physics(delta: float) -> State:
+	if parent.been_hit:
+		return hit
 	#fall to ground
 	parent.velocity.y += gravity * delta
 

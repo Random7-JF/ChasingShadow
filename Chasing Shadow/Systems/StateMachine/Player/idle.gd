@@ -18,6 +18,8 @@ func process(_delta: float) -> State:
 	return null
 	
 func process_physics(delta: float) -> State:
+	if parent.been_hit:
+		return hit
 	#fall to the ground
 	parent.velocity.y += gravity * delta
 	

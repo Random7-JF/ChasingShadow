@@ -5,6 +5,7 @@ extends State
 @export var idle: PlayerIdle
 @export var wall_slide: PlayerWallSlide
 @export var attack_1: PlayerAttack1
+@export var hit: PlayerHit
 
 func enter() -> void:
 	#super()
@@ -22,6 +23,8 @@ func process_physics(delta: float) -> State:
 	parent.velocity.y += gravity * delta
 	if parent.velocity.y > 0 :
 		return fall
+	if parent.been_hit:
+		return hit
 	#Air control
 	var direction = Input.get_axis("move_left", "move_right") * parent.speed
 	if direction != 0:

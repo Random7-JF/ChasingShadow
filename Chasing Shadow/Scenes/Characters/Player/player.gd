@@ -22,7 +22,7 @@ var in_combo: bool = false
 var attack_finished: bool = false
 var next_attack: bool = false
 
-var hit: bool = false
+var been_hit: bool = false
 @export var health: int = 5
 var dead: bool = false
 
@@ -47,6 +47,7 @@ func fall_death(coord: Vector2):
 
 func take_hit():
 	health -= 1
+	been_hit = true
 
 func flip_character(direction: float):
 	sprite.flip_h = direction < 0

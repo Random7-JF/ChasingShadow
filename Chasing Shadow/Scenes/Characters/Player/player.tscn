@@ -1,7 +1,8 @@
-[gd_scene load_steps=93 format=3 uid="uid://cywoo6cilrv81"]
+[gd_scene load_steps=94 format=3 uid="uid://cywoo6cilrv81"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_an5xb"]
+[ext_resource type="Script" path="res://Scenes/Characters/Player/health.gd" id="2_nw2uw"]
 [ext_resource type="Texture2D" uid="uid://6tix1l5lgu71" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0074.png" id="2_s4ss8"]
 [ext_resource type="Script" path="res://Systems/StateMachine/state_machine.gd" id="3_it107"]
 [ext_resource type="Texture2D" uid="uid://dog8mtuhailw2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0002.png" id="3_whs4h"]
@@ -376,6 +377,14 @@ death_state = NodePath("StateMachine/Death")
 wall_grip = 0.4
 jump_velocity = 600.0
 
+[node name="Label" type="Label" parent="." node_paths=PackedStringArray("player")]
+offset_top = -93.0
+offset_right = 40.0
+offset_bottom = -48.0
+theme_override_font_sizes/font_size = 32
+script = ExtResource("2_nw2uw")
+player = NodePath("..")
+
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.696285, 0.607647, 0.209257, 1)
 energy = 1.8
@@ -413,43 +422,48 @@ libraries = {
 script = ExtResource("3_it107")
 starting_state = NodePath("Idle")
 
-[node name="Attack 1" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle", "attack_2")]
+[node name="Attack 1" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle", "attack_2", "hit")]
 script = ExtResource("51_75yhr")
 jump = NodePath("../Jump")
 run = NodePath("../Run")
 idle = NodePath("../Idle")
 attack_2 = NodePath("../Attack 2")
+hit = NodePath("../Hit")
 animation_name = "attack_1"
 
-[node name="Attack 2" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle", "attack_3")]
+[node name="Attack 2" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle", "attack_3", "hit")]
 script = ExtResource("52_vnpcj")
 jump = NodePath("../Jump")
 run = NodePath("../Run")
 idle = NodePath("../Idle")
 attack_3 = NodePath("../Attack 3")
+hit = NodePath("../Hit")
 animation_name = "attack_2"
 
-[node name="Attack 3" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle")]
+[node name="Attack 3" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "run", "idle", "hit")]
 script = ExtResource("57_5rm05")
 jump = NodePath("../Jump")
 run = NodePath("../Run")
 idle = NodePath("../Idle")
+hit = NodePath("../Hit")
 animation_name = "attack_3"
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "run", "jump", "attack_1")]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "run", "jump", "attack_1", "hit")]
 script = ExtResource("18_mgjqw")
 idle = NodePath("../Idle")
 run = NodePath("../Run")
 jump = NodePath("../Jump")
 attack_1 = NodePath("../Attack 1")
+hit = NodePath("../Hit")
 animation_name = "walk"
 
-[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "walk", "jump", "attack_1")]
+[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "walk", "jump", "attack_1", "hit")]
 script = ExtResource("28_kqtyb")
 idle = NodePath("../Idle")
 walk = NodePath("../Walk")
 jump = NodePath("../Jump")
 attack_1 = NodePath("../Attack 1")
+hit = NodePath("../Hit")
 animation_name = "run"
 
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("walk", "run", "jump", "attack_1", "hit")]
@@ -461,7 +475,7 @@ attack_1 = NodePath("../Attack 1")
 hit = NodePath("../Hit")
 animation_name = "idle"
 
-[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("run", "idle", "fall", "wall_slide", "double_jump", "attack_1")]
+[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("run", "idle", "fall", "wall_slide", "double_jump", "attack_1", "hit")]
 script = ExtResource("21_t0c6y")
 run = NodePath("../Run")
 idle = NodePath("../Idle")
@@ -469,29 +483,33 @@ fall = NodePath("../Fall")
 wall_slide = NodePath("../Wall Slide")
 double_jump = NodePath("../Double Jump")
 attack_1 = NodePath("../Attack 1")
+hit = NodePath("../Hit")
 animation_name = "jump"
 
-[node name="Double Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall", "idle", "wall_slide", "attack_1")]
+[node name="Double Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall", "idle", "wall_slide", "attack_1", "hit")]
 script = ExtResource("31_jvlet")
 fall = NodePath("../Fall")
 idle = NodePath("../Idle")
 wall_slide = NodePath("../Wall Slide")
 attack_1 = NodePath("../Attack 1")
+hit = NodePath("../Hit")
 animation_name = "jump"
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "double_jump", "wall_slide", "attack_1")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "double_jump", "wall_slide", "attack_1", "hit")]
 script = ExtResource("32_qhwg1")
 idle = NodePath("../Idle")
 double_jump = NodePath("../Double Jump")
 wall_slide = NodePath("../Wall Slide")
 attack_1 = NodePath("../Attack 1")
+hit = NodePath("../Hit")
 animation_name = "jump"
 
-[node name="Wall Slide" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "idle", "attack_1")]
+[node name="Wall Slide" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump", "idle", "attack_1", "hit")]
 script = ExtResource("36_tyfa3")
 jump = NodePath("../Jump")
 idle = NodePath("../Idle")
 attack_1 = NodePath("../Attack 1")
+hit = NodePath("../Hit")
 animation_name = "wall_slide"
 
 [node name="Hit" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle")]

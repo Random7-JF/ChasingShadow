@@ -4,6 +4,7 @@ extends State
 @export var jump: PlayerJump
 @export var idle: PlayerIdle
 @export var attack_1: PlayerAttack1
+@export var hit: PlayerHit
 
 func enter() -> void:
 	super()
@@ -16,6 +17,8 @@ func process(_delta: float) -> State:
 	return null
 	
 func process_physics(delta: float) -> State:
+	if parent.been_hit:
+		return hit
 	#fall to the ground
 	parent.velocity.y += (gravity * parent.wall_grip) * delta
 	parent.move_and_slide()
