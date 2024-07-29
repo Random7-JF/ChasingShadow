@@ -24,7 +24,11 @@ func process_physics(delta: float) -> State:
 	return null
 
 func animation_action() -> void:
-	pass
+	var attack_zone: Area2D = parent.attack_zone
+	for body in attack_zone.get_overlapping_bodies():
+		if body is Player:
+			print("Found Player")
+			body.take_hit()
 	
 func animation_ended() -> void:
 	parent.attack_finished = true

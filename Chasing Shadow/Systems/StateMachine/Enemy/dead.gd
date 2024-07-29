@@ -1,6 +1,8 @@
 class_name EnemyDead
 extends State
 
+
+
 func enter() -> void:
 	super()
 	state_name = "Dead"

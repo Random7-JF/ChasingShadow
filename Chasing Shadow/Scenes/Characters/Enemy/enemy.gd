@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @onready var state_machine: StateMachine = $StateMachine
 @onready var animator: AnimationPlayer = $AnimationPlayer
-
+@onready var attack_zone: Area2D = $AttackHit
 @export var dead_state: EnemyDead
 
 @export var health: int = 3
@@ -46,7 +46,14 @@ func take_hit():
 	if health <= 0:
 		state_machine.change_state(dead_state)
 		$CollisionShape2D.disabled = true
-	
+		
+func flip_character(direction: float):
+	$Sprite.flip_h = direction < 0
+	if direction < 0:
+		$AttackHit/AttackArea.position.x = -50
+	else:
+		$AttackHit/AttackArea.position.x = 50
+
 func _on_aggro_range_body_entered(body):
 	if body is Player:
 		player_found = true

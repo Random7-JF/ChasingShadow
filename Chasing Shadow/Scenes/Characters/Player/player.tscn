@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://cywoo6cilrv81"]
+[gd_scene load_steps=93 format=3 uid="uid://cywoo6cilrv81"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_an5xb"]
@@ -75,6 +75,7 @@
 [ext_resource type="Texture2D" uid="uid://cpl1w4fep7bhu" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0059.png" id="61_426c0"]
 [ext_resource type="Texture2D" uid="uid://dseyuyf30acsy" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0060.png" id="62_is2y1"]
 [ext_resource type="Texture2D" uid="uid://ox4h2amlnqqw" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0061.png" id="63_ucbh4"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Player/death.gd" id="76_1k3si"]
 
 [sub_resource type="Gradient" id="Gradient_rov1h"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -369,8 +370,9 @@ _data = {
 "wall_slide": SubResource("Animation_2d42m")
 }
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("death_state") groups=["player"]]
 script = ExtResource("1_an5xb")
+death_state = NodePath("StateMachine/Death")
 wall_grip = 0.4
 jump_velocity = 600.0
 
@@ -496,3 +498,8 @@ animation_name = "wall_slide"
 script = ExtResource("59_tyrpc")
 idle = NodePath("../Idle")
 animation_name = "hit"
+
+[node name="Death" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle")]
+script = ExtResource("76_1k3si")
+idle = NodePath("../Idle")
+animation_name = "death"

@@ -32,7 +32,7 @@ func process_physics(delta: float) -> State:
 	
 	var direction =  parent.global_position.direction_to(parent.wander_coord) * (parent.speed * 0.50)
 	##Dirty get_node, maybe switch to a function
-	parent.get_node("Sprite").flip_h = direction.x < 0
+	parent.flip_character(direction.x)
 	parent.velocity.x = direction.x
 	
 	parent.move_and_slide()

@@ -8,6 +8,7 @@ func enter() -> void:
 	super()
 	state_name = "Hit"
 	parent.hit = true
+	parent.health -= 1
 
 func exit() -> void:
 	pass

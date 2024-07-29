@@ -33,8 +33,7 @@ func process_physics(delta: float) -> State:
 	## fall to ground
 	parent.velocity.y += gravity * delta
 	
-	##Dirty get_node, maybe switch to a function
-	parent.get_node("Sprite").flip_h = direction.x < 0
+	parent.flip_character(direction.x)
 	parent.velocity.x = direction.x * parent.speed
 	parent.move_and_slide()
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://b6tir47hjqhyc"]
+[gd_scene load_steps=91 format=3 uid="uid://b6tir47hjqhyc"]
 
 [ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="1_8qh15"]
 [ext_resource type="Script" path="res://Scenes/Characters/Enemy/enemy.gd" id="1_klbah"]
@@ -366,6 +366,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gbisy"]
 size = Vector2(854, 243)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqw2i"]
+size = Vector2(70.1186, 165)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ia3fv"]
 size = Vector2(156, 168)
 
@@ -437,16 +440,23 @@ libraries = {
 "": SubResource("AnimationLibrary_mffh5")
 }
 
-[node name="Aggro Range" type="Area2D" parent="."]
+[node name="AggroRange" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Aggro Range"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AggroRange"]
 position = Vector2(1, 8.5)
 shape = SubResource("RectangleShape2D_gbisy")
 debug_color = Color(0.900887, 0.138215, 0.683167, 0.42)
 
-[node name="Attack Range" type="Area2D" parent="."]
+[node name="AttackHit" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack Range"]
+[node name="AttackArea" type="CollisionShape2D" parent="AttackHit"]
+position = Vector2(50, 40)
+shape = SubResource("RectangleShape2D_lqw2i")
+debug_color = Color(0.889743, 0.31651, 0.209498, 0.42)
+
+[node name="AttackRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
 position = Vector2(-5, 42)
 shape = SubResource("RectangleShape2D_ia3fv")
 debug_color = Color(0.140245, 0.635116, 0.346438, 0.42)
@@ -495,7 +505,7 @@ animation_name = "hit"
 script = ExtResource("71_fnn51")
 animation_name = "death"
 
-[connection signal="body_entered" from="Aggro Range" to="." method="_on_aggro_range_body_entered"]
-[connection signal="body_exited" from="Aggro Range" to="." method="_on_aggro_range_body_exited"]
-[connection signal="body_entered" from="Attack Range" to="." method="_on_attack_range_body_entered"]
-[connection signal="body_exited" from="Attack Range" to="." method="_on_attack_range_body_exited"]
+[connection signal="body_entered" from="AggroRange" to="." method="_on_aggro_range_body_entered"]
+[connection signal="body_exited" from="AggroRange" to="." method="_on_aggro_range_body_exited"]
+[connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="AttackRange" to="." method="_on_attack_range_body_exited"]
