@@ -20,7 +20,7 @@ func process(_delta: float) -> State:
 	return null
 	
 func process_physics(delta: float) -> State:
-	if parent.attack:
+	if parent.attack and parent.since_attack >= parent.attack_delay:
 		return attack
 	if parent.been_hit:
 		return hit
@@ -36,5 +36,5 @@ func process_physics(delta: float) -> State:
 	parent.flip_character(direction.x)
 	parent.velocity.x = direction.x * parent.speed
 	parent.move_and_slide()
-	
+	parent.since_attack += delta
 	return null

@@ -10,6 +10,7 @@ extends State
 func enter() -> void:
 	super()
 	state_name = "Idle"
+	parent.velocity.x = 0
 
 func exit() -> void:
 	pass
@@ -25,14 +26,10 @@ func process_physics(delta: float) -> State:
 	
 	## get the direction in idle, incase the keys are being held.
 	## send to run state if they are
-	var direction = Input.get_axis("move_left", "move_right") * parent.speed
-	if direction != 0:
-		return run
-	parent.flip_character(direction)
-	parent.velocity.x = direction
-
-	parent.move_and_slide()
-
+	#var direction = Input.get_axis("move_left", "move_right") * parent.speed
+	#if direction != 0:
+	#	return run
+	#parent.flip_character(direction)
 	return null
 
 func process_input(_event: InputEvent) -> State:

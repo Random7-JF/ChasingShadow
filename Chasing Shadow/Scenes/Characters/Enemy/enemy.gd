@@ -3,26 +3,29 @@ extends CharacterBody2D
 
 @onready var state_machine: StateMachine = $StateMachine
 @onready var animator: AnimationPlayer = $AnimationPlayer
-@onready var attack_zone: Area2D = $AttackHit
-@export var dead_state: EnemyDead
+@onready var attack_hit: Area2D = $AttackHit
+@onready var attack_area: CollisionShape2D = $AttackHit/AttackArea
+@onready var colision: CollisionShape2D = $CollisionShape2D
+@onready var sprite: Sprite2D = $Sprite
 
+@export var dead_state: EnemyDead
 @export var health: int = 3
 @export var speed: float = 500
 @export var wall_grip: float = 0.50
-var can_wall_slide: bool = true
+@export var start_boundary: Marker2D
+@export var end_boundary: Marker2D
+@export var wander_delay: float = 5
+@export var attack_delay: float = 0.5
+
+var since_attack: float = attack_delay
 var attack_finished: bool = false
 var player_found: bool = false
 var attack: bool = false
 var been_hit: bool = false
 var dead: bool = false
 
-@export var start_boundary: Marker2D
-@export var end_boundary: Marker2D
-@export var wander_delay: float = 190
 var wander_time: float = 0
 var wander_coord: Vector2
-
-
 
 func _ready():
 	state_machine.init(self, animator)
@@ -45,14 +48,14 @@ func take_hit():
 	health -= 1
 	if health <= 0:
 		state_machine.change_state(dead_state)
-		$CollisionShape2D.disabled = true
+		colision.disabled = true
 		
 func flip_character(direction: float):
-	$Sprite.flip_h = direction < 0
+	sprite.flip_h = direction < 0
 	if direction < 0:
-		$AttackHit/AttackArea.position.x = -50
+		attack_area.position.x = -50
 	else:
-		$AttackHit/AttackArea.position.x = 50
+		attack_area.position.x = 50
 
 func _on_aggro_range_body_entered(body):
 	if body is Player:
