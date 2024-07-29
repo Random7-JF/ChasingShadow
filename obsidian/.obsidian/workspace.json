@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PirateJam/Chasing Shadow/World/Levels.md",
+                "file": "PirateJam/Chasing Shadow/Last Minute To Do.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PirateJam/Chasing Shadow/World/Levels.md",
+                "file": "PirateJam/Chasing Shadow/Last Minute To Do.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PirateJam/Chasing Shadow/World/Levels.md",
+                "file": "PirateJam/Chasing Shadow/Last Minute To Do.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PirateJam/Chasing Shadow/World/Levels.md"
+                "file": "PirateJam/Chasing Shadow/Last Minute To Do.md"
               }
             }
           }
@@ -149,6 +149,9 @@
   "active": "a044995baad4dccf",
   "lastOpenFiles": [
     "PirateJam/Chasing Shadow/Chasing Shadow GDD.md",
+    "PirateJam/Chasing Shadow/Last Minute To Do.md",
+    "Chasing Shadow-GDD.pdf",
+    "PirateJam/Game Ideas.md",
     "PirateJam/Chasing Shadow/World/Levels.md",
     "PirateJam/Chasing Shadow/Work Board.md",
     "PirateJam/Chasing Shadow/Assets and Learning Material.md"
