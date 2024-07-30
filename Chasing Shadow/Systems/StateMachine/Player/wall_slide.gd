@@ -11,7 +11,7 @@ func enter() -> void:
 	state_name = "Wall Slide"
 
 func exit() -> void:
-	pass
+	parent.can_wall_slide = true
 
 func process(_delta: float) -> State:
 	return null

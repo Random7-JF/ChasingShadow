@@ -56,3 +56,7 @@ func flip_character(direction: float):
 	else:
 		attack_area.position.x = 50
 	
+
+
+func _on_movement_body_entered(body):
+	pass # Replace with function body.

@@ -1,8 +1,9 @@
-[gd_scene load_steps=50 format=3 uid="uid://cglqycpxsnt6m"]
+[gd_scene load_steps=61 format=3 uid="uid://cglqycpxsnt6m"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_bnq16"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_1caof"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="3_tlqhi"]
+[ext_resource type="PackedScene" uid="uid://b6tir47hjqhyc" path="res://Scenes/Characters/Enemy/enemy.tscn" id="4_mrn8g"]
 [ext_resource type="Texture2D" uid="uid://dq3umj8ybrahv" path="res://Assets/Assets 1024 Cave/Floor/long_stone1.png" id="4_p6ad8"]
 [ext_resource type="Texture2D" uid="uid://cufj4faejwour" path="res://Assets/Assets 1024 Cave/Floor/long_platform.png" id="4_spdof"]
 [ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="4_tnkjw"]
@@ -30,6 +31,11 @@
 [ext_resource type="PackedScene" uid="uid://mnhdtn3l02e" path="res://Scenes/Triggers/fall_dead_zone.tscn" id="28_4gr1m"]
 [ext_resource type="PackedScene" uid="uid://c8eku16jig8uh" path="res://Scenes/Triggers/next_level_zone.tscn" id="29_qgxg2"]
 [ext_resource type="PackedScene" uid="uid://da3dygi5nrfpe" path="res://Scenes/World/level_2.tscn" id="30_q6fbk"]
+[ext_resource type="Script" path="res://Scenes/World/Tutorial/movement.gd" id="31_t01vu"]
+[ext_resource type="Script" path="res://Scenes/World/Tutorial/jump.gd" id="32_qxrmo"]
+[ext_resource type="Script" path="res://Scenes/World/Tutorial/wall.gd" id="33_m3bv3"]
+[ext_resource type="Script" path="res://Scenes/World/Tutorial/attack.gd" id="35_y20x3"]
+[ext_resource type="Script" path="res://Scenes/World/Tutorial/exit.gd" id="36_725me"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qqa46"]
 polygon = PackedVector2Array(713, 34.9999, 677, 66.9999, 613, 92.9999, 428, 112, 238, 103, -97, 125, -300, 112, -561, 108, -661, 67.0001, -695, 31.0001, -540, 46.0001, -412, 33.0001, -212, 38, -30, 37, 162, 45.9999, 389, 39.9999, 549, 54.9999, 636, -13.0001, 691, 3.99988)
@@ -94,6 +100,21 @@ fill_to = Vector2(0.217949, 0.495726)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hsnxh"]
 polygon = PackedVector2Array(5004, -850, 5206, -843, 5488, -841, 5780, -833, 5812, -820, 5901, -648, 6051, -405, 6212, -165, 6331, -21, 6977, -19, 8322, 1, 8354, 360, 6977, 343, 6634, 339, 6613, 456, 6503, 468, 6361, 473, 6299, 473, 6299, 1271, 5028, 1274, 5024, 1396, 4803, 1394, 4735, 1394, 4743, 2304, 8496, 2306, 8488, -1229, 4986, -1236)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcvnq"]
+size = Vector2(330, 197)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_215cj"]
+size = Vector2(376, 138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ops73"]
+size = Vector2(367, 185)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mbrm"]
+size = Vector2(234, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vt6h"]
+size = Vector2(254, 100)
+
 [node name="Level_1" type="Node2D"]
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_bnq16")]
@@ -123,6 +144,17 @@ zoom = Vector2(0.5, 0.5)
 process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
+
+[node name="enemy" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_mrn8g")]
+position = Vector2(5799, 1086)
+start_boundary = NodePath("Start")
+end_boundary = NodePath("End")
+
+[node name="Start" type="Marker2D" parent="enemy"]
+position = Vector2(-227, 0)
+
+[node name="End" type="Marker2D" parent="enemy"]
+position = Vector2(318, -1)
 
 [node name="World" type="Node2D" parent="."]
 position = Vector2(-172, -59)
@@ -194,6 +226,7 @@ position = Vector2(1914, 393)
 position = Vector2(2575, 396)
 
 [node name="Block3" parent="World/Map" instance=ExtResource("14_1v5gy")]
+position = Vector2(3134, -22)
 
 [node name="Block1" parent="World/Map" instance=ExtResource("12_ch1nf")]
 
@@ -588,3 +621,77 @@ texture_scale = 8.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="World/Lighting"]
 occluder = SubResource("OccluderPolygon2D_hsnxh")
+
+[node name="Tutorial" type="Node2D" parent="."]
+
+[node name="Movement" type="Area2D" parent="Tutorial" node_paths=PackedStringArray("label")]
+script = ExtResource("31_t01vu")
+label = NodePath("../../UI/VBox/Tutorial")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Movement"]
+position = Vector2(15, 27.5)
+shape = SubResource("RectangleShape2D_qcvnq")
+
+[node name="Jump" type="Area2D" parent="Tutorial" node_paths=PackedStringArray("label")]
+position = Vector2(1055, 0)
+script = ExtResource("32_qxrmo")
+label = NodePath("../../UI/VBox/Tutorial")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Jump"]
+position = Vector2(-33, 59)
+shape = SubResource("RectangleShape2D_215cj")
+
+[node name="Wall" type="Area2D" parent="Tutorial" node_paths=PackedStringArray("label")]
+position = Vector2(2562, 247)
+script = ExtResource("33_m3bv3")
+label = NodePath("../../UI/VBox/Tutorial")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Wall"]
+position = Vector2(-2.5, 36.5)
+shape = SubResource("RectangleShape2D_ops73")
+
+[node name="Attack" type="Area2D" parent="Tutorial" node_paths=PackedStringArray("label")]
+position = Vector2(4546, 645)
+script = ExtResource("35_y20x3")
+label = NodePath("../../UI/VBox/Tutorial")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Attack"]
+position = Vector2(95, 42)
+shape = SubResource("RectangleShape2D_8mbrm")
+
+[node name="Exit" type="Area2D" parent="Tutorial" node_paths=PackedStringArray("label")]
+position = Vector2(6338, 208)
+script = ExtResource("36_725me")
+label = NodePath("../../UI/VBox/Tutorial")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Exit"]
+position = Vector2(72, 40)
+shape = SubResource("RectangleShape2D_8vt6h")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="VBox" type="VBoxContainer" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -198.0
+offset_top = 100.0
+offset_right = 198.0
+offset_bottom = 158.0
+grow_horizontal = 2
+
+[node name="Tutorial" type="Label" parent="UI/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "This is Tutorial Text"
+
+[connection signal="body_entered" from="Tutorial/Movement" to="Tutorial/Movement" method="_on_body_entered"]
+[connection signal="body_exited" from="Tutorial/Movement" to="Tutorial/Movement" method="_on_body_exited"]
+[connection signal="body_entered" from="Tutorial/Jump" to="Tutorial/Jump" method="_on_body_entered"]
+[connection signal="body_exited" from="Tutorial/Jump" to="Tutorial/Jump" method="_on_body_exited"]
+[connection signal="body_entered" from="Tutorial/Wall" to="Tutorial/Wall" method="_on_body_entered"]
+[connection signal="body_exited" from="Tutorial/Wall" to="Tutorial/Wall" method="_on_body_exited"]
+[connection signal="body_entered" from="Tutorial/Attack" to="Tutorial/Attack" method="_on_body_entered"]
+[connection signal="body_exited" from="Tutorial/Attack" to="Tutorial/Attack" method="_on_body_exited"]
+[connection signal="body_entered" from="Tutorial/Exit" to="Tutorial/Exit" method="_on_body_entered"]
+[connection signal="body_exited" from="Tutorial/Exit" to="Tutorial/Exit" method="_on_body_exited"]
