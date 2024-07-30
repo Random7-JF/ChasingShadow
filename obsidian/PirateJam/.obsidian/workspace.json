@@ -8,66 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7524ba0cdc723794",
-            "type": "leaf",
-            "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
-            "id": "75cf504a15512ce5",
-            "type": "leaf",
-            "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
-            "id": "b18f5ea1aafebe6c",
-            "type": "leaf",
-            "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
-            "id": "9ef8bc5bbfe96014",
-            "type": "leaf",
-            "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
-            "id": "d703eed5fb7637c1",
-            "type": "leaf",
-            "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
-            "id": "b208278136bcaa42",
-            "type": "leaf",
-            "state": {
-              "type": "kanban-view",
-              "state": {
-                "file": "Chasing Shadow/Work Board.md"
-              }
-            }
-          },
-          {
             "id": "5ef33e5bd8a69f98",
             "type": "leaf",
             "state": {
@@ -79,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"

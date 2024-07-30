@@ -378,6 +378,7 @@ dead_state = NodePath("StateMachine/Dead")
 wander_delay = 3.0
 
 [node name="Label" type="Label" parent="." node_paths=PackedStringArray("enemy")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -397,6 +398,7 @@ script = ExtResource("2_apncr")
 enemy = NodePath("..")
 
 [node name="Label2" type="Label" parent="." node_paths=PackedStringArray("enemy")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

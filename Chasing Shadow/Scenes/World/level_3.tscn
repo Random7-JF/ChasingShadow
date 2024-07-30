@@ -1,0 +1,1480 @@
+[gd_scene load_steps=113 format=3 uid="uid://c0bolgvcloqq2"]
+
+[ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_fvbf3"]
+[ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_p3gsd"]
+[ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="3_mh27t"]
+[ext_resource type="PackedScene" uid="uid://b6tir47hjqhyc" path="res://Scenes/Characters/Enemy/enemy.tscn" id="4_d0ae1"]
+[ext_resource type="Texture2D" uid="uid://bqcqvyiwfrrpr" path="res://Assets/Assets 1024 Cave/Blocks/block3.png" id="5_ppnks"]
+[ext_resource type="Texture2D" uid="uid://g0555ihwlnb3" path="res://Assets/Assets 1024 Cave/Blocks/block8.png" id="6_n3scy"]
+[ext_resource type="Texture2D" uid="uid://bgc7nr46uqvub" path="res://Assets/Assets 1024 Cave/Blocks/block10.png" id="7_ysjvv"]
+[ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="8_xk81f"]
+[ext_resource type="Texture2D" uid="uid://s76eilmrifu8" path="res://Assets/Assets 1024 Cave/Floor/platform2.png" id="9_v42d7"]
+[ext_resource type="Texture2D" uid="uid://be4h65jh0q86x" path="res://Assets/Assets 1024 Cave/Floor/platform7.png" id="10_y1cfk"]
+[ext_resource type="Texture2D" uid="uid://cufj4faejwour" path="res://Assets/Assets 1024 Cave/Floor/long_platform.png" id="11_qnlnn"]
+[ext_resource type="Texture2D" uid="uid://bnj2wtvkgaoib" path="res://Assets/Assets 1024 Cave/Floor/platform1.png" id="12_tp6xc"]
+[ext_resource type="Texture2D" uid="uid://b46aunclyl30p" path="res://Assets/Assets 1024 Cave/Blocks/block11.png" id="13_8ffai"]
+[ext_resource type="Texture2D" uid="uid://e1v0gwme4nbm" path="res://Assets/Assets 1024 Cave/Blocks/block7.png" id="14_1im1o"]
+[ext_resource type="Texture2D" uid="uid://42xko7vw0e7a" path="res://Assets/Assets 1024 Cave/Blocks/block6.png" id="15_rd1hq"]
+[ext_resource type="Texture2D" uid="uid://i7vwfe1nk12u" path="res://Assets/Assets 1024 Cave/Blocks/block4.png" id="16_dvsxi"]
+[ext_resource type="Texture2D" uid="uid://dg8e7301wgj63" path="res://Assets/Assets 1024 Cave/Floor/platform3.png" id="17_wrq0h"]
+[ext_resource type="Texture2D" uid="uid://cf0oxnlp6gsha" path="res://Assets/Assets 1024 Cave/Floor/platform4.png" id="18_gwxns"]
+[ext_resource type="Texture2D" uid="uid://don1alpbe7rbq" path="res://Assets/Assets 1024 Cave/Floor/platform9.png" id="19_e76de"]
+[ext_resource type="Texture2D" uid="uid://dq3umj8ybrahv" path="res://Assets/Assets 1024 Cave/Floor/long_stone1.png" id="20_8p1pk"]
+[ext_resource type="Texture2D" uid="uid://cpvc637ps5c6v" path="res://Assets/Assets 1024 Cave/Floor/long_stone2.png" id="21_yb4a3"]
+[ext_resource type="Texture2D" uid="uid://0qce12ftbqac" path="res://Assets/Assets 1024 Cave/Floor/stone_plat1.png" id="22_kfkai"]
+[ext_resource type="Texture2D" uid="uid://daf366amol1it" path="res://Assets/Assets 1024 Cave/Floor/stone_wall1.png" id="23_f14sa"]
+[ext_resource type="Texture2D" uid="uid://cq0u4uysbxh47" path="res://Assets/Assets 1024 Cave/Blocks/block9.png" id="24_qfduh"]
+[ext_resource type="Texture2D" uid="uid://ctw4ieo8xjhr6" path="res://Assets/Assets 1024 Cave/Floor/stone1.png" id="25_lbgo2"]
+[ext_resource type="Texture2D" uid="uid://dvgtyem5qelgq" path="res://Assets/Assets 1024 Cave/Floor/stone4.png" id="26_0c57u"]
+[ext_resource type="Texture2D" uid="uid://6m8io1254ao7" path="res://Assets/Assets 1024 Cave/Floor/stone3.png" id="27_nvc8m"]
+[ext_resource type="Texture2D" uid="uid://d4ncxrhwbg0dd" path="res://Assets/Assets 1024 Cave/Square - Black.jpg" id="28_s2b36"]
+[ext_resource type="PackedScene" uid="uid://mnhdtn3l02e" path="res://Scenes/Triggers/fall_dead_zone.tscn" id="29_0cekw"]
+[ext_resource type="PackedScene" uid="uid://c8eku16jig8uh" path="res://Scenes/Triggers/next_level_zone.tscn" id="30_vg74j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyb5l"]
+size = Vector2(290, 286)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jyadb"]
+polygon = PackedVector2Array(-149, -139, 38.9135, -137.726, 146, -137, 147, 150, -143, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmf1a"]
+size = Vector2(251, 123)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_f65fg"]
+polygon = PackedVector2Array(-121, -59, 124, -58, 127, 59, -125, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mckxk"]
+size = Vector2(347, 46)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qcxm3"]
+polygon = PackedVector2Array(-173, 23, -173, 6, 173, 7, 173, 25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ndwo3"]
+polygon = PackedVector2Array(-396, -12, -243, -15, -7, -10, 183, -10, 329, -4, 388, -7, 388, 3, -312, 3)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rgogm"]
+polygon = PackedVector2Array(-467.5, -2, -332.5, 5, -157.5, -4, 123.5, 3, 326.5, 8, 481.5, 10, 491.5, 35, -497.5, 64)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k10my"]
+polygon = PackedVector2Array(-178, -4, -89, -12, 14, -15, 140, -17, 177, -7, 172, 27, -178, 27, -180, 11)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vbnqm"]
+polygon = PackedVector2Array(-398.5, -10, -80.5, -8, 184.5, -3, 381.5, 6, 384.5, 27, 369.5, 51, -70.5, 31, -417.5, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xryk5"]
+size = Vector2(980, 28)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_s2phe"]
+polygon = PackedVector2Array(-490, 14, 492, 20, 446, 45, 143, 39, 57, 32, 37, 38, -291, 45, -306, 33, -452, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwbaq"]
+size = Vector2(754, 25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q3ldr"]
+polygon = PackedVector2Array(-395, 13, 359, 12, 347, 32, 255, 33, 38, 33, -74, 34, -107, 43, -378, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fo58g"]
+size = Vector2(366, 25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pfmeg"]
+polygon = PackedVector2Array(-182, 19, -157, 33, -55, 32, 174, 28, 183, 11, -184, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2neve"]
+size = Vector2(762, 24)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qu4au"]
+polygon = PackedVector2Array(-394, 18, 406, 19, 380, 34, 53, 39, -91, 43, -258, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrsmd"]
+size = Vector2(183, 76)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ekca8"]
+polygon = PackedVector2Array(-91, -39, 89, -39, 90, 37, -92, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21c1y"]
+size = Vector2(967.5, 24)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_itl1l"]
+polygon = PackedVector2Array(-477, 19, -439, 34, -304, 34, -297, 40, -26, 39, 46, 41, 62, 35, 104, 34, 157, 39, 286, 45, 444, 41, 494, 26, 480, 21)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pw3hn"]
+polygon = PackedVector2Array(384, 22, 384, 2, 47, 0, -218, 6, -397, -5.00024, -382, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vv0dx"]
+size = Vector2(291, 40)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_650kq"]
+polygon = PackedVector2Array(-152, -9, 150, -7, 148, 15, 130, 26, 38, 30, 4, 25, -31, 29, -72, 27, -128, 26, -151, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7ak2"]
+size = Vector2(759, 25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8eqlo"]
+polygon = PackedVector2Array(-392, 16, 381, 16, 375, 26, 40, 35, -95, 36, -298, 35, -384, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yxpb"]
+size = Vector2(784, 25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hljy1"]
+polygon = PackedVector2Array(-392, 19, 391, 21, 380, 32, 37, 36, -14, 33, -65, 33, -95, 42, -383, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm5h2"]
+size = Vector2(165, 302)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jjjlc"]
+polygon = PackedVector2Array(-84, -158, 86, -159, 85, 143, -77, 145)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fomou"]
+size = Vector2(277, 279)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_h3wfc"]
+polygon = PackedVector2Array(-138, -134, 137, -133, 139, 139, -138, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pldi"]
+size = Vector2(548, 319)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8ndx4"]
+polygon = PackedVector2Array(-270, -161, 270, -159, 274, 158, -275, 157)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jve2"]
+size = Vector2(140, 48)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rc7af"]
+polygon = PackedVector2Array(-68, -14, -28.8086, -14.8222, 25.9514, -15.9709, 75, -17, 70, 24, 20, 31, -50, 32, -68, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft5kf"]
+size = Vector2(277, 40)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_56jxy"]
+polygon = PackedVector2Array(-138, 5, 142, 7, 139, 28, 105, 38, 26, 36, -32, 35, -68, 31, -132, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwuw6"]
+size = Vector2(361, 53)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lrdla"]
+polygon = PackedVector2Array(-181, -18, 180, -21, 186, 2, 169, 25, -171, 29, -185, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq82v"]
+size = Vector2(347, 29)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l8qw2"]
+polygon = PackedVector2Array(-175, -12, 175, -11, 174, 28, -128, 40, -173, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpx8x"]
+size = Vector2(212, 55)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_aafgn"]
+polygon = PackedVector2Array(-108, -21, 104, -21, 103, 35, -108, 34)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4pxl7"]
+polygon = PackedVector2Array(720, 0.999939, 466, 3.99994, 73, -8, -150, -5, -442, -4.99994, -658, 11.0001, -356, 49.0001, -235, 65, 88, 42, 371, 46, 568, 54.9999)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0ktgg"]
+polygon = PackedVector2Array(675.669, 31.7487, 493.851, 8.04407, 237.599, 10.0441, 9.83838, -0.455261, -146.029, 13.8734, -393.42, 9.66962, -591.369, 10.801, -687.003, 11.0595, -702.77, 34.9638, -635.602, 71.9028, -347.604, 112.343, -145.382, 133.274, 46.3628, 123.282, 201.391, 119.36, 424.176, 134.359, 614.964, 99.305)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wg84a"]
+polygon = PackedVector2Array(717, 3.00012, 555, 0, 269, 3, -23, 3, -296, 15, -569, 6, -724, 3, -550, 53, -419, 50, -318, 60, -172, 60, 78.9998, 44, 301, 47, 466, 57, 638, 53.0001)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_v7bdn"]
+polygon = PackedVector2Array(733, 2.00012, 591, 6.00012, 313, 2.00012, 85, 4, -163, 4, -498, 11, -706, -2, -724, -2, -616, 36, -477, 54, -327, 55, -204, 66, 1, 38, 179, 34, 336, 50.0001, 453, 52.0001, 571, 52.0001, 705, 32.0001)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_t6m3n"]
+polygon = PackedVector2Array(389, 12.0001, 276, 3.00012, 114, -2, -116, -4, -326, -2, -401, -4, -371, 35, 369, 26.0001)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q0kc8"]
+polygon = PackedVector2Array(-143.163, -34.9333, 23.9718, -33.5463, 132.971, -34.652, 141.555, -100.061, 6.67651, -112.381, -113.602, -101.748)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_v4yqm"]
+polygon = PackedVector2Array(-74.321, 168.542, -2.36737, 171.311, 4.20837, 15.2412, 10.5223, -135.835, -76.7728, -159.235, -83.0869, -8.15881)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q1i6r"]
+polygon = PackedVector2Array(483.082, 9.4967, 296.055, -7.20056, 73.9678, -9.93958, -229.419, 4.05957, -408.666, -16.3062, -482.005, 6.96008, -442.917, 21.1755, 184.973, 33.6022, 468.15, 41.3407)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_c0dp4"]
+polygon = PackedVector2Array(392.861, 6.97766, 261.077, -10.717, 96.5498, -1.7876, -40.6885, -6.43469, -263.365, -4.3418, -351.593, -10.7246, -378.604, 25.6533, 378.368, 26.9767)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y8way"]
+polygon = PackedVector2Array(699.046, 42.4247, 415.997, 41.7164, 75.3662, 28.0002, -337.886, 23.1823, -588.16, 19.6832, -705.119, 24.2096, -620.86, 81.4144, -402.714, 116.817, -307.797, 109.621, 82.9307, 133.351, 221.356, 117.905, 499.938, 127.781, 613.048, 98.4718)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pqe86"]
+polygon = PackedVector2Array(387, 7.99976, 208, -4, -37, 1, -246, -10, -268, 53, -118, 35, 129, 23, 304, 25.9998)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_iugk7"]
+polygon = PackedVector2Array(697.996, 39.0642, 386.025, 43.7449, 174.796, 35.2656, -132.327, 32.8408, -307.672, 18.592, -548.575, 25.7515, -712.729, 20.2649, -614.403, 81.1736, -276.666, 111.949, 214.5, 114.434, 520.493, 110.881)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwsnl"]
+size = Vector2(782, 42)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8xphs"]
+polygon = PackedVector2Array(-393, -16, 388, -17, 388, 23, 120, 38, 40, 37, -73, 32, -96, 40, -398, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1i3ad"]
+size = Vector2(278, 280)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j7ccu"]
+polygon = PackedVector2Array(-142, -142, 140, -143, 140, 145, -142, 149)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83j82"]
+size = Vector2(176, 321)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y5uis"]
+polygon = PackedVector2Array(-86, -164, 92, -161, 92, 158, -85, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1noww"]
+size = Vector2(379, 88)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_siepp"]
+polygon = PackedVector2Array(-187, -39, 190, -35, 191, 49, -189, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3yd0"]
+size = Vector2(13185, 182)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwqx7"]
+size = Vector2(767, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3edtq"]
+size = Vector2(25, 376)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t51hh"]
+size = Vector2(25.5, 792)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nicg"]
+size = Vector2(25, 382)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inuq6"]
+size = Vector2(19.96, 250.031)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wc2lf"]
+size = Vector2(1723.5, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mjgk"]
+size = Vector2(1759, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0njpy"]
+size = Vector2(784.653, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r52wp"]
+size = Vector2(1452, 1770)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78lgd"]
+size = Vector2(2580, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ref"]
+size = Vector2(31, 781)
+
+[sub_resource type="Gradient" id="Gradient_5wnfp"]
+offsets = PackedFloat32Array(0, 0.00578035, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0.0367347, 0.0367347, 0.0367347, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cfw7i"]
+gradient = SubResource("Gradient_5wnfp")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.217949, 0.495726)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0vt3h"]
+polygon = PackedVector2Array(382, 1123, 378, 1477, 512, 1652, 701, 1684, 2277, 1697, 2272, 2416, 2641, 3139, 5, 3156, -17, 157, 777, 166, 782, 498, 2515, 516, 2097, 1123)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vsp1e"]
+polygon = PackedVector2Array(6568, 288, 7297, 291, 7829, 81, 8505, 73, 8521, 95, 8535, 805, 8203, 1477, 7287, 1481, 6649, 1039)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1sq4p"]
+polygon = PackedVector2Array(11760, -1682, 12507, -1685, 12521, -2056, 13199, -2048, 13205, 4030, 9981, 4025, 9963, 3406, 9936, 2799, 10691, 2795, 10686, 2297, 9936, 2279, 9896, 1964, 9963, 1003, 9182, 52, 11768, 56)
+
+[node name="Level 3" type="Node2D"]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_fvbf3")]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = 30.0
+offset_top = -3430.0
+offset_right = 14565.0
+offset_bottom = 5649.0
+color = Color(0.168627, 0.113725, 0.0117647, 1)
+
+[node name="DirectionalLight2D" parent="." instance=ExtResource("2_p3gsd")]
+
+[node name="Player" parent="." instance=ExtResource("3_mh27t")]
+position = Vector2(367, -1)
+respawn_coord = Vector2(367, -1)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.5, 0.5)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+
+[node name="Enemy" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_d0ae1")]
+position = Vector2(1536, 347)
+start_boundary = NodePath("Start Boundary")
+end_boundary = NodePath("End Boundary")
+
+[node name="Start Boundary" type="Marker2D" parent="Enemy"]
+position = Vector2(-502, 77)
+
+[node name="End Boundary" type="Marker2D" parent="Enemy"]
+position = Vector2(560, 71)
+
+[node name="Enemy2" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_d0ae1")]
+position = Vector2(4498, -7)
+start_boundary = NodePath("Start Boundary")
+end_boundary = NodePath("End Boundary")
+
+[node name="Start Boundary" type="Marker2D" parent="Enemy2"]
+position = Vector2(-278, 62)
+
+[node name="End Boundary" type="Marker2D" parent="Enemy2"]
+position = Vector2(227, 69)
+
+[node name="Enemy3" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_d0ae1")]
+position = Vector2(4788, 1487)
+start_boundary = NodePath("Start Boundary")
+end_boundary = NodePath("End Boundary")
+
+[node name="Start Boundary" type="Marker2D" parent="Enemy3"]
+position = Vector2(-278, 62)
+
+[node name="End Boundary" type="Marker2D" parent="Enemy3"]
+position = Vector2(227, 69)
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Map" type="Node2D" parent="World"]
+
+[node name="Block3" type="Sprite2D" parent="World/Map"]
+position = Vector2(3229, 1520)
+texture = ExtResource("5_ppnks")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block3/StaticBody2D"]
+position = Vector2(-1, 5)
+shape = SubResource("RectangleShape2D_eyb5l")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block3"]
+occluder = SubResource("OccluderPolygon2D_jyadb")
+
+[node name="Block9" type="Sprite2D" parent="World/Map"]
+position = Vector2(5733, 91)
+texture = ExtResource("5_ppnks")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block9/StaticBody2D"]
+position = Vector2(-1, 5)
+shape = SubResource("RectangleShape2D_eyb5l")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block9"]
+occluder = SubResource("OccluderPolygon2D_jyadb")
+
+[node name="Block8" type="Sprite2D" parent="World/Map"]
+position = Vector2(6439, 819)
+texture = ExtResource("6_n3scy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block8/StaticBody2D"]
+position = Vector2(1.5, 2.5)
+shape = SubResource("RectangleShape2D_bmf1a")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block8"]
+occluder = SubResource("OccluderPolygon2D_f65fg")
+
+[node name="Block10" type="Sprite2D" parent="World/Map"]
+position = Vector2(2473, 1848)
+texture = ExtResource("7_ysjvv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block10/StaticBody2D"]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_mckxk")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block10"]
+occluder = SubResource("OccluderPolygon2D_qcxm3")
+
+[node name="LongPlatform14" type="Sprite2D" parent="World/Map"]
+position = Vector2(2441, 2788)
+rotation = 1.06506
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform12" type="Sprite2D" parent="World/Map"]
+position = Vector2(2299, 847)
+rotation = 2.20492
+texture = ExtResource("8_xk81f")
+
+[node name="Platform3" type="Sprite2D" parent="World/Map"]
+position = Vector2(367, 1329)
+rotation = 1.5708
+texture = ExtResource("9_v42d7")
+
+[node name="Platform7" type="Sprite2D" parent="World/Map"]
+position = Vector2(460, 1601)
+rotation = 0.98421
+texture = ExtResource("10_y1cfk")
+
+[node name="LongPlatform8" type="Sprite2D" parent="World/Map"]
+position = Vector2(1780.5, 1701)
+texture = ExtResource("11_qnlnn")
+
+[node name="LongPlatform9" type="Sprite2D" parent="World/Map"]
+position = Vector2(913.5, 1701)
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform10" type="Sprite2D" parent="World/Map"]
+position = Vector2(1620.5, 1140)
+rotation = 3.14159
+texture = ExtResource("11_qnlnn")
+
+[node name="LongPlatform11" type="Sprite2D" parent="World/Map"]
+position = Vector2(753.5, 1140)
+rotation = 3.14159
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform2" type="Sprite2D" parent="World/Map"]
+position = Vector2(392, 165)
+texture = ExtResource("8_xk81f")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform2"]
+occluder = SubResource("OccluderPolygon2D_ndwo3")
+
+[node name="LongPlatform" type="Sprite2D" parent="World/Map"]
+position = Vector2(1267.5, 503)
+texture = ExtResource("11_qnlnn")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform"]
+occluder = SubResource("OccluderPolygon2D_rgogm")
+
+[node name="Platform1" type="Sprite2D" parent="World/Map"]
+position = Vector2(768, 348)
+rotation = 1.5708
+texture = ExtResource("12_tp6xc")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform1"]
+occluder = SubResource("OccluderPolygon2D_k10my")
+
+[node name="LongPlatform3" type="Sprite2D" parent="World/Map"]
+position = Vector2(2142.5, 514)
+texture = ExtResource("8_xk81f")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform3"]
+occluder = SubResource("OccluderPolygon2D_vbnqm")
+
+[node name="LongPlatform4" type="Sprite2D" parent="World/Map"]
+position = Vector2(3371, 501)
+texture = ExtResource("11_qnlnn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform4/StaticBody2D"]
+position = Vector2(2, 4)
+shape = SubResource("RectangleShape2D_xryk5")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform4"]
+occluder = SubResource("OccluderPolygon2D_s2phe")
+
+[node name="LongPlatform41" type="Sprite2D" parent="World/Map"]
+position = Vector2(4489, 171)
+texture = ExtResource("11_qnlnn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform41"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform41/StaticBody2D"]
+position = Vector2(2, 4)
+shape = SubResource("RectangleShape2D_xryk5")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform41"]
+occluder = SubResource("OccluderPolygon2D_s2phe")
+
+[node name="LongPlatform42" type="Sprite2D" parent="World/Map"]
+position = Vector2(4093, 1267)
+texture = ExtResource("11_qnlnn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform42"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform42/StaticBody2D"]
+position = Vector2(2, 4)
+shape = SubResource("RectangleShape2D_xryk5")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform42"]
+occluder = SubResource("OccluderPolygon2D_s2phe")
+
+[node name="LongPlatform43" type="Sprite2D" parent="World/Map"]
+position = Vector2(5765, 2167)
+texture = ExtResource("11_qnlnn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform43"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform43/StaticBody2D"]
+position = Vector2(2, 4)
+shape = SubResource("RectangleShape2D_xryk5")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform43"]
+occluder = SubResource("OccluderPolygon2D_s2phe")
+
+[node name="LongPlatform5" type="Sprite2D" parent="World/Map"]
+position = Vector2(5416, 526)
+texture = ExtResource("8_xk81f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform5/StaticBody2D"]
+position = Vector2(-16, 2.5)
+shape = SubResource("RectangleShape2D_mwbaq")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform5"]
+occluder = SubResource("OccluderPolygon2D_q3ldr")
+
+[node name="Platform2" type="Sprite2D" parent="World/Map"]
+position = Vector2(5961, 527)
+texture = ExtResource("9_v42d7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform2/StaticBody2D"]
+position = Vector2(-1, 1.5)
+shape = SubResource("RectangleShape2D_fo58g")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform2"]
+occluder = SubResource("OccluderPolygon2D_pfmeg")
+
+[node name="LongPlatform6" type="Sprite2D" parent="World/Map"]
+position = Vector2(4340, 1666)
+texture = ExtResource("8_xk81f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform6/StaticBody2D"]
+position = Vector2(-7, 2)
+shape = SubResource("RectangleShape2D_2neve")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform6"]
+occluder = SubResource("OccluderPolygon2D_qu4au")
+
+[node name="LongPlatform13" type="Sprite2D" parent="World/Map"]
+position = Vector2(2264, 2101)
+rotation = 1.5708
+texture = ExtResource("8_xk81f")
+
+[node name="Block11" type="Sprite2D" parent="World/Map"]
+position = Vector2(2904, 1791)
+texture = ExtResource("13_8ffai")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block11/StaticBody2D"]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_xrsmd")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block11"]
+occluder = SubResource("OccluderPolygon2D_ekca8")
+
+[node name="LongPlatform7" type="Sprite2D" parent="World/Map"]
+position = Vector2(5193, 1661)
+texture = ExtResource("11_qnlnn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform7/StaticBody2D"]
+position = Vector2(-2.25, 7)
+shape = SubResource("RectangleShape2D_21c1y")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform7"]
+occluder = SubResource("OccluderPolygon2D_itl1l")
+
+[node name="LongPlatform15" type="Sprite2D" parent="World/Map"]
+position = Vector2(6926, 267)
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform16" type="Sprite2D" parent="World/Map"]
+position = Vector2(8176, 58)
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform17" type="Sprite2D" parent="World/Map"]
+position = Vector2(9666.5, 45)
+texture = ExtResource("11_qnlnn")
+
+[node name="LongPlatform18" type="Sprite2D" parent="World/Map"]
+position = Vector2(10473.5, 50)
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform19" type="Sprite2D" parent="World/Map"]
+position = Vector2(11279.5, 50)
+texture = ExtResource("11_qnlnn")
+
+[node name="LongPlatform20" type="Sprite2D" parent="World/Map"]
+position = Vector2(11755, -323)
+rotation = -1.56835
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform21" type="Sprite2D" parent="World/Map"]
+position = Vector2(11755, -1177)
+rotation = -1.5708
+texture = ExtResource("11_qnlnn")
+
+[node name="LongPlatform22" type="Sprite2D" parent="World/Map"]
+position = Vector2(12131, -1684)
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform36" type="Sprite2D" parent="World/Map"]
+position = Vector2(12183, -2071)
+rotation = -3.14159
+texture = ExtResource("8_xk81f")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform36"]
+occluder = SubResource("OccluderPolygon2D_pw3hn")
+
+[node name="LongPlatform23" type="Sprite2D" parent="World/Map"]
+position = Vector2(10312, 2807)
+texture = ExtResource("8_xk81f")
+
+[node name="Platform4" type="Sprite2D" parent="World/Map"]
+position = Vector2(10689, 2623)
+rotation = -1.57844
+texture = ExtResource("9_v42d7")
+
+[node name="Platform5" type="Sprite2D" parent="World/Map"]
+position = Vector2(10688, 2457)
+rotation = -1.57844
+texture = ExtResource("9_v42d7")
+
+[node name="LongPlatform24" type="Sprite2D" parent="World/Map"]
+position = Vector2(10324, 2284)
+rotation = -3.14159
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform25" type="Sprite2D" parent="World/Map"]
+position = Vector2(9436, 364)
+rotation = -2.24185
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform26" type="Sprite2D" parent="World/Map"]
+position = Vector2(9709, 684)
+rotation = -2.23625
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform27" type="Sprite2D" parent="World/Map"]
+position = Vector2(9922, 1486)
+rotation = -1.50335
+texture = ExtResource("11_qnlnn")
+
+[node name="Platform6" type="Sprite2D" parent="World/Map"]
+position = Vector2(9923, 2131)
+rotation = -1.64223
+texture = ExtResource("12_tp6xc")
+
+[node name="Block7" type="Sprite2D" parent="World/Map"]
+position = Vector2(8812, 2001)
+texture = ExtResource("14_1im1o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block7/StaticBody2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_vv0dx")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block7"]
+occluder = SubResource("OccluderPolygon2D_650kq")
+
+[node name="Block12" type="Sprite2D" parent="World/Map"]
+position = Vector2(9093, 1285)
+texture = ExtResource("14_1im1o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block12/StaticBody2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_vv0dx")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block12"]
+occluder = SubResource("OccluderPolygon2D_650kq")
+
+[node name="Block13" type="Sprite2D" parent="World/Map"]
+position = Vector2(9092, 778)
+texture = ExtResource("14_1im1o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block13/StaticBody2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_vv0dx")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block13"]
+occluder = SubResource("OccluderPolygon2D_650kq")
+
+[node name="Block14" type="Sprite2D" parent="World/Map"]
+position = Vector2(8737, 543)
+texture = ExtResource("14_1im1o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block14"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block14/StaticBody2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_vv0dx")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block14"]
+occluder = SubResource("OccluderPolygon2D_650kq")
+
+[node name="LongPlatform28" type="Sprite2D" parent="World/Map"]
+position = Vector2(6837, 1968)
+texture = ExtResource("8_xk81f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform28"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform28/StaticBody2D"]
+position = Vector2(-12.5, 2.5)
+shape = SubResource("RectangleShape2D_i7ak2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform28"]
+occluder = SubResource("OccluderPolygon2D_8eqlo")
+
+[node name="LongPlatform29" type="Sprite2D" parent="World/Map"]
+position = Vector2(7598, 1963)
+texture = ExtResource("8_xk81f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform29"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform29/StaticBody2D"]
+position = Vector2(-2, 7.5)
+shape = SubResource("RectangleShape2D_6yxpb")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform29"]
+occluder = SubResource("OccluderPolygon2D_hljy1")
+
+[node name="Block6" type="Sprite2D" parent="World/Map"]
+position = Vector2(8311, 2268)
+texture = ExtResource("15_rd1hq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block6/StaticBody2D"]
+position = Vector2(2.5, -4)
+shape = SubResource("RectangleShape2D_jm5h2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block6"]
+occluder = SubResource("OccluderPolygon2D_jjjlc")
+
+[node name="Block4" type="Sprite2D" parent="World/Map"]
+position = Vector2(9572, 3110)
+texture = ExtResource("5_ppnks")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block4/StaticBody2D"]
+position = Vector2(0.5, 3.5)
+shape = SubResource("RectangleShape2D_fomou")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block4"]
+occluder = SubResource("OccluderPolygon2D_h3wfc")
+
+[node name="Block5" type="Sprite2D" parent="World/Map"]
+position = Vector2(8887, 2634)
+texture = ExtResource("16_dvsxi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block5/StaticBody2D"]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_3pldi")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block5"]
+occluder = SubResource("OccluderPolygon2D_8ndx4")
+
+[node name="Platform8" type="Sprite2D" parent="World/Map"]
+position = Vector2(9318, 2781)
+texture = ExtResource("17_wrq0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform8/StaticBody2D"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_8jve2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform8"]
+occluder = SubResource("OccluderPolygon2D_rc7af")
+
+[node name="Platform18" type="Sprite2D" parent="World/Map"]
+position = Vector2(8519, 2356)
+texture = ExtResource("17_wrq0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform18"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform18/StaticBody2D"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_8jve2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform18"]
+occluder = SubResource("OccluderPolygon2D_rc7af")
+
+[node name="Platform19" type="Sprite2D" parent="World/Map"]
+position = Vector2(8799, 1120)
+texture = ExtResource("17_wrq0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform19"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform19/StaticBody2D"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_8jve2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform19"]
+occluder = SubResource("OccluderPolygon2D_rc7af")
+
+[node name="Platform21" type="Sprite2D" parent="World/Map"]
+position = Vector2(8799, 1120)
+texture = ExtResource("17_wrq0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform21"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform21/StaticBody2D"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_8jve2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform21"]
+occluder = SubResource("OccluderPolygon2D_rc7af")
+
+[node name="Platform22" type="Sprite2D" parent="World/Map"]
+position = Vector2(8633, 906)
+texture = ExtResource("17_wrq0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform22"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform22/StaticBody2D"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_8jve2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform22"]
+occluder = SubResource("OccluderPolygon2D_rc7af")
+
+[node name="Platform23" type="Sprite2D" parent="World/Map"]
+position = Vector2(8633, 906)
+texture = ExtResource("17_wrq0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform23"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform23/StaticBody2D"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_8jve2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform23"]
+occluder = SubResource("OccluderPolygon2D_rc7af")
+
+[node name="Platform24" type="Sprite2D" parent="World/Map"]
+position = Vector2(8633, 906)
+texture = ExtResource("17_wrq0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform24"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform24/StaticBody2D"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_8jve2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform24"]
+occluder = SubResource("OccluderPolygon2D_rc7af")
+
+[node name="Platform25" type="Sprite2D" parent="World/Map"]
+position = Vector2(9080, 353)
+texture = ExtResource("17_wrq0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform25"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform25/StaticBody2D"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_8jve2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform25"]
+occluder = SubResource("OccluderPolygon2D_rc7af")
+
+[node name="Platform20" type="Sprite2D" parent="World/Map"]
+position = Vector2(9396, 1447)
+texture = ExtResource("17_wrq0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform20"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform20/StaticBody2D"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_8jve2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform20"]
+occluder = SubResource("OccluderPolygon2D_rc7af")
+
+[node name="Platform9" type="Sprite2D" parent="World/Map"]
+position = Vector2(9716, 1657)
+texture = ExtResource("10_y1cfk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform9/StaticBody2D"]
+position = Vector2(1.5, 3)
+shape = SubResource("RectangleShape2D_ft5kf")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform9"]
+occluder = SubResource("OccluderPolygon2D_56jxy")
+
+[node name="Platform17" type="Sprite2D" parent="World/Map"]
+position = Vector2(9315, 1865)
+texture = ExtResource("10_y1cfk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform17"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform17/StaticBody2D"]
+shape = SubResource("RectangleShape2D_ft5kf")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform17"]
+occluder = SubResource("OccluderPolygon2D_56jxy")
+
+[node name="LongPlatform30" type="Sprite2D" parent="World/Map"]
+position = Vector2(7740, 1499)
+rotation = 3.14159
+texture = ExtResource("11_qnlnn")
+
+[node name="LongPlatform31" type="Sprite2D" parent="World/Map"]
+position = Vector2(6591, 657)
+rotation = -1.68445
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform32" type="Sprite2D" parent="World/Map"]
+position = Vector2(6942, 1262)
+rotation = -2.5206
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform33" type="Sprite2D" parent="World/Map"]
+position = Vector2(8545, 453)
+rotation = 1.57581
+texture = ExtResource("8_xk81f")
+
+[node name="LongPlatform34" type="Sprite2D" parent="World/Map"]
+position = Vector2(8385, 1147)
+rotation = 2.0494
+texture = ExtResource("8_xk81f")
+
+[node name="Platform10" type="Sprite2D" parent="World/Map"]
+position = Vector2(7440, 209)
+rotation = -0.342068
+texture = ExtResource("12_tp6xc")
+
+[node name="Platform11" type="Sprite2D" parent="World/Map"]
+position = Vector2(7667, 111)
+rotation = -0.364254
+texture = ExtResource("12_tp6xc")
+
+[node name="Platform12" type="Sprite2D" parent="World/Map"]
+position = Vector2(9943, 2983)
+rotation = -1.60343
+texture = ExtResource("12_tp6xc")
+
+[node name="Platform13" type="Sprite2D" parent="World/Map"]
+position = Vector2(9942, 3182)
+rotation = -1.57871
+texture = ExtResource("17_wrq0h")
+
+[node name="Platform14" type="Sprite2D" parent="World/Map"]
+position = Vector2(11543, -444)
+texture = ExtResource("9_v42d7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform14"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform14/StaticBody2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_vwuw6")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform14"]
+occluder = SubResource("OccluderPolygon2D_lrdla")
+
+[node name="Platform15" type="Sprite2D" parent="World/Map"]
+position = Vector2(11015, -718)
+texture = ExtResource("18_gwxns")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform15/StaticBody2D"]
+position = Vector2(3.5, 4.5)
+shape = SubResource("RectangleShape2D_hq82v")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform15"]
+occluder = SubResource("OccluderPolygon2D_l8qw2")
+
+[node name="Platform27" type="Sprite2D" parent="World/Map"]
+position = Vector2(11539, -952)
+texture = ExtResource("18_gwxns")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform27"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform27/StaticBody2D"]
+position = Vector2(3.5, 4.5)
+shape = SubResource("RectangleShape2D_hq82v")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform27"]
+occluder = SubResource("OccluderPolygon2D_l8qw2")
+
+[node name="Platform28" type="Sprite2D" parent="World/Map"]
+position = Vector2(11494, -1407)
+texture = ExtResource("18_gwxns")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform28"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform28/StaticBody2D"]
+position = Vector2(3.5, 4.5)
+shape = SubResource("RectangleShape2D_hq82v")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform28"]
+occluder = SubResource("OccluderPolygon2D_l8qw2")
+
+[node name="Platform16" type="Sprite2D" parent="World/Map"]
+position = Vector2(11060, -1163)
+texture = ExtResource("19_e76de")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform16"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform16/StaticBody2D"]
+position = Vector2(-3, 6.5)
+shape = SubResource("RectangleShape2D_xpx8x")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform16"]
+occluder = SubResource("OccluderPolygon2D_aafgn")
+
+[node name="Platform26" type="Sprite2D" parent="World/Map"]
+position = Vector2(11084, -219)
+texture = ExtResource("19_e76de")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Platform26"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Platform26/StaticBody2D"]
+position = Vector2(-3, 6.5)
+shape = SubResource("RectangleShape2D_xpx8x")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Platform26"]
+occluder = SubResource("OccluderPolygon2D_aafgn")
+
+[node name="LongStone1" type="Sprite2D" parent="World/Map"]
+position = Vector2(751, -623)
+rotation = -3.14159
+texture = ExtResource("20_8p1pk")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongStone1"]
+occluder = SubResource("OccluderPolygon2D_4pxl7")
+
+[node name="LongStone2" type="Sprite2D" parent="World/Map"]
+position = Vector2(2519, -1174)
+rotation = 2.76962
+texture = ExtResource("21_yb4a3")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongStone2"]
+occluder = SubResource("OccluderPolygon2D_0ktgg")
+
+[node name="LongStone3" type="Sprite2D" parent="World/Map"]
+position = Vector2(4110, -1520)
+rotation = 3.14159
+texture = ExtResource("20_8p1pk")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongStone3"]
+occluder = SubResource("OccluderPolygon2D_wg84a")
+
+[node name="LongStone4" type="Sprite2D" parent="World/Map"]
+position = Vector2(6527, -1522)
+rotation = 3.14159
+texture = ExtResource("20_8p1pk")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongStone4"]
+occluder = SubResource("OccluderPolygon2D_v7bdn")
+
+[node name="LongPlatform37" type="Sprite2D" parent="World/Map"]
+position = Vector2(5156, -1528)
+rotation = 3.14159
+texture = ExtResource("8_xk81f")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform37"]
+occluder = SubResource("OccluderPolygon2D_t6m3n")
+
+[node name="StonePlat1" type="Sprite2D" parent="World/Map"]
+position = Vector2(1564, -632)
+rotation = -0.375473
+texture = ExtResource("22_kfkai")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/StonePlat1"]
+occluder = SubResource("OccluderPolygon2D_q0kc8")
+
+[node name="StoneWall2" type="Sprite2D" parent="World/Map"]
+position = Vector2(1821, -812)
+rotation = 0.874944
+texture = ExtResource("23_f14sa")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/StoneWall2"]
+occluder = SubResource("OccluderPolygon2D_v4yqm")
+
+[node name="LongPlatform38" type="Sprite2D" parent="World/Map"]
+position = Vector2(7675, -1613)
+rotation = 2.96189
+texture = ExtResource("11_qnlnn")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform38"]
+occluder = SubResource("OccluderPolygon2D_q1i6r")
+
+[node name="LongPlatform39" type="Sprite2D" parent="World/Map"]
+position = Vector2(8515, -1785)
+rotation = 2.8875
+texture = ExtResource("8_xk81f")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform39"]
+occluder = SubResource("OccluderPolygon2D_c0dp4")
+
+[node name="LongStone5" type="Sprite2D" parent="World/Map"]
+position = Vector2(9544, -2015)
+rotation = 2.88554
+texture = ExtResource("21_yb4a3")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongStone5"]
+occluder = SubResource("OccluderPolygon2D_y8way")
+
+[node name="LongPlatform40" type="Sprite2D" parent="World/Map"]
+position = Vector2(10808, -2209)
+rotation = -3.14159
+texture = ExtResource("8_xk81f")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform40"]
+occluder = SubResource("OccluderPolygon2D_pqe86")
+
+[node name="LongStone6" type="Sprite2D" parent="World/Map"]
+position = Vector2(11641, -2178)
+rotation = -3.12018
+texture = ExtResource("21_yb4a3")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongStone6"]
+occluder = SubResource("OccluderPolygon2D_iugk7")
+
+[node name="LongPlatform35" type="Sprite2D" parent="World/Map"]
+position = Vector2(10854, -1685)
+texture = ExtResource("8_xk81f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/LongPlatform35"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/LongPlatform35/StaticBody2D"]
+position = Vector2(-5, 2)
+shape = SubResource("RectangleShape2D_dwsnl")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/LongPlatform35"]
+occluder = SubResource("OccluderPolygon2D_8xphs")
+
+[node name="Block15" type="Sprite2D" parent="World/Map"]
+position = Vector2(3057, -427.5)
+texture = ExtResource("5_ppnks")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block15/StaticBody2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_1i3ad")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block15"]
+occluder = SubResource("OccluderPolygon2D_j7ccu")
+
+[node name="Block16" type="Sprite2D" parent="World/Map"]
+position = Vector2(4045, -611.5)
+texture = ExtResource("15_rd1hq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block16"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block16/StaticBody2D"]
+position = Vector2(3, -0.5)
+shape = SubResource("RectangleShape2D_83j82")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block16"]
+occluder = SubResource("OccluderPolygon2D_y5uis")
+
+[node name="Block17" type="Sprite2D" parent="World/Map"]
+position = Vector2(7795, -748)
+texture = ExtResource("15_rd1hq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block17"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block17/StaticBody2D"]
+position = Vector2(3, -0.5)
+shape = SubResource("RectangleShape2D_83j82")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block17"]
+occluder = SubResource("OccluderPolygon2D_y5uis")
+
+[node name="Block18" type="Sprite2D" parent="World/Map"]
+position = Vector2(4973, -763.5)
+texture = ExtResource("24_qfduh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block18"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block18/StaticBody2D"]
+position = Vector2(1.5, 7)
+shape = SubResource("RectangleShape2D_1noww")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block18"]
+occluder = SubResource("OccluderPolygon2D_siepp")
+
+[node name="Block19" type="Sprite2D" parent="World/Map"]
+position = Vector2(8971, -806)
+texture = ExtResource("24_qfduh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Map/Block19"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Map/Block19/StaticBody2D"]
+position = Vector2(1.5, 7)
+shape = SubResource("RectangleShape2D_1noww")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Map/Block19"]
+occluder = SubResource("OccluderPolygon2D_siepp")
+
+[node name="Stone1" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(1739, 684)
+texture = ExtResource("25_lbgo2")
+
+[node name="Stone4" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(310, 431)
+texture = ExtResource("26_0c57u")
+
+[node name="Stone2" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(466, -820)
+rotation = 3.14159
+texture = ExtResource("25_lbgo2")
+
+[node name="LongStone7" type="Sprite2D" parent="World/Map"]
+position = Vector2(1425, -1358)
+rotation = 3.11548
+texture = ExtResource("20_8p1pk")
+
+[node name="Stone3" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(222, 1671)
+texture = ExtResource("27_nvc8m")
+
+[node name="Stone5" type="Sprite2D" parent="World/Map"]
+z_index = 1
+position = Vector2(1839, 1972)
+texture = ExtResource("26_0c57u")
+
+[node name="Square-Black" type="Sprite2D" parent="World/Map"]
+position = Vector2(13860.5, 310.5)
+scale = Vector2(2.77539, 14.5566)
+texture = ExtResource("28_s2b36")
+
+[node name="Collision" type="Node2D" parent="World"]
+
+[node name="Fall Dead Zone" parent="World/Collision" instance=ExtResource("29_0cekw")]
+position = Vector2(6524, 3127)
+map_entrance_coord = Vector2(123, -23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/Fall Dead Zone"]
+position = Vector2(73, 174)
+shape = SubResource("RectangleShape2D_e3yd0")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(4791, -2665)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Collision/StaticBody2D9"]
+polygon = PackedVector2Array(-4777, 2004, -3387, 2033, -2859, 1690, -1676, 1213, -1277, 1099, 733, 1106, 2429, 1127, 5380, 443, 5657, 457, 6214, 457, 6502.81, 484.336, 6846, 535, 7035, 617, 7277, 625, 7431, 624, 7738, 622, 7739, 965, 8403, 965, 8396, -658, -4788, -666)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(408, 157)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D"]
+position = Vector2(-26.5, 0)
+shape = SubResource("RectangleShape2D_iwqx7")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(785, 350)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D2"]
+position = Vector2(-7.5, -15)
+shape = SubResource("RectangleShape2D_3edtq")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(2287, 1883)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D7"]
+position = Vector2(-16, 194)
+shape = SubResource("RectangleShape2D_t51hh")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(2373, 2633)
+rotation = -0.501142
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D8"]
+position = Vector2(-16, 194)
+shape = SubResource("RectangleShape2D_t51hh")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(393, 1323)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D6"]
+position = Vector2(-8, -12)
+shape = SubResource("RectangleShape2D_1nicg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World/Collision/StaticBody2D6"]
+position = Vector2(64.1991, 265.531)
+rotation = -0.673771
+shape = SubResource("RectangleShape2D_inuq6")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(800, 1152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D5"]
+position = Vector2(434.75, -13)
+shape = SubResource("RectangleShape2D_wc2lf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World/Collision/StaticBody2D5"]
+position = Vector2(596, 545)
+shape = SubResource("RectangleShape2D_wc2lf")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(1045, 494)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D3"]
+position = Vector2(624.5, 13)
+shape = SubResource("RectangleShape2D_3mjgk")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(1410, 959)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D4"]
+position = Vector2(899.559, -127.724)
+rotation = -0.958365
+shape = SubResource("RectangleShape2D_0njpy")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(12120, -1692)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D10"]
+position = Vector2(355, 876)
+shape = SubResource("RectangleShape2D_r52wp")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(10459, 42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D11"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_78lgd")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(10999, 758)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Collision/StaticBody2D12"]
+polygon = PackedVector2Array(-1825, -699, -1045, 250, -1094, 1214, -1073, 1536, -313, 1544, -299, 2052, -1065, 2054, -1049, 2492, 2205, 2469, 2201, -695)
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(7611, 808)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Collision/StaticBody2D13"]
+polygon = PackedVector2Array(-1065, -554, -977, 232, -350, 682, 598, 688, 948, -12, 936, -762, 225, -766, -332, -550)
+
+[node name="Next Level Zone" parent="World/Collision" instance=ExtResource("30_vg74j")]
+position = Vector2(12428, -1839)
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(84, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D14"]
+position = Vector2(-5.5, -243.5)
+shape = SubResource("RectangleShape2D_e3ref")
+
+[node name="Background" type="Node2D" parent="World"]
+
+[node name="Square-Black" type="Sprite2D" parent="World/Background"]
+position = Vector2(12482, 1187.25)
+scale = Vector2(2.80859, 11.1201)
+texture = ExtResource("28_s2b36")
+
+[node name="Polygon2D" type="Polygon2D" parent="World/Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(6578, 292, 7298, 294, 7835, 78, 8523, 78, 8533, 786, 8196, 1466, 7271, 1461, 6656, 1025)
+
+[node name="Polygon2D2" type="Polygon2D" parent="World/Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(9203, 68, 9963, 1008, 9923, 1956, 9943, 2276, 10699, 2284, 10691, 2832, 9931, 2828, 9936, 3237, 9955, 4019, 11901, 4032, 11883, 3212, 11763, 64)
+
+[node name="Polygon2D3" type="Polygon2D" parent="World/Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(7, 168, 763, 172, 764, 524, 2514, 527, 2089, 1119, 370, 1124, 365, 1471, 482, 1685, 2255, 1717, 2255, 2470, 2634, 3180, -9, 3196)
+
+[node name="Polygon2D4" type="Polygon2D" parent="World/Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(3078, -1439, 2103, -1108, 1714, -820, 1488, -659, 1196, -659, 234, -656, -1, -650, 27, -3337, 3061, -3354)
+
+[node name="Polygon2D5" type="Polygon2D" parent="World/Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(5884, -1558, 7223, -1549, 8181, -1710, 8994, -1930, 10164, -2227, 10147, -3321, 5858, -3354)
+
+[node name="Polygon2D6" type="Polygon2D" parent="World/Background"]
+position = Vector2(0, 41.7373)
+scale = Vector2(1, 1.01251)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(10430, -2236.76, 10434, -3337, 13202, -3332, 13214, -1658, 12507, -1663, 12515, -2065, 12155, -2074, 12256, -2246.64, 11658, -2305.9, 11072, -2288.12, 10924, -2250.59, 10838, -2254.54)
+
+[node name="Square-Black2" type="Sprite2D" parent="World/Background"]
+position = Vector2(4503, -2471)
+scale = Vector2(3.96484, 3.57227)
+texture = ExtResource("28_s2b36")
+
+[node name="Square-Black3" type="Sprite2D" parent="World/Background"]
+position = Vector2(-1074, 32.4998)
+scale = Vector2(4.47266, 13.2637)
+texture = ExtResource("28_s2b36")
+
+[node name="Lighting" type="Node2D" parent="World"]
+
+[node name="PointLight2D" type="PointLight2D" parent="World/Lighting"]
+position = Vector2(-724, -129)
+scale = Vector2(1.00659, 1)
+energy = 2.57
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 4.0
+texture = SubResource("GradientTexture2D_cfw7i")
+texture_scale = 8.0
+
+[node name="PointLight2D2" type="PointLight2D" parent="World/Lighting"]
+position = Vector2(3625, -2182)
+scale = Vector2(1.00659, 1)
+energy = 2.57
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 4.0
+texture = SubResource("GradientTexture2D_cfw7i")
+texture_scale = 8.0
+
+[node name="PointLight2D3" type="PointLight2D" parent="World/Lighting"]
+position = Vector2(6078, -2558)
+scale = Vector2(1.73596, 1.98022)
+energy = 2.57
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 4.0
+texture = SubResource("GradientTexture2D_cfw7i")
+texture_scale = 8.0
+
+[node name="PointLight2D4" type="PointLight2D" parent="World/Lighting"]
+position = Vector2(10717, -2873)
+scale = Vector2(1.00659, 1)
+energy = 2.57
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 4.0
+texture = SubResource("GradientTexture2D_cfw7i")
+texture_scale = 8.0
+
+[node name="PointLight2D5" type="PointLight2D" parent="World/Lighting"]
+position = Vector2(13086, -1855)
+scale = Vector2(1.00659, 1)
+energy = 2.57
+shadow_enabled = true
+shadow_filter = 2
+texture = SubResource("GradientTexture2D_cfw7i")
+texture_scale = 8.0
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World/Lighting"]
+occluder = SubResource("OccluderPolygon2D_0vt3h")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="World/Lighting"]
+occluder = SubResource("OccluderPolygon2D_vsp1e")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="World/Lighting"]
+occluder = SubResource("OccluderPolygon2D_1sq4p")
