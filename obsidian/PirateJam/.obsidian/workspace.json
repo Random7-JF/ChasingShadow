@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md",
+                "file": "Chasing Shadow/Last Minute To Do.md",
                 "mode": "source",
                 "source": false
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md",
+                "file": "Chasing Shadow/Last Minute To Do.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md",
+                "file": "Chasing Shadow/Last Minute To Do.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chasing Shadow/Assets and Learning Material.md"
+                "file": "Chasing Shadow/Last Minute To Do.md"
               }
             }
           },
@@ -215,8 +215,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57d4c95321857f08",
+  "active": "5ef33e5bd8a69f98",
   "lastOpenFiles": [
+    "Chasing Shadow/Assets and Learning Material.md",
+    "Chasing Shadow/World/Levels.md",
+    "Chasing Shadow/Last Minute To Do.md",
     "Chasing Shadow/World/Assets.md",
     "Chasing Shadow/Player/State Machine.canvas",
     "Chasing Shadow/Chasing Shadow GDD.md",
@@ -225,7 +228,6 @@
     "Daily Notes/2024-07-31.md",
     "Daily Notes/2024-07-21.md",
     "Chasing Shadow/Work Board.md",
-    "Chasing Shadow/Assets and Learning Material.md",
     "Chasing Shadow/Player/Damage.md",
     "Chasing Shadow/Player/Attack Movement.md",
     "Chasing Shadow/Player/States/Wall Slide State.md",

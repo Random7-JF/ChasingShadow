@@ -1,7 +1,7 @@
 
 ## Features
 
-- [ ] Game Menu
+- [x] Game Menu
 - [ ] Pause Menu
 - [ ] Levels
 	- [ ] Level 2
