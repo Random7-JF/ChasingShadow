@@ -13,5 +13,5 @@ func exit() -> void:
 func process(_delta: float) -> State:
 	return null
 	
-func process_physics(delta: float) -> State:
+func process_physics(_delta: float) -> State:
 	return null

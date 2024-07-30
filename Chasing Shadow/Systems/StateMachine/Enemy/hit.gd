@@ -14,7 +14,7 @@ func exit() -> void:
 func process(_delta: float) -> State:
 	return null
 	
-func process_physics(delta: float) -> State:
+func process_physics(_delta: float) -> State:
 	if not parent.been_hit:
 		return idle
 	if parent.dead:

@@ -22,5 +22,5 @@ func process(delta: float) -> State:
 		parent.state_machine.change_state(idle)
 	return null
 	
-func process_physics(delta: float) -> State:
+func process_physics(_delta: float) -> State:
 	return null

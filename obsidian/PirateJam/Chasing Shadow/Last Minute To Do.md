@@ -12,8 +12,8 @@
 	- [ ] AI
 	- [ ] Character
 - [ ] Tutorial 
-	- [ ] Controls
-	- [ ] Enemies
+	- [x] Controls
+	- [x] Enemies
 	- [ ] Objectives
 	- [ ] Boss
 
