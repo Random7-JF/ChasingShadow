@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5cb8swqk24rk"]
+
+[ext_resource type="AudioStream" uid="uid://c7rfxgcurm62s" path="res://Assets/DavidKBD - Eternity Pack - 03 - I Can See You - loop.ogg" id="1_rwyv5"]
+
+[node name="BG_Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_rwyv5")
+volume_db = -15.0
+autoplay = true

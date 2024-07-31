@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://cglqycpxsnt6m"]
+[gd_scene load_steps=64 format=3 uid="uid://cglqycpxsnt6m"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_bnq16"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_1caof"]
@@ -37,6 +37,7 @@
 [ext_resource type="Script" path="res://Scenes/World/Tutorial/wall.gd" id="33_m3bv3"]
 [ext_resource type="Script" path="res://Scenes/World/Tutorial/attack.gd" id="35_y20x3"]
 [ext_resource type="Script" path="res://Scenes/World/Tutorial/exit.gd" id="36_725me"]
+[ext_resource type="PackedScene" uid="uid://cxxa8px4386n8" path="res://Scenes/UI/hp.tscn" id="38_reqjk"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qqa46"]
 polygon = PackedVector2Array(713, 34.9999, 677, 66.9999, 613, 92.9999, 428, 112, 238, 103, -97, 125, -300, 112, -561, 108, -661, 67.0001, -695, 31.0001, -540, 46.0001, -412, 33.0001, -212, 38, -30, 37, 162, 45.9999, 389, 39.9999, 549, 54.9999, 636, -13.0001, 691, 3.99988)
@@ -161,7 +162,7 @@ position = Vector2(-227, 0)
 position = Vector2(318, -1)
 
 [node name="shadow" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_x3nby")]
-position = Vector2(611, 0)
+position = Vector2(784, -4)
 start_boundary = NodePath("Start")
 end_boundary = NodePath("End")
 wander_delay = 999.0
@@ -704,6 +705,9 @@ grow_horizontal = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 42
 text = "This is Tutorial Text"
+
+[node name="HP" parent="UI" node_paths=PackedStringArray("player") instance=ExtResource("38_reqjk")]
+player = NodePath("../../Player")
 
 [connection signal="body_entered" from="Tutorial/Movement" to="Tutorial/Movement" method="_on_body_entered"]
 [connection signal="body_exited" from="Tutorial/Movement" to="Tutorial/Movement" method="_on_body_exited"]

@@ -86,17 +86,17 @@ Boss health bottom middle once we reach him.
 
 
 
-| Feature of Function  | Type    | Status | Notes                                                                   |
-| -------------------- | ------- | ------ | ----------------------------------------------------------------------- |
-| Design Document      | #Other  | WIP    |                                                                         |
-| Basic Player         | #Engine | 80%    | Need a character with basic animations and controllers                  |
-| Basic Level          | #Engine | 90%    | Basic level has been made as well a more complicated level              |
-| Main Menu            | #Engine | 0%     |                                                                         |
-| Pause Menu           | #Engine | 0%     |                                                                         |
-| Game Assets - Player | #Art    | 80%    | Player assets are mostly provided.                                      |
-| Game Assets - Shadow | #Art    | 50%    | will colour modulate or alter player assets to fill this.               |
-| Game Assets - Levels | #Art    | 90%    | basic set of assets to  build levels with                               |
-| Game Assets - UI     | #Art    | 0%     |                                                                         |
-| Game Assets - Audio  | #Art    | 0%     |                                                                         |
-| Game Loop            | #Engine | 0%     | Timer for each level, Health for player, Save check points and buffs.   |
-| Shadow Chase         | #Engine | 0%     | Shadow runs the path and the player gets to watch before ever map start |
+| Feature of Function  | Type    | Status | Notes                                                                         |
+| -------------------- | ------- | ------ | ----------------------------------------------------------------------------- |
+| Design Document      | #Other  | WIP    |                                                                               |
+| Basic Player         | #Engine | 95%    | Need a character with basic animations and controllers                        |
+| Basic Level          | #Engine | 95%    | Basic level has been made as well a more complicated level                    |
+| Main Menu            | #Engine | 100%   | Basic main menu made                                                          |
+| Pause Menu           | #Engine | 0%     |                                                                               |
+| Game Assets - Player | #Art    | 80%    | Player assets are mostly provided.                                            |
+| Game Assets - Shadow | #Art    | 80%    | will colour modulate or alter player assets to fill this.                     |
+| Game Assets - Levels | #Art    | 90%    | basic set of assets to  build levels with                                     |
+| Game Assets - UI     | #Art    | 0%     |                                                                               |
+| Game Assets - Audio  | #Art    | 20%    | Background music                                                              |
+| Game Loop            | #Engine | 50%    | ~~Timer for each level,~~ Health for player, Save check points and ~~buffs.~~ |
+| Shadow Chase         | #Engine | 20%    | Shadow runs the path and the player gets to watch before ever map start       |

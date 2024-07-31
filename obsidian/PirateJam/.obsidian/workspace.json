@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chasing Shadow/Last Minute To Do.md",
+                "file": "Chasing Shadow/Assets and Learning Material.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chasing Shadow/Last Minute To Do.md",
+                "file": "Chasing Shadow/Assets and Learning Material.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chasing Shadow/Last Minute To Do.md",
+                "file": "Chasing Shadow/Assets and Learning Material.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chasing Shadow/Last Minute To Do.md"
+                "file": "Chasing Shadow/Assets and Learning Material.md"
               }
             }
           },
@@ -156,12 +156,12 @@
   },
   "active": "5ef33e5bd8a69f98",
   "lastOpenFiles": [
+    "Chasing Shadow/Chasing Shadow GDD.md",
+    "Chasing Shadow/Last Minute To Do.md",
     "Chasing Shadow/Assets and Learning Material.md",
     "Chasing Shadow/World/Levels.md",
-    "Chasing Shadow/Last Minute To Do.md",
     "Chasing Shadow/World/Assets.md",
     "Chasing Shadow/Player/State Machine.canvas",
-    "Chasing Shadow/Chasing Shadow GDD.md",
     "Itch.md",
     "Game Ideas.md",
     "Daily Notes/2024-07-31.md",

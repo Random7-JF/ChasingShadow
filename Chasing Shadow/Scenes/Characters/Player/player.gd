@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody2D
 
+signal update_health(health)
+
 @onready var state_machine: StateMachine = $StateMachine
 @onready var animator: AnimationPlayer = $AnimationPlayer
 @onready var colision: CollisionShape2D = $CollisionShape2D
@@ -47,6 +49,7 @@ func fall_death(coord: Vector2):
 
 func take_hit():
 	health -= 1
+	update_health.emit(health)
 	been_hit = true
 
 func flip_character(direction: float):

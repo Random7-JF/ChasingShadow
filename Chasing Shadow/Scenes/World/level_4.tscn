@@ -1,8 +1,9 @@
-[gd_scene load_steps=39 format=3 uid="uid://cvkwmh5tf8sn"]
+[gd_scene load_steps=41 format=3 uid="uid://cvkwmh5tf8sn"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_xjbu3"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_ly7wd"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="3_1aam4"]
+[ext_resource type="PackedScene" uid="uid://b5ur5kpd7m16o" path="res://Scenes/World/victory.tscn" id="4_614b5"]
 [ext_resource type="PackedScene" uid="uid://bw4kga7i5c6uj" path="res://Scenes/Characters/Shadow/shadow.tscn" id="5_nko0b"]
 [ext_resource type="Texture2D" uid="uid://cpvc637ps5c6v" path="res://Assets/Assets 1024 Cave/Floor/long_stone2.png" id="6_70gr7"]
 [ext_resource type="Texture2D" uid="uid://dq3umj8ybrahv" path="res://Assets/Assets 1024 Cave/Floor/long_stone1.png" id="7_i3xrr"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dybmxylvolqfl" path="res://Assets/Assets 1024 Cave/Floor/stone2.png" id="13_dimc5"]
 [ext_resource type="Script" path="res://Scenes/World/Tutorial/boss.gd" id="15_f4tex"]
 [ext_resource type="Script" path="res://Scenes/UI/ProgressBar.gd" id="16_6qp3w"]
+[ext_resource type="PackedScene" uid="uid://cxxa8px4386n8" path="res://Scenes/UI/hp.tscn" id="18_ir8e6"]
 [ext_resource type="Texture2D" uid="uid://bnj2wtvkgaoib" path="res://Assets/Assets 1024 Cave/Floor/platform1.png" id="21_kl534"]
 [ext_resource type="Texture2D" uid="uid://dvgtyem5qelgq" path="res://Assets/Assets 1024 Cave/Floor/stone4.png" id="26_824lx"]
 [ext_resource type="Texture2D" uid="uid://d4ncxrhwbg0dd" path="res://Assets/Assets 1024 Cave/Square - Black.jpg" id="29_h7ix2"]
@@ -113,6 +115,7 @@ color = Color(0.168627, 0.113725, 0.0117647, 1)
 
 [node name="shadow" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("5_nko0b")]
 position = Vector2(171, -138)
+victor_scene = ExtResource("4_614b5")
 health = 10
 start_boundary = NodePath("Start")
 end_boundary = NodePath("End")
@@ -127,6 +130,7 @@ position = Vector2(1674, 31)
 
 [node name="Player" parent="." instance=ExtResource("3_1aam4")]
 position = Vector2(207, -676)
+respawn_coord = Vector2(207, -676)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.5, 0.5)
@@ -465,5 +469,8 @@ theme_override_font_sizes/font_size = 28
 text = "The Shadow"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HP" parent="UI" node_paths=PackedStringArray("player") instance=ExtResource("18_ir8e6")]
+player = NodePath("../../Player")
 
 [connection signal="body_exited" from="Tutorial/Area2D" to="Tutorial/Area2D" method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://da3dygi5nrfpe"]
+[gd_scene load_steps=87 format=3 uid="uid://da3dygi5nrfpe"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_kkgvp"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="1_x6ygq"]
@@ -18,11 +18,13 @@
 [ext_resource type="Texture2D" uid="uid://cjoc20b0xbso" path="res://Assets/Assets 1024 Cave/Blocks/block2.png" id="16_io38j"]
 [ext_resource type="Texture2D" uid="uid://cf0oxnlp6gsha" path="res://Assets/Assets 1024 Cave/Floor/platform4.png" id="17_4bjjb"]
 [ext_resource type="Texture2D" uid="uid://dg8e7301wgj63" path="res://Assets/Assets 1024 Cave/Floor/platform3.png" id="17_iqyyv"]
+[ext_resource type="Texture2D" uid="uid://don1alpbe7rbq" path="res://Assets/Assets 1024 Cave/Floor/platform9.png" id="18_enwhl"]
 [ext_resource type="Texture2D" uid="uid://0fjok0w8gs5q" path="res://Assets/Assets 1024 Cave/Floor/platform6.png" id="18_jnivs"]
 [ext_resource type="Texture2D" uid="uid://cpvc637ps5c6v" path="res://Assets/Assets 1024 Cave/Floor/long_stone2.png" id="21_3kwug"]
 [ext_resource type="PackedScene" uid="uid://c0bolgvcloqq2" path="res://Scenes/World/level_3.tscn" id="21_8shbl"]
 [ext_resource type="Texture2D" uid="uid://d4ncxrhwbg0dd" path="res://Assets/Assets 1024 Cave/Square - Black.jpg" id="24_0q6uq"]
 [ext_resource type="PackedScene" uid="uid://c8eku16jig8uh" path="res://Scenes/Triggers/next_level_zone.tscn" id="24_6p8i8"]
+[ext_resource type="PackedScene" uid="uid://cxxa8px4386n8" path="res://Scenes/UI/hp.tscn" id="25_4e2tl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5mnf"]
 size = Vector2(345, 39)
@@ -234,11 +236,11 @@ running = true
 [node name="Start" type="Marker2D" parent="shadow"]
 
 [node name="End" type="Marker2D" parent="shadow"]
-position = Vector2(1112, 513)
+position = Vector2(1022, 808)
 
 [node name="Player" parent="." instance=ExtResource("1_x6ygq")]
 position = Vector2(116, -392)
-respawn_coord = Vector2(253, -436)
+respawn_coord = Vector2(116, -392)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.5, 0.5)
@@ -370,6 +372,11 @@ polygon = PackedVector2Array(2749, -1480, 4021, -1056, 4954, -992, 6255, -1231, 
 [node name="Polygon2D4" type="Polygon2D" parent="World/Background"]
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(14, -601, 722, -850, 1069, -1086, 1426, -1313, -5, -1282)
+
+[node name="Square-Black13" type="Sprite2D" parent="World/Background"]
+position = Vector2(12905.5, -119)
+scale = Vector2(1.98633, 2.04102)
+texture = ExtResource("24_0q6uq")
 
 [node name="Map" type="Node2D" parent="World"]
 
@@ -793,11 +800,30 @@ rotation = 2.5757
 scale = Vector2(1, 1)
 texture = ExtResource("5_edy4n")
 
+[node name="Platform22" type="Sprite2D" parent="World/Map"]
+position = Vector2(12398, -387)
+rotation = -1.55661
+scale = Vector2(1, 1)
+texture = ExtResource("18_enwhl")
+
+[node name="Platform23" type="Sprite2D" parent="World/Map"]
+position = Vector2(12399, -198)
+rotation = -1.55661
+scale = Vector2(1, 1)
+texture = ExtResource("18_enwhl")
+
+[node name="Platform24" type="Sprite2D" parent="World/Map"]
+position = Vector2(12399, -198)
+rotation = -1.55661
+scale = Vector2(1, 1)
+texture = ExtResource("18_enwhl")
+
 [node name="Collision" type="Node2D" parent="World"]
+visible = false
 
 [node name="Fall Dead Zone" parent="World/Collision" instance=ExtResource("13_6lneu")]
 position = Vector2(6524, 3127)
-map_entrance_coord = Vector2(123, -23)
+map_entrance_coord = Vector2(253, -436)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/Fall Dead Zone"]
 position = Vector2(-116, -883)
@@ -984,6 +1010,7 @@ shape = SubResource("RectangleShape2D_jus0l")
 polygon = PackedVector2Array(7933, -1545, 7933, -570, 9641, -552, 9638, -188, 10384, -175, 11279, -537, 13409, -522, 13411, -1545)
 
 [node name="Lighting" type="Node2D" parent="World"]
+visible = false
 
 [node name="PointLight2D3" type="PointLight2D" parent="World/Lighting"]
 position = Vector2(1590, -2262)
@@ -1042,3 +1069,8 @@ occluder = SubResource("OccluderPolygon2D_jqnnb")
 
 [node name="LightOccluder2D6" type="LightOccluder2D" parent="World/Lighting"]
 occluder = SubResource("OccluderPolygon2D_4bfj3")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HP" parent="UI" node_paths=PackedStringArray("player") instance=ExtResource("25_4e2tl")]
+player = NodePath("../../Player")

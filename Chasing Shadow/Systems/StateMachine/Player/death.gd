@@ -11,14 +11,16 @@ func enter() -> void:
 	state_name = "Dead"
 
 func exit() -> void:
-	pass
+	dead_timer = 0
 
 func process(delta: float) -> State:
 	dead_timer += delta
 	if dead_timer >= respawn_timer:
 		parent.fall_death(parent.respawn_coord)
-		parent.health = 10
+		parent.health = 5
+		parent.update_health.emit(5)
 		parent.colision.disabled = false
+		parent.dead = false
 		parent.state_machine.change_state(idle)
 	return null
 	

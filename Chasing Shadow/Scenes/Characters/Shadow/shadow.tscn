@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://bw4kga7i5c6uj"]
+[gd_scene load_steps=93 format=3 uid="uid://bw4kga7i5c6uj"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Enemy/enemy.gd" id="1_mnvcv"]
 [ext_resource type="Script" path="res://Scenes/Characters/Enemy/state.gd" id="2_m5aot"]
@@ -105,7 +105,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_ya6vq"]
-length = 1.1
+length = 0.9
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -113,7 +113,7 @@ tracks/0/path = NodePath("../Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("4_tc8e7"), ExtResource("5_qpoqw"), ExtResource("6_w00eu"), ExtResource("7_2ysyl"), ExtResource("8_ckt7g"), ExtResource("9_f6h4l"), ExtResource("10_vpl2p"), ExtResource("11_81wnr"), ExtResource("12_0kxsf")]
@@ -125,7 +125,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.6, 1.1),
+"times": PackedFloat32Array(0.4, 0.9),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -349,12 +349,46 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_7f27e"]
+resource_name = "attack_enemy"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_tc8e7"), ExtResource("5_qpoqw"), ExtResource("6_w00eu"), ExtResource("7_2ysyl"), ExtResource("8_ckt7g"), ExtResource("9_f6h4l"), ExtResource("10_vpl2p"), ExtResource("11_81wnr"), ExtResource("12_0kxsf")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"animation_action"
+}, {
+"args": [],
+"method": &"animation_ended"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mffh5"]
 _data = {
 "RESET": SubResource("Animation_wve0h"),
 "attack_1": SubResource("Animation_ya6vq"),
 "attack_2": SubResource("Animation_248ka"),
 "attack_3": SubResource("Animation_bbvb8"),
+"attack_enemy": SubResource("Animation_7f27e"),
 "death": SubResource("Animation_awqsh"),
 "hit": SubResource("Animation_gjn6c"),
 "idle": SubResource("Animation_jxt35"),

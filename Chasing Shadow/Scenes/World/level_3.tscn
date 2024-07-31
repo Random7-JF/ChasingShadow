@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://c0bolgvcloqq2"]
+[gd_scene load_steps=117 format=3 uid="uid://c0bolgvcloqq2"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_fvbf3"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_p3gsd"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://mnhdtn3l02e" path="res://Scenes/Triggers/fall_dead_zone.tscn" id="29_0cekw"]
 [ext_resource type="PackedScene" uid="uid://c8eku16jig8uh" path="res://Scenes/Triggers/next_level_zone.tscn" id="30_vg74j"]
 [ext_resource type="PackedScene" uid="uid://cvkwmh5tf8sn" path="res://Scenes/World/level_4.tscn" id="32_08fkp"]
+[ext_resource type="PackedScene" uid="uid://cxxa8px4386n8" path="res://Scenes/UI/hp.tscn" id="33_v1mi7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyb5l"]
 size = Vector2(290, 286)
@@ -303,7 +304,7 @@ color = Color(0.168627, 0.113725, 0.0117647, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_mh27t")]
 position = Vector2(165, -1)
-respawn_coord = Vector2(367, -1)
+respawn_coord = Vector2(165, -1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.5, 0.5)
@@ -1304,7 +1305,7 @@ texture = ExtResource("28_s2b36")
 
 [node name="Fall Dead Zone" parent="World/Collision" instance=ExtResource("29_0cekw")]
 position = Vector2(6524, 3127)
-map_entrance_coord = Vector2(123, -23)
+map_entrance_coord = Vector2(165, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/Fall Dead Zone"]
 position = Vector2(73, 174)
@@ -1526,3 +1527,8 @@ occluder = SubResource("OccluderPolygon2D_vsp1e")
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="World/Lighting"]
 occluder = SubResource("OccluderPolygon2D_1sq4p")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HP" parent="UI" node_paths=PackedStringArray("player") instance=ExtResource("33_v1mi7")]
+player = NodePath("../../Player")
