@@ -4,18 +4,18 @@
 - [x] Game Menu
 - [ ] Pause Menu
 - [ ] Levels
-	- [ ] Level 2
-	- [ ] Current Level 2 -> level 3
-	- [ ] Boss level
+	- [x] Level 2
+	- [x] Current Level 2 -> level 3
+	- [x] Boss level
 	- [ ] Decor
-- [ ] Boss
+- [x] Boss
 	- [ ] AI
-	- [ ] Character
+	- [x] Character
 - [ ] Tutorial 
 	- [x] Controls
 	- [x] Enemies
 	- [ ] Objectives
-	- [ ] Boss
+	- [x] Boss
 
 ## Fixes
 

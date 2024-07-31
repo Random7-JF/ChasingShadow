@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://c0bolgvcloqq2"]
+[gd_scene load_steps=116 format=3 uid="uid://c0bolgvcloqq2"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_fvbf3"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_p3gsd"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://d4ncxrhwbg0dd" path="res://Assets/Assets 1024 Cave/Square - Black.jpg" id="28_s2b36"]
 [ext_resource type="PackedScene" uid="uid://mnhdtn3l02e" path="res://Scenes/Triggers/fall_dead_zone.tscn" id="29_0cekw"]
 [ext_resource type="PackedScene" uid="uid://c8eku16jig8uh" path="res://Scenes/Triggers/next_level_zone.tscn" id="30_vg74j"]
+[ext_resource type="PackedScene" uid="uid://cvkwmh5tf8sn" path="res://Scenes/World/level_4.tscn" id="32_08fkp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyb5l"]
 size = Vector2(290, 286)
@@ -260,15 +261,18 @@ size = Vector2(1452, 1770)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_78lgd"]
 size = Vector2(2580, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycyur"]
+size = Vector2(293, 341)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ref"]
 size = Vector2(31, 781)
 
-[sub_resource type="Gradient" id="Gradient_6ylnn"]
+[sub_resource type="Gradient" id="Gradient_trkws"]
 offsets = PackedFloat32Array(0, 0.00578035, 1)
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0.0367347, 0.0367347, 0.0367347, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_cfw7i"]
-gradient = SubResource("Gradient_6ylnn")
+gradient = SubResource("Gradient_trkws")
 width = 512
 height = 512
 fill = 1
@@ -1407,6 +1411,11 @@ polygon = PackedVector2Array(-1065, -554, -977, 232, -350, 682, 598, 688, 948, -
 
 [node name="Next Level Zone" parent="World/Collision" instance=ExtResource("30_vg74j")]
 position = Vector2(12428, -1839)
+next_level = ExtResource("32_08fkp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/Next Level Zone"]
+position = Vector2(-67.5, -33.5)
+shape = SubResource("RectangleShape2D_ycyur")
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="World/Collision"]
 position = Vector2(84, 6)

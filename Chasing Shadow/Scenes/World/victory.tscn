@@ -1,16 +1,16 @@
-[gd_scene load_steps=22 format=3 uid="uid://dxm2hqrqexjwe"]
+[gd_scene load_steps=22 format=3 uid="uid://b5ur5kpd7m16o"]
 
-[ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_6tc8n"]
-[ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="1_i4at5"]
-[ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_gedgq"]
-[ext_resource type="Texture2D" uid="uid://cufj4faejwour" path="res://Assets/Assets 1024 Cave/Floor/long_platform.png" id="2_xoomk"]
-[ext_resource type="Texture2D" uid="uid://bqcqvyiwfrrpr" path="res://Assets/Assets 1024 Cave/Blocks/block3.png" id="3_51gt2"]
-[ext_resource type="Texture2D" uid="uid://cq0u4uysbxh47" path="res://Assets/Assets 1024 Cave/Blocks/block9.png" id="4_7bogc"]
-[ext_resource type="Texture2D" uid="uid://dq3umj8ybrahv" path="res://Assets/Assets 1024 Cave/Floor/long_stone1.png" id="5_a8gji"]
-[ext_resource type="Texture2D" uid="uid://cpvc637ps5c6v" path="res://Assets/Assets 1024 Cave/Floor/long_stone2.png" id="6_ps4dy"]
-[ext_resource type="PackedScene" uid="uid://b6tir47hjqhyc" path="res://Scenes/Characters/Enemy/enemy.tscn" id="7_x1h8h"]
-[ext_resource type="PackedScene" uid="uid://l2o1wmrvlj5x" path="res://Scenes/UI/menu.tscn" id="11_wcsod"]
-[ext_resource type="PackedScene" uid="uid://bw4kga7i5c6uj" path="res://Scenes/Characters/Shadow/shadow.tscn" id="12_dpguh"]
+[ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_nl7y5"]
+[ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_m6ly2"]
+[ext_resource type="PackedScene" uid="uid://b6tir47hjqhyc" path="res://Scenes/Characters/Enemy/enemy.tscn" id="3_424s8"]
+[ext_resource type="PackedScene" uid="uid://bw4kga7i5c6uj" path="res://Scenes/Characters/Shadow/shadow.tscn" id="4_o3g0x"]
+[ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="5_ba6x5"]
+[ext_resource type="Texture2D" uid="uid://cufj4faejwour" path="res://Assets/Assets 1024 Cave/Floor/long_platform.png" id="6_fm5ag"]
+[ext_resource type="Texture2D" uid="uid://bqcqvyiwfrrpr" path="res://Assets/Assets 1024 Cave/Blocks/block3.png" id="7_nw54x"]
+[ext_resource type="Texture2D" uid="uid://cq0u4uysbxh47" path="res://Assets/Assets 1024 Cave/Blocks/block9.png" id="8_84fnf"]
+[ext_resource type="Texture2D" uid="uid://dq3umj8ybrahv" path="res://Assets/Assets 1024 Cave/Floor/long_stone1.png" id="9_fh7kt"]
+[ext_resource type="Texture2D" uid="uid://cpvc637ps5c6v" path="res://Assets/Assets 1024 Cave/Floor/long_stone2.png" id="10_wvhk8"]
+[ext_resource type="PackedScene" uid="uid://jrgxjuforuiy" path="res://Scenes/UI/victory.tscn" id="11_vjncf"]
 
 [sub_resource type="Gradient" id="Gradient_wmiu6"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -57,18 +57,20 @@ offset_bottom = -47.0
 scale = Vector2(51.1632, 33.838)
 color = Color(0.168627, 0.113725, 0.0117647, 1)
 
-[node name="WorldEnvironment" parent="." instance=ExtResource("1_6tc8n")]
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_nl7y5")]
 
-[node name="DirectionalLight2D" parent="." instance=ExtResource("2_gedgq")]
+[node name="DirectionalLight2D" parent="." instance=ExtResource("2_m6ly2")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1026, 640)
 zoom = Vector2(0.5, 0.5)
 
-[node name="enemy2" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("7_x1h8h")]
+[node name="enemy2" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("3_424s8")]
 position = Vector2(1828, 1078)
+health = 0
 start_boundary = NodePath("Start")
 end_boundary = NodePath("End")
+start_dead = true
 
 [node name="Start" type="Marker2D" parent="enemy2"]
 position = Vector2(-416, -16)
@@ -76,10 +78,12 @@ position = Vector2(-416, -16)
 [node name="End" type="Marker2D" parent="enemy2"]
 position = Vector2(173, 0)
 
-[node name="enemy" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("7_x1h8h")]
+[node name="enemy" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("3_424s8")]
 position = Vector2(251, 1051)
+health = 0
 start_boundary = NodePath("Start")
 end_boundary = NodePath("End")
+start_dead = true
 
 [node name="Start" type="Marker2D" parent="enemy"]
 position = Vector2(-452, -7)
@@ -87,10 +91,12 @@ position = Vector2(-452, -7)
 [node name="End" type="Marker2D" parent="enemy"]
 position = Vector2(389, 0)
 
-[node name="shadow" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("12_dpguh")]
+[node name="shadow" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_o3g0x")]
 position = Vector2(1124, 614)
+health = 0
 start_boundary = NodePath("Start")
 end_boundary = NodePath("End")
+start_dead = true
 
 [node name="Start" type="Marker2D" parent="shadow"]
 position = Vector2(-292, 20)
@@ -104,35 +110,35 @@ position = Vector2(265, 14)
 
 [node name="LongPlatform2" type="Sprite2D" parent="World/Map"]
 position = Vector2(1080, 776)
-texture = ExtResource("1_i4at5")
+texture = ExtResource("5_ba6x5")
 
 [node name="LongPlatform" type="Sprite2D" parent="World/Map"]
 position = Vector2(223.5, 1218)
-texture = ExtResource("2_xoomk")
+texture = ExtResource("6_fm5ag")
 
 [node name="LongPlatform3" type="Sprite2D" parent="World/Map"]
 position = Vector2(1044.5, 1228)
-texture = ExtResource("1_i4at5")
+texture = ExtResource("5_ba6x5")
 
 [node name="LongPlatform4" type="Sprite2D" parent="World/Map"]
 position = Vector2(1767.5, 1233)
-texture = ExtResource("2_xoomk")
+texture = ExtResource("6_fm5ag")
 
 [node name="Block3" type="Sprite2D" parent="World/Map"]
 position = Vector2(208, 520)
-texture = ExtResource("3_51gt2")
+texture = ExtResource("7_nw54x")
 
 [node name="Block9" type="Sprite2D" parent="World/Map"]
 position = Vector2(1822, 620)
-texture = ExtResource("4_7bogc")
+texture = ExtResource("8_84fnf")
 
 [node name="LongStone1" type="Sprite2D" parent="World/Map"]
 position = Vector2(175.5, -30.5)
-texture = ExtResource("5_a8gji")
+texture = ExtResource("9_fh7kt")
 
 [node name="LongStone2" type="Sprite2D" parent="World/Map"]
 position = Vector2(1983.5, -48.5)
-texture = ExtResource("6_ps4dy")
+texture = ExtResource("10_wvhk8")
 
 [node name="Lighting" type="Node2D" parent="World"]
 
@@ -193,4 +199,4 @@ position = Vector2(1116, 787)
 position = Vector2(-36, -6)
 shape = SubResource("RectangleShape2D_hasti")
 
-[node name="UI" parent="." instance=ExtResource("11_wcsod")]
+[node name="UI" parent="." instance=ExtResource("11_vjncf")]

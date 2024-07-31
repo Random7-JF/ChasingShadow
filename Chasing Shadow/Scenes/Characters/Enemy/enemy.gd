@@ -1,6 +1,8 @@
 class_name Enemy
 extends CharacterBody2D
 
+signal update_health(health)
+
 @onready var state_machine: StateMachine = $StateMachine
 @onready var animator: AnimationPlayer = $AnimationPlayer
 @onready var attack_hit: Area2D = $AttackHit
@@ -8,6 +10,7 @@ extends CharacterBody2D
 @onready var colision: CollisionShape2D = $CollisionShape2D
 @onready var sprite: Sprite2D = $Sprite
 
+@export var victor_scene: PackedScene
 @export var dead_state: EnemyDead
 @export var run_state: EnemyRun
 @export var health: int = 3
@@ -18,6 +21,7 @@ extends CharacterBody2D
 @export var wander_delay: float = 5
 @export var attack_delay: float = 0.5
 @export var running: bool = false
+@export var start_dead: bool = false
 
 var since_attack: float = attack_delay
 var attack_finished: bool = false
@@ -34,6 +38,8 @@ func _ready():
 	state_machine.init(self, animator)
 	if running:
 		state_machine.change_state(run_state)
+	if start_dead:
+		state_machine.change_state(dead_state)
 
 func _process(delta):
 	state_machine.process(delta)
@@ -58,9 +64,13 @@ func disapear():
 func take_hit():
 	been_hit = true
 	health -= 1
+	update_health.emit(health)
+	
 	if health <= 0:
 		state_machine.change_state(dead_state)
 		colision.disabled = true
+		get_tree().change_scene_to_packed(victor_scene)
+		
 		
 func flip_character(direction: float):
 	sprite.flip_h = direction < 0

@@ -105,7 +105,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_ya6vq"]
-length = 0.9
+length = 1.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -113,7 +113,7 @@ tracks/0/path = NodePath("../Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("4_tc8e7"), ExtResource("5_qpoqw"), ExtResource("6_w00eu"), ExtResource("7_2ysyl"), ExtResource("8_ckt7g"), ExtResource("9_f6h4l"), ExtResource("10_vpl2p"), ExtResource("11_81wnr"), ExtResource("12_0kxsf")]
@@ -125,7 +125,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.4, 0.9),
+"times": PackedFloat32Array(0.6, 1.1),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -364,8 +364,8 @@ _data = {
 "wall_slide": SubResource("Animation_2d42m")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbisy"]
-size = Vector2(854, 243)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5msdg"]
+size = Vector2(1877, 243)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqw2i"]
 size = Vector2(70.1186, 165)
@@ -381,6 +381,7 @@ speed = 600.0
 wander_delay = 3.0
 
 [node name="Label" type="Label" parent="." node_paths=PackedStringArray("enemy")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -400,6 +401,7 @@ script = ExtResource("2_m5aot")
 enemy = NodePath("..")
 
 [node name="Label2" type="Label" parent="." node_paths=PackedStringArray("enemy")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -446,8 +448,8 @@ libraries = {
 [node name="AggroRange" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AggroRange"]
-position = Vector2(1, 8.5)
-shape = SubResource("RectangleShape2D_gbisy")
+position = Vector2(0.5, 8.5)
+shape = SubResource("RectangleShape2D_5msdg")
 debug_color = Color(0.900887, 0.138215, 0.683167, 0.42)
 
 [node name="AttackHit" type="Area2D" parent="."]
