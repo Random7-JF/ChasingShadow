@@ -465,7 +465,7 @@ debug_color = Color(0.140245, 0.635116, 0.346438, 0.42)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_it107")
-starting_state = NodePath("Wander")
+starting_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("hit", "attack", "chase", "wander")]
 script = ExtResource("55_sjqah")

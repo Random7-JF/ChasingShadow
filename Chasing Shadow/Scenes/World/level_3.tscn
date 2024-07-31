@@ -1,8 +1,9 @@
-[gd_scene load_steps=113 format=3 uid="uid://c0bolgvcloqq2"]
+[gd_scene load_steps=114 format=3 uid="uid://c0bolgvcloqq2"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_fvbf3"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_p3gsd"]
 [ext_resource type="PackedScene" uid="uid://cywoo6cilrv81" path="res://Scenes/Characters/Player/player.tscn" id="3_mh27t"]
+[ext_resource type="PackedScene" uid="uid://bw4kga7i5c6uj" path="res://Scenes/Characters/Shadow/shadow.tscn" id="4_86k7h"]
 [ext_resource type="PackedScene" uid="uid://b6tir47hjqhyc" path="res://Scenes/Characters/Enemy/enemy.tscn" id="4_d0ae1"]
 [ext_resource type="Texture2D" uid="uid://bqcqvyiwfrrpr" path="res://Assets/Assets 1024 Cave/Blocks/block3.png" id="5_ppnks"]
 [ext_resource type="Texture2D" uid="uid://g0555ihwlnb3" path="res://Assets/Assets 1024 Cave/Blocks/block8.png" id="6_n3scy"]
@@ -297,7 +298,7 @@ color = Color(0.168627, 0.113725, 0.0117647, 1)
 [node name="DirectionalLight2D" parent="." instance=ExtResource("2_p3gsd")]
 
 [node name="Player" parent="." instance=ExtResource("3_mh27t")]
-position = Vector2(367, -1)
+position = Vector2(165, -1)
 respawn_coord = Vector2(367, -1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -306,16 +307,54 @@ process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
+[node name="shadow" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_86k7h")]
+position = Vector2(710, 12)
+start_boundary = NodePath("Start")
+end_boundary = NodePath("End")
+running = true
+
+[node name="Start" type="Marker2D" parent="shadow"]
+
+[node name="End" type="Marker2D" parent="shadow"]
+position = Vector2(833, 376)
+
 [node name="Enemy" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_d0ae1")]
-position = Vector2(1536, 347)
+position = Vector2(934, 338)
 start_boundary = NodePath("Start Boundary")
 end_boundary = NodePath("End Boundary")
+wander_delay = 6.0
 
 [node name="Start Boundary" type="Marker2D" parent="Enemy"]
-position = Vector2(-502, 77)
+position = Vector2(180, 41)
 
 [node name="End Boundary" type="Marker2D" parent="Enemy"]
-position = Vector2(560, 71)
+position = Vector2(1229, 38)
+
+[node name="Enemy4" parent="." node_paths=PackedStringArray("dead_state", "start_boundary", "end_boundary") instance=ExtResource("4_d0ae1")]
+position = Vector2(1476, 1511)
+dead_state = NodePath("../Enemy/StateMachine/Dead")
+start_boundary = NodePath("../Enemy/Start Boundary")
+end_boundary = NodePath("../Enemy/End Boundary")
+wander_delay = 6.0
+
+[node name="Start Boundary" type="Marker2D" parent="Enemy4"]
+position = Vector2(-415, 45)
+
+[node name="End Boundary" type="Marker2D" parent="Enemy4"]
+position = Vector2(342, 49)
+
+[node name="Enemy5" parent="." node_paths=PackedStringArray("dead_state", "start_boundary", "end_boundary") instance=ExtResource("4_d0ae1")]
+position = Vector2(10021, -136)
+dead_state = NodePath("../Enemy/StateMachine/Dead")
+start_boundary = NodePath("../Enemy/Start Boundary")
+end_boundary = NodePath("../Enemy/End Boundary")
+wander_delay = 6.0
+
+[node name="Start Boundary" type="Marker2D" parent="Enemy5"]
+position = Vector2(-415, 45)
+
+[node name="End Boundary" type="Marker2D" parent="Enemy5"]
+position = Vector2(342, 49)
 
 [node name="Enemy2" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_d0ae1")]
 position = Vector2(4498, -7)
