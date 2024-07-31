@@ -1,0 +1,518 @@
+[gd_scene load_steps=92 format=3 uid="uid://bw4kga7i5c6uj"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/Enemy/enemy.gd" id="1_mnvcv"]
+[ext_resource type="Script" path="res://Scenes/Characters/Enemy/state.gd" id="2_m5aot"]
+[ext_resource type="Script" path="res://Scenes/Characters/Enemy/health.gd" id="3_1dv8s"]
+[ext_resource type="Texture2D" uid="uid://6tix1l5lgu71" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0074.png" id="4_tc8e7"]
+[ext_resource type="Texture2D" uid="uid://08rbjjiupu5" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0075.png" id="5_qpoqw"]
+[ext_resource type="Texture2D" uid="uid://dkosvs410rr1g" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0076.png" id="6_w00eu"]
+[ext_resource type="Texture2D" uid="uid://wikt6dpe6c3d" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0077.png" id="7_2ysyl"]
+[ext_resource type="Texture2D" uid="uid://lj5bxm87esdr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0078.png" id="8_ckt7g"]
+[ext_resource type="Texture2D" uid="uid://u1hcjbpdltwo" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0079.png" id="9_f6h4l"]
+[ext_resource type="Texture2D" uid="uid://cdb8yslvk6oqp" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0080.png" id="10_vpl2p"]
+[ext_resource type="Texture2D" uid="uid://d08w07ut46s1t" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0081.png" id="11_81wnr"]
+[ext_resource type="Texture2D" uid="uid://dwo0ju1wux23" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0082.png" id="12_0kxsf"]
+[ext_resource type="Texture2D" uid="uid://0lgfqoqcihji" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0068.png" id="13_7mndr"]
+[ext_resource type="Texture2D" uid="uid://dk7o5sdytl7mx" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0069.png" id="14_c67ma"]
+[ext_resource type="Texture2D" uid="uid://buberjr0a07bh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0070.png" id="15_r7ped"]
+[ext_resource type="Texture2D" uid="uid://dux57w2qc55xr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0071.png" id="16_hohmc"]
+[ext_resource type="Texture2D" uid="uid://ckqip7qyh7ghc" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0072.png" id="17_07cma"]
+[ext_resource type="Texture2D" uid="uid://c824p1hfjro08" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0073.png" id="18_2ukr0"]
+[ext_resource type="Texture2D" uid="uid://b6pi8ucgw1am5" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0064.png" id="19_1a86r"]
+[ext_resource type="Texture2D" uid="uid://c4io8l8lu8kff" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0065.png" id="20_x7477"]
+[ext_resource type="Texture2D" uid="uid://cl1xuybqkttht" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0066.png" id="21_l1clb"]
+[ext_resource type="Texture2D" uid="uid://b7llr4uwjjlvc" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_combo_0067.png" id="22_pi2dv"]
+[ext_resource type="Texture2D" uid="uid://jv1r2pj6p15" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0048.png" id="23_c4o48"]
+[ext_resource type="Texture2D" uid="uid://jl8f70e308yk" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0049.png" id="24_20roh"]
+[ext_resource type="Texture2D" uid="uid://csb0mdm4r0sgr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0050.png" id="25_yfq60"]
+[ext_resource type="Texture2D" uid="uid://bxujnx2urhwx0" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_hit_0051.png" id="26_m51mj"]
+[ext_resource type="Texture2D" uid="uid://hjhbvegqc1he" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0001.png" id="27_jlsau"]
+[ext_resource type="Texture2D" uid="uid://dog8mtuhailw2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0002.png" id="28_yw33g"]
+[ext_resource type="Texture2D" uid="uid://d03agj0sxtxs2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0003.png" id="29_cjvwf"]
+[ext_resource type="Texture2D" uid="uid://cohxeeyq545jy" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0004.png" id="30_76lih"]
+[ext_resource type="Texture2D" uid="uid://b1k21r1de0mwr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0005.png" id="31_8n7uy"]
+[ext_resource type="Texture2D" uid="uid://c45npv2ck44pf" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0006.png" id="32_l1y4l"]
+[ext_resource type="Texture2D" uid="uid://c3q0gja7dv3wg" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0007.png" id="33_ycpby"]
+[ext_resource type="Texture2D" uid="uid://5204aru2s5yu" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_Idle_0008.png" id="34_8k5wf"]
+[ext_resource type="Texture2D" uid="uid://dyjovu6mudknm" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_jump_0043.png" id="35_jjko0"]
+[ext_resource type="Texture2D" uid="uid://c7cqx3dbqhhcu" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_jump_0044.png" id="36_nevvy"]
+[ext_resource type="Texture2D" uid="uid://cvueuu82fbih8" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_jump_0045.png" id="37_v16a5"]
+[ext_resource type="Texture2D" uid="uid://cjubl40usvufr" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0017.png" id="38_askd3"]
+[ext_resource type="Texture2D" uid="uid://byyf633edm7ru" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0018.png" id="39_mhdci"]
+[ext_resource type="Texture2D" uid="uid://b2cwqruilg5cn" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0019.png" id="40_8hr6n"]
+[ext_resource type="Texture2D" uid="uid://3kfommylb0d3" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0020.png" id="41_0ng2n"]
+[ext_resource type="Texture2D" uid="uid://qbmxqf6xeit1" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0021.png" id="42_4ync3"]
+[ext_resource type="Texture2D" uid="uid://ch8uwv3wtbvwh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0022.png" id="43_5gpnl"]
+[ext_resource type="Texture2D" uid="uid://dfjigr5r47lgw" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0023.png" id="44_fqlui"]
+[ext_resource type="Texture2D" uid="uid://b6it83rtxas0r" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_run_0024.png" id="45_k0eg8"]
+[ext_resource type="Texture2D" uid="uid://d0wpo7h3en0yi" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0009.png" id="46_go7mw"]
+[ext_resource type="Texture2D" uid="uid://bq0iw70aaj7en" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0010.png" id="47_3ysd6"]
+[ext_resource type="Texture2D" uid="uid://ctxp4i1fslab2" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0011.png" id="48_jw0ou"]
+[ext_resource type="Texture2D" uid="uid://dq6kwol7bffd1" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0012.png" id="49_lso01"]
+[ext_resource type="Texture2D" uid="uid://cumq36k5rt87y" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0013.png" id="50_h57y4"]
+[ext_resource type="Texture2D" uid="uid://cp1p2rd5lkoc1" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0014.png" id="51_53qlq"]
+[ext_resource type="Texture2D" uid="uid://b1o65e5gr6jio" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0015.png" id="52_1xb2b"]
+[ext_resource type="Texture2D" uid="uid://h8djny2rynfh" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_walk_0016.png" id="53_0ll01"]
+[ext_resource type="Texture2D" uid="uid://270bdm5jrjdy" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_wallslide0083.png" id="54_gc7ok"]
+[ext_resource type="Texture2D" uid="uid://dqwhdsbcvl74b" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_wallslide0084.png" id="55_r0hon"]
+[ext_resource type="Texture2D" uid="uid://cf4od7o5byy4i" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0052.png" id="56_q2uon"]
+[ext_resource type="Texture2D" uid="uid://dsr8gdsj8r3dk" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0053.png" id="57_iufxj"]
+[ext_resource type="Texture2D" uid="uid://dke1kshpg21pg" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0054.png" id="58_h55rf"]
+[ext_resource type="Texture2D" uid="uid://bot08m1vq7v3b" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0055.png" id="59_36m4a"]
+[ext_resource type="Texture2D" uid="uid://c70d6m8st12rq" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0056.png" id="60_patsd"]
+[ext_resource type="Texture2D" uid="uid://lg40d3uvse52" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0057.png" id="61_6bc0q"]
+[ext_resource type="Texture2D" uid="uid://ydgwuryceq4t" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0058.png" id="62_d573l"]
+[ext_resource type="Texture2D" uid="uid://cpl1w4fep7bhu" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0059.png" id="63_35b4k"]
+[ext_resource type="Texture2D" uid="uid://dseyuyf30acsy" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0060.png" id="64_7ys1q"]
+[ext_resource type="Texture2D" uid="uid://ox4h2amlnqqw" path="res://Assets/Stick Figure Character Sprites 2D/Fighter sprites/fighter_death_0061.png" id="65_o1s1g"]
+[ext_resource type="Script" path="res://Systems/StateMachine/state_machine.gd" id="66_n5j8n"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/idle.gd" id="67_nmcuk"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/wander.gd" id="68_0xytw"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/attack.gd" id="69_mihhs"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/chase.gd" id="70_rvm82"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/hit.gd" id="71_d6jy1"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/dead.gd" id="72_nerkk"]
+[ext_resource type="Script" path="res://Systems/StateMachine/Enemy/run.gd" id="73_b1ex5"]
+
+[sub_resource type="Gradient" id="Gradient_rov1h"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ns55h"]
+gradient = SubResource("Gradient_rov1h")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.4, 0)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ofvm"]
+radius = 41.3174
+height = 107.099
+
+[sub_resource type="Animation" id="Animation_wve0h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_tc8e7")]
+}
+
+[sub_resource type="Animation" id="Animation_ya6vq"]
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_tc8e7"), ExtResource("5_qpoqw"), ExtResource("6_w00eu"), ExtResource("7_2ysyl"), ExtResource("8_ckt7g"), ExtResource("9_f6h4l"), ExtResource("10_vpl2p"), ExtResource("11_81wnr"), ExtResource("12_0kxsf")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"animation_action"
+}, {
+"args": [],
+"method": &"animation_ended"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_248ka"]
+resource_name = "attack_2"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("13_7mndr"), ExtResource("14_c67ma"), ExtResource("15_r7ped"), ExtResource("16_hohmc"), ExtResource("17_07cma"), ExtResource("18_2ukr0"), ExtResource("4_tc8e7")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"animation_action"
+}, {
+"args": [],
+"method": &"animation_ended"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_bbvb8"]
+resource_name = "attack_3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("19_1a86r"), ExtResource("20_x7477"), ExtResource("21_l1clb"), ExtResource("22_pi2dv"), ExtResource("13_7mndr")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"animation_action"
+}, {
+"args": [],
+"method": &"animation_ended"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_gjn6c"]
+resource_name = "hit"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("23_c4o48"), ExtResource("24_20roh"), ExtResource("25_yfq60"), ExtResource("26_m51mj")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"animation_action"
+}, {
+"args": [],
+"method": &"animation_ended"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_jxt35"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("27_jlsau"), ExtResource("28_yw33g"), ExtResource("29_cjvwf"), ExtResource("30_76lih"), ExtResource("31_8n7uy"), ExtResource("32_l1y4l"), ExtResource("33_ycpby"), ExtResource("34_8k5wf")]
+}
+
+[sub_resource type="Animation" id="Animation_1jobo"]
+resource_name = "jump"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("35_jjko0"), ExtResource("36_nevvy"), ExtResource("37_v16a5")]
+}
+
+[sub_resource type="Animation" id="Animation_obco4"]
+resource_name = "run"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("38_askd3"), ExtResource("39_mhdci"), ExtResource("40_8hr6n"), ExtResource("41_0ng2n"), ExtResource("42_4ync3"), ExtResource("43_5gpnl"), ExtResource("44_fqlui"), ExtResource("45_k0eg8")]
+}
+
+[sub_resource type="Animation" id="Animation_fquag"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("46_go7mw"), ExtResource("47_3ysd6"), ExtResource("48_jw0ou"), ExtResource("49_lso01"), ExtResource("50_h57y4"), ExtResource("51_53qlq"), ExtResource("52_1xb2b"), ExtResource("53_0ll01")]
+}
+
+[sub_resource type="Animation" id="Animation_2d42m"]
+resource_name = "wall_slide"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("54_gc7ok"), ExtResource("55_r0hon")]
+}
+
+[sub_resource type="Animation" id="Animation_awqsh"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("56_q2uon"), ExtResource("57_iufxj"), ExtResource("58_h55rf"), ExtResource("59_36m4a"), ExtResource("60_patsd"), ExtResource("61_6bc0q"), ExtResource("62_d573l"), ExtResource("63_35b4k"), ExtResource("64_7ys1q"), ExtResource("65_o1s1g")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"animation_action"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mffh5"]
+_data = {
+"RESET": SubResource("Animation_wve0h"),
+"attack_1": SubResource("Animation_ya6vq"),
+"attack_2": SubResource("Animation_248ka"),
+"attack_3": SubResource("Animation_bbvb8"),
+"death": SubResource("Animation_awqsh"),
+"hit": SubResource("Animation_gjn6c"),
+"idle": SubResource("Animation_jxt35"),
+"jump": SubResource("Animation_1jobo"),
+"run": SubResource("Animation_obco4"),
+"walk": SubResource("Animation_fquag"),
+"wall_slide": SubResource("Animation_2d42m")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbisy"]
+size = Vector2(854, 243)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqw2i"]
+size = Vector2(70.1186, 165)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ia3fv"]
+size = Vector2(156, 168)
+
+[node name="shadow" type="CharacterBody2D" node_paths=PackedStringArray("dead_state", "run_state")]
+script = ExtResource("1_mnvcv")
+dead_state = NodePath("StateMachine/Dead")
+run_state = NodePath("StateMachine/Run")
+speed = 600.0
+wander_delay = 3.0
+
+[node name="Label" type="Label" parent="." node_paths=PackedStringArray("enemy")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -88.0
+offset_right = 41.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "State"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_m5aot")
+enemy = NodePath("..")
+
+[node name="Label2" type="Label" parent="." node_paths=PackedStringArray("enemy")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -123.0
+offset_right = 40.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "State"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_1dv8s")
+enemy = NodePath("..")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.00351917, 0.00351917, 0.00351917, 1)
+energy = 1.8
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.815686)
+texture = SubResource("GradientTexture2D_ns55h")
+texture_scale = 2.0
+
+[node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(0.29219, 0.29219, 0.29219, 1)
+z_index = 2
+texture_filter = 2
+texture = ExtResource("4_tc8e7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.499999, 53)
+scale = Vector2(1.17384, 1.34456)
+shape = SubResource("CapsuleShape2D_7ofvm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../StateMachine")
+libraries = {
+"": SubResource("AnimationLibrary_mffh5")
+}
+
+[node name="AggroRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AggroRange"]
+position = Vector2(1, 8.5)
+shape = SubResource("RectangleShape2D_gbisy")
+debug_color = Color(0.900887, 0.138215, 0.683167, 0.42)
+
+[node name="AttackHit" type="Area2D" parent="."]
+
+[node name="AttackArea" type="CollisionShape2D" parent="AttackHit"]
+position = Vector2(50, 40)
+shape = SubResource("RectangleShape2D_lqw2i")
+debug_color = Color(0.889743, 0.31651, 0.209498, 0.42)
+
+[node name="AttackRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+position = Vector2(-5, 42)
+shape = SubResource("RectangleShape2D_ia3fv")
+debug_color = Color(0.140245, 0.635116, 0.346438, 0.42)
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
+script = ExtResource("66_n5j8n")
+starting_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("hit", "attack", "chase", "wander")]
+script = ExtResource("67_nmcuk")
+hit = NodePath("../Hit")
+attack = NodePath("../Attack")
+chase = NodePath("../Chase")
+wander = NodePath("../Wander")
+animation_name = "idle"
+
+[node name="Wander" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "attack", "chase", "hit")]
+script = ExtResource("68_0xytw")
+idle = NodePath("../Idle")
+attack = NodePath("../Attack")
+chase = NodePath("../Chase")
+hit = NodePath("../Hit")
+animation_name = "walk"
+
+[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "chase", "hit")]
+script = ExtResource("69_mihhs")
+idle = NodePath("../Idle")
+chase = NodePath("../Chase")
+hit = NodePath("../Hit")
+animation_name = "attack_1"
+
+[node name="Chase" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "attack", "hit")]
+script = ExtResource("70_rvm82")
+idle = NodePath("../Idle")
+attack = NodePath("../Attack")
+hit = NodePath("../Hit")
+animation_name = "run"
+
+[node name="Hit" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle", "dead")]
+script = ExtResource("71_d6jy1")
+idle = NodePath("../Idle")
+dead = NodePath("../Dead")
+animation_name = "hit"
+
+[node name="Dead" type="Node" parent="StateMachine"]
+script = ExtResource("72_nerkk")
+animation_name = "death"
+
+[node name="Run" type="Node" parent="StateMachine"]
+script = ExtResource("73_b1ex5")
+animation_name = "run"
+
+[connection signal="body_entered" from="AggroRange" to="." method="_on_aggro_range_body_entered"]
+[connection signal="body_exited" from="AggroRange" to="." method="_on_aggro_range_body_exited"]
+[connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="AttackRange" to="." method="_on_attack_range_body_exited"]

@@ -9,6 +9,7 @@ extends CharacterBody2D
 @onready var sprite: Sprite2D = $Sprite
 
 @export var dead_state: EnemyDead
+@export var run_state: EnemyRun
 @export var health: int = 3
 @export var speed: float = 500
 @export var wall_grip: float = 0.50
@@ -16,6 +17,7 @@ extends CharacterBody2D
 @export var end_boundary: Marker2D
 @export var wander_delay: float = 5
 @export var attack_delay: float = 0.5
+@export var running: bool = false
 
 var since_attack: float = attack_delay
 var attack_finished: bool = false
@@ -26,9 +28,12 @@ var dead: bool = false
 
 var wander_time: float = 0
 var wander_coord: Vector2
+var run_coord: Vector2
 
 func _ready():
 	state_machine.init(self, animator)
+	if running:
+		state_machine.change_state(run_state)
 
 func _process(delta):
 	state_machine.process(delta)
@@ -42,6 +47,13 @@ func _unhandled_input(event):
 func setup_wander():
 	wander_time = 0
 	wander_coord = Vector2(randf_range(start_boundary.global_position.x, end_boundary.global_position.x), start_boundary.global_position.y)
+	
+func setup_run():
+	run_coord = end_boundary.global_position
+	
+func disapear():
+	sprite.visible = false
+	queue_free()
 
 func take_hit():
 	been_hit = true

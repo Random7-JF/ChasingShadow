@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://cglqycpxsnt6m"]
+[gd_scene load_steps=63 format=3 uid="uid://cglqycpxsnt6m"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_bnq16"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_1caof"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dq3umj8ybrahv" path="res://Assets/Assets 1024 Cave/Floor/long_stone1.png" id="4_p6ad8"]
 [ext_resource type="Texture2D" uid="uid://cufj4faejwour" path="res://Assets/Assets 1024 Cave/Floor/long_platform.png" id="4_spdof"]
 [ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="4_tnkjw"]
+[ext_resource type="PackedScene" uid="uid://bw4kga7i5c6uj" path="res://Scenes/Characters/Shadow/shadow.tscn" id="4_x3nby"]
 [ext_resource type="Texture2D" uid="uid://cpvc637ps5c6v" path="res://Assets/Assets 1024 Cave/Floor/long_stone2.png" id="4_yp615"]
 [ext_resource type="Texture2D" uid="uid://daf366amol1it" path="res://Assets/Assets 1024 Cave/Floor/stone_wall1.png" id="7_eibo7"]
 [ext_resource type="Texture2D" uid="uid://dmyowvmm0fk17" path="res://Assets/Assets 1024 Cave/Floor/stone_wall4.png" id="8_eluoi"]
@@ -75,6 +76,9 @@ size = Vector2(1512, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2w4nc"]
 size = Vector2(8419, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7ytb"]
+size = Vector2(280, 260)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5kljj"]
 polygon = PackedVector2Array(1983, -797, 1681, -823, 1483, -820, 1219, -823, 890, -811, 635, -811, 533, -808, 671, -861, 863, -861, 1028, -861, 1207, -849, 1336, -849, 1483, -873, 1624, -876, 1717, -864, 1792, -864, 1898, -840, 1983, -815)
@@ -155,6 +159,18 @@ position = Vector2(-227, 0)
 
 [node name="End" type="Marker2D" parent="enemy"]
 position = Vector2(318, -1)
+
+[node name="shadow" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("4_x3nby")]
+position = Vector2(611, 0)
+start_boundary = NodePath("Start")
+end_boundary = NodePath("End")
+wander_delay = 999.0
+running = true
+
+[node name="Start" type="Marker2D" parent="shadow"]
+
+[node name="End" type="Marker2D" parent="shadow"]
+position = Vector2(1150, 251)
 
 [node name="World" type="Node2D" parent="."]
 position = Vector2(-172, -59)
@@ -584,6 +600,10 @@ shape = SubResource("RectangleShape2D_2w4nc")
 
 [node name="Next Level Zone" parent="World/Collision" instance=ExtResource("29_qgxg2")]
 next_level = ExtResource("30_q6fbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/Next Level Zone"]
+position = Vector2(-23, 8)
+shape = SubResource("RectangleShape2D_h7ytb")
 
 [node name="Lighting" type="Node" parent="World"]
 

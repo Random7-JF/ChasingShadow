@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dxm2hqrqexjwe"]
+[gd_scene load_steps=22 format=3 uid="uid://dxm2hqrqexjwe"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_6tc8n"]
 [ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="1_i4at5"]
@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dq3umj8ybrahv" path="res://Assets/Assets 1024 Cave/Floor/long_stone1.png" id="5_a8gji"]
 [ext_resource type="Texture2D" uid="uid://cpvc637ps5c6v" path="res://Assets/Assets 1024 Cave/Floor/long_stone2.png" id="6_ps4dy"]
 [ext_resource type="PackedScene" uid="uid://b6tir47hjqhyc" path="res://Scenes/Characters/Enemy/enemy.tscn" id="7_x1h8h"]
-[ext_resource type="Script" path="res://Scenes/World/play_button.gd" id="10_vl330"]
-[ext_resource type="PackedScene" uid="uid://cglqycpxsnt6m" path="res://Scenes/World/level_1.tscn" id="11_1b38h"]
+[ext_resource type="PackedScene" uid="uid://l2o1wmrvlj5x" path="res://Scenes/UI/menu.tscn" id="11_wcsod"]
+[ext_resource type="PackedScene" uid="uid://bw4kga7i5c6uj" path="res://Scenes/Characters/Shadow/shadow.tscn" id="12_dpguh"]
 
 [sub_resource type="Gradient" id="Gradient_wmiu6"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -43,6 +43,9 @@ polygon = PackedVector2Array(-266, 1200, 2256, 1223, 2259, 1262, 2202, 1275, -21
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xn5sd"]
 size = Vector2(2522, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hasti"]
+size = Vector2(788, 66)
 
 [node name="Menu" type="Node2D"]
 
@@ -150,6 +153,13 @@ position = Vector2(987, 1225)
 position = Vector2(9, 8)
 shape = SubResource("RectangleShape2D_xn5sd")
 
+[node name="StaticBody2D2" type="StaticBody2D" parent="World/Collision"]
+position = Vector2(1116, 787)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/StaticBody2D2"]
+position = Vector2(-36, -6)
+shape = SubResource("RectangleShape2D_hasti")
+
 [node name="enemy2" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("7_x1h8h")]
 position = Vector2(1828, 1078)
 start_boundary = NodePath("Start")
@@ -172,42 +182,15 @@ position = Vector2(-452, -7)
 [node name="End" type="Marker2D" parent="enemy"]
 position = Vector2(389, 0)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="shadow" parent="." node_paths=PackedStringArray("start_boundary", "end_boundary") instance=ExtResource("12_dpguh")]
+position = Vector2(1124, 614)
+start_boundary = NodePath("Start")
+end_boundary = NodePath("End")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -253.0
-offset_top = -182.0
-offset_right = 253.0
-offset_bottom = -39.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Start" type="Marker2D" parent="shadow"]
+position = Vector2(-292, 20)
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 6
-theme_override_constants/shadow_outline_size = 3
-theme_override_font_sizes/font_size = 64
-text = "Chasing Shadow
-"
+[node name="End" type="Marker2D" parent="shadow"]
+position = Vector2(265, 14)
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/MarginContainer"]
-layout_mode = 2
-text = "Play	"
-script = ExtResource("10_vl330")
-level_1 = ExtResource("11_1b38h")
-
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/MarginContainer/Button" to="CanvasLayer/VBoxContainer/MarginContainer/Button" method="_on_pressed"]
+[node name="UI" parent="." instance=ExtResource("11_wcsod")]
