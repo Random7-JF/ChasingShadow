@@ -281,7 +281,7 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.217949, 0.495726)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0vt3h"]
-polygon = PackedVector2Array(382, 1123, 378, 1477, 512, 1652, 701, 1684, 2277, 1697, 2272, 2416, 2641, 3139, 5, 3156, -17, 157, 777, 166, 782, 498, 2515, 516, 2097, 1123)
+polygon = PackedVector2Array(381, 1136, 378, 1477, 512, 1652, 701, 1684, 2254, 1705, 2265, 2469, 2641, 3139, 5, 3156, -17, 157, 772, 155, 778, 500, 2512, 504, 2520, 536, 2478, 596, 2093, 1134)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vsp1e"]
 polygon = PackedVector2Array(6568, 288, 7297, 291, 7829, 81, 8505, 73, 8521, 95, 8535, 805, 8203, 1477, 7287, 1481, 6649, 1039)
@@ -1434,11 +1434,13 @@ texture = ExtResource("28_s2b36")
 
 [node name="Polygon2D" type="Polygon2D" parent="World/Background"]
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(6578, 292, 7298, 294, 7835, 78, 8523, 78, 8533, 786, 8196, 1466, 7271, 1461, 6656, 1025)
+polygon = PackedVector2Array(6570, 280, 7288, 280, 7837, 65, 8537, 61, 8553, 794, 8199, 1480, 7260, 1482, 6646, 1035)
 
 [node name="Polygon2D2" type="Polygon2D" parent="World/Background"]
+position = Vector2(0, -2.03021)
+scale = Vector2(1, 1.0005)
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(9203, 68, 9963, 1008, 9923, 1956, 9943, 2276, 10699, 2284, 10691, 2832, 9931, 2828, 9936, 3237, 9955, 4019, 11901, 4032, 11883, 3212, 11763, 64)
+polygon = PackedVector2Array(9201, 60, 9963, 1008, 9923, 1956, 9943, 2276, 10699, 2284, 10691, 2832, 9931, 2828, 9936, 3237, 9955, 4019, 11901, 4032, 11883, 3212, 11761, 58.001)
 
 [node name="Polygon2D3" type="Polygon2D" parent="World/Background"]
 color = Color(0, 0, 0, 1)
@@ -1520,6 +1522,7 @@ texture = SubResource("GradientTexture2D_cfw7i")
 texture_scale = 8.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="World/Lighting"]
+position = Vector2(6, 1)
 occluder = SubResource("OccluderPolygon2D_0vt3h")
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="World/Lighting"]

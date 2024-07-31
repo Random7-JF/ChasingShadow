@@ -69,7 +69,7 @@ func take_hit():
 	if health <= 0:
 		state_machine.change_state(dead_state)
 		colision.disabled = true
-		get_tree().change_scene_to_packed(victor_scene)
+		
 		
 		
 func flip_character(direction: float):

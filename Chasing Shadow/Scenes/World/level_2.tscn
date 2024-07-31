@@ -203,16 +203,16 @@ polygon = PackedVector2Array(2764, -1482, 4002, -1078, 4920, -1021, 6226, -1255,
 polygon = PackedVector2Array(9, -584, 593, -792, 1327, -1271, 1423, -1303, 2009, -1498, -25, -1527, -166, -798)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ktu1a"]
-polygon = PackedVector2Array(7929, -1532, 7935, -571, 9666, -548, 9649, -191, 10387, -200, 11276, -539, 12638, -549, 12619, -1532)
+polygon = PackedVector2Array(7929, -1532, 7935, -571, 9634, -548, 9633, -190, 10387, -200, 11276, -539, 12638, -549, 12619, -1532)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_oxy4y"]
-polygon = PackedVector2Array(1, -212, 762, -203, 749, 719, 1508, 743, 1493, 1487, 2201, 1498, 2206, 2930, -8, 2926)
+polygon = PackedVector2Array(1, -212, 760, -213, 760, 722, 1514, 726, 1509, 1479, 2206, 1492, 2206, 2930, -8, 2926)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jqnnb"]
-polygon = PackedVector2Array(5082, 2802, 5082, 1484, 6038, 1495, 6037, 752, 6332, 751, 6328, 427, 7276, 442, 7280, 1786, 8243, 1809, 8231, 2810)
+polygon = PackedVector2Array(5082, 2802, 5081, 1483, 6038, 1495, 6037, 752, 6332, 751, 6321, 422, 7276, 422, 7289, 1785, 8223, 1792, 8231, 2810)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4bfj3"]
-polygon = PackedVector2Array(10168, 2847, 10183, 1128, 11464, 1137, 11454, 375, 13413, 370, 13404, 2857)
+polygon = PackedVector2Array(10168, 2847, 10168, 1128, 11452, 1129, 11454, 358, 13413, 370, 13404, 2857)
 
 [node name="Level 2" type="Node2D"]
 
@@ -314,8 +314,8 @@ scale = Vector2(3.83789, 4.87109)
 texture = ExtResource("24_0q6uq")
 
 [node name="Square-Black" type="Sprite2D" parent="World/Background"]
-position = Vector2(-552.5, 300.636)
-scale = Vector2(5.04102, 1.89063)
+position = Vector2(-543.5, 300.636)
+scale = Vector2(5.07617, 1.89063)
 texture = ExtResource("24_0q6uq")
 
 [node name="Square-Black2" type="Sprite2D" parent="World/Background"]
@@ -377,6 +377,10 @@ polygon = PackedVector2Array(14, -601, 722, -850, 1069, -1086, 1426, -1313, -5, 
 position = Vector2(12905.5, -119)
 scale = Vector2(1.98633, 2.04102)
 texture = ExtResource("24_0q6uq")
+
+[node name="Polygon2D5" type="Polygon2D" parent="World/Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(11954, -485, 12407, -53, 12402, -513, 11946, -511)
 
 [node name="Map" type="Node2D" parent="World"]
 
@@ -801,25 +805,24 @@ scale = Vector2(1, 1)
 texture = ExtResource("5_edy4n")
 
 [node name="Platform22" type="Sprite2D" parent="World/Map"]
-position = Vector2(12398, -387)
-rotation = -1.55661
+position = Vector2(12001, -413)
+rotation = -2.37719
 scale = Vector2(1, 1)
 texture = ExtResource("18_enwhl")
 
 [node name="Platform23" type="Sprite2D" parent="World/Map"]
-position = Vector2(12399, -198)
-rotation = -1.55661
+position = Vector2(12314, -122)
+rotation = -2.44267
 scale = Vector2(1, 1)
 texture = ExtResource("18_enwhl")
 
 [node name="Platform24" type="Sprite2D" parent="World/Map"]
-position = Vector2(12399, -198)
-rotation = -1.55661
+position = Vector2(12152, -259)
+rotation = -2.4099
 scale = Vector2(1, 1)
 texture = ExtResource("18_enwhl")
 
 [node name="Collision" type="Node2D" parent="World"]
-visible = false
 
 [node name="Fall Dead Zone" parent="World/Collision" instance=ExtResource("13_6lneu")]
 position = Vector2(6524, 3127)
@@ -1001,7 +1004,7 @@ shape = SubResource("RectangleShape2D_3216y")
 position = Vector2(11446, 222)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Collision/Pier3/StaticBody2D5"]
-position = Vector2(932, -319.5)
+position = Vector2(935, -304)
 shape = SubResource("RectangleShape2D_jus0l")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="World/Collision/Pier3"]
@@ -1010,7 +1013,6 @@ shape = SubResource("RectangleShape2D_jus0l")
 polygon = PackedVector2Array(7933, -1545, 7933, -570, 9641, -552, 9638, -188, 10384, -175, 11279, -537, 13409, -522, 13411, -1545)
 
 [node name="Lighting" type="Node2D" parent="World"]
-visible = false
 
 [node name="PointLight2D3" type="PointLight2D" parent="World/Lighting"]
 position = Vector2(1590, -2262)
@@ -1043,9 +1045,10 @@ texture = SubResource("GradientTexture2D_uy78a")
 texture_scale = 8.0
 
 [node name="PointLight2D6" type="PointLight2D" parent="World/Lighting"]
+visible = false
 position = Vector2(12918, -622)
 scale = Vector2(1.73596, 1.98022)
-energy = 2.57
+energy = 1.46
 shadow_enabled = true
 shadow_filter = 2
 shadow_filter_smooth = 4.0
@@ -1065,6 +1068,7 @@ occluder = SubResource("OccluderPolygon2D_ktu1a")
 occluder = SubResource("OccluderPolygon2D_oxy4y")
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="World/Lighting"]
+position = Vector2(-9, -6)
 occluder = SubResource("OccluderPolygon2D_jqnnb")
 
 [node name="LightOccluder2D6" type="LightOccluder2D" parent="World/Lighting"]

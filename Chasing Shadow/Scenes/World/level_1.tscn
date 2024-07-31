@@ -103,7 +103,7 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.217949, 0.495726)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hsnxh"]
-polygon = PackedVector2Array(5004, -850, 5206, -843, 5488, -841, 5780, -833, 5812, -820, 5901, -648, 6051, -405, 6212, -165, 6331, -21, 6977, -19, 8322, 1, 8354, 360, 6977, 343, 6634, 339, 6613, 456, 6503, 468, 6361, 473, 6299, 473, 6299, 1271, 5028, 1274, 5024, 1396, 4803, 1394, 4735, 1394, 4743, 2304, 8496, 2306, 8488, -1229, 4986, -1236)
+polygon = PackedVector2Array(5004, -850, 5206, -843, 5488, -841, 5780, -833, 5812, -820, 5901, -648, 6051, -405, 6212, -165, 6331, -21, 6977, -19, 8322, 1, 8354, 360, 6977, 343, 6627, 331, 6613, 456, 6503, 468, 6361, 473, 6290, 475, 6285, 1268, 5024, 1263, 5024, 1396, 4803, 1394, 4735, 1394, 4743, 2304, 8496, 2306, 8488, -1229, 4986, -1236)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcvnq"]
 size = Vector2(330, 197)
@@ -464,15 +464,16 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-313, 182, 1266, 186, 1277, 1237, 476.629, 1233.46, -306, 1230)
 
 [node name="Polygon2D4" type="Polygon2D" parent="World/Background"]
-position = Vector2(162.761, -927.138)
-scale = Vector2(0.926996, 3.30059)
+position = Vector2(162.761, -935.999)
+scale = Vector2(0.926996, 3.30769)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(1435, 405, 1437, 1248, 2750, 1243, 2748.5, 822.777, 2747, 403)
 
 [node name="Polygon2D5" type="Polygon2D" parent="World/Background"]
-position = Vector2(4, 14)
+position = Vector2(4, -1.78528)
+scale = Vector2(1, 1.01174)
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(3443, 748, 4127, 753, 4760, 763, 4776, 1341, 3551, 1344, 3550, 1132, 3621, 1131, 3608, 815, 3446, 806)
+polygon = PackedVector2Array(3443, 748, 4127, 753, 4770, 750, 4776, 1341, 3551, 1344, 3550, 1132, 3621, 1131, 3608, 815, 3444, 813.234)
 
 [node name="Polygon2D7" type="Polygon2D" parent="World/Background"]
 color = Color(0, 0, 0, 1)
@@ -634,7 +635,7 @@ texture = SubResource("GradientTexture2D_tl072")
 texture_scale = 8.0
 
 [node name="PointLight2D3" type="PointLight2D" parent="World/Lighting"]
-position = Vector2(7157, 169)
+position = Vector2(7168, 159)
 shadow_enabled = true
 shadow_filter = 2
 texture = SubResource("GradientTexture2D_tl072")

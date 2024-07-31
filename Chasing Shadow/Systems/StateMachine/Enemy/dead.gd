@@ -15,3 +15,6 @@ func process(_delta: float) -> State:
 	
 func process_physics(_delta: float) -> State:
 	return null
+
+func animation_ended() -> void:
+	get_tree().change_scene_to_packed(parent.victor_scene)

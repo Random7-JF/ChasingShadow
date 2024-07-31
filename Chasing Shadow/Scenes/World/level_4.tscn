@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cvkwmh5tf8sn"]
+[gd_scene load_steps=46 format=3 uid="uid://cvkwmh5tf8sn"]
 
 [ext_resource type="PackedScene" uid="uid://cogc5bric8uq7" path="res://Scenes/Environment/world_environment_1.tscn" id="1_xjbu3"]
 [ext_resource type="PackedScene" uid="uid://mum2tdvx8ub" path="res://Scenes/Environment/cave_lighting_1.tscn" id="2_ly7wd"]
@@ -10,13 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://cufj4faejwour" path="res://Assets/Assets 1024 Cave/Floor/long_platform.png" id="8_dq62g"]
 [ext_resource type="Texture2D" uid="uid://basnmslnfew3" path="res://Assets/Assets 1024 Cave/Floor/long_platform2.png" id="9_4il4m"]
 [ext_resource type="Texture2D" uid="uid://s76eilmrifu8" path="res://Assets/Assets 1024 Cave/Floor/platform2.png" id="10_j8q5t"]
+[ext_resource type="Texture2D" uid="uid://daf366amol1it" path="res://Assets/Assets 1024 Cave/Floor/stone_wall1.png" id="10_n0psc"]
+[ext_resource type="Texture2D" uid="uid://dmyowvmm0fk17" path="res://Assets/Assets 1024 Cave/Floor/stone_wall4.png" id="11_anpym"]
 [ext_resource type="Texture2D" uid="uid://ctw4ieo8xjhr6" path="res://Assets/Assets 1024 Cave/Floor/stone1.png" id="12_2ydm2"]
 [ext_resource type="Texture2D" uid="uid://dybmxylvolqfl" path="res://Assets/Assets 1024 Cave/Floor/stone2.png" id="13_dimc5"]
 [ext_resource type="Script" path="res://Scenes/World/Tutorial/boss.gd" id="15_f4tex"]
 [ext_resource type="Script" path="res://Scenes/UI/ProgressBar.gd" id="16_6qp3w"]
+[ext_resource type="Texture2D" uid="uid://cldgtq2e8rqpe" path="res://Assets/Assets 1024 Cave/Floor/stone_plat3.png" id="17_fjst0"]
 [ext_resource type="PackedScene" uid="uid://cxxa8px4386n8" path="res://Scenes/UI/hp.tscn" id="18_ir8e6"]
+[ext_resource type="Texture2D" uid="uid://dugfba7q3er83" path="res://Assets/Assets 1024 Cave/Floor/stone_wall2.png" id="19_lbuli"]
 [ext_resource type="Texture2D" uid="uid://bnj2wtvkgaoib" path="res://Assets/Assets 1024 Cave/Floor/platform1.png" id="21_kl534"]
 [ext_resource type="Texture2D" uid="uid://dvgtyem5qelgq" path="res://Assets/Assets 1024 Cave/Floor/stone4.png" id="26_824lx"]
+[ext_resource type="Texture2D" uid="uid://ctba20q3nme6c" path="res://Assets/Assets 1024 Cave/Floor/stone_plat2.png" id="27_s8w2n"]
 [ext_resource type="Texture2D" uid="uid://d4ncxrhwbg0dd" path="res://Assets/Assets 1024 Cave/Square - Black.jpg" id="29_h7ix2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnar5"]
@@ -145,8 +150,8 @@ position = Vector2(-172, -59)
 position = Vector2(148, 56)
 
 [node name="Square-Black" type="Sprite2D" parent="World/Background"]
-position = Vector2(-12.5001, 1012)
-scale = Vector2(14.1152, 3.67578)
+position = Vector2(-12.5001, 999)
+scale = Vector2(14.1152, 3.72656)
 texture = ExtResource("29_h7ix2")
 
 [node name="Square-Black2" type="Sprite2D" parent="World/Background"]
@@ -169,7 +174,7 @@ polygon = PackedVector2Array(-221, -1564, -201, -2437, 595, -2440, 747, -1545)
 
 [node name="Polygon2D3" type="Polygon2D" parent="World/Background"]
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(957, -1464, 1092, -2434, 2298, -2429, 2270, -857)
+polygon = PackedVector2Array(957, -1464, 1092, -2434, 2298, -2429, 2272, -839)
 
 [node name="Map" type="Node2D" parent="World"]
 position = Vector2(148, 56)
@@ -328,6 +333,37 @@ texture = ExtResource("12_2ydm2")
 [node name="Stone5" type="Sprite2D" parent="World/Map"]
 position = Vector2(2823, -17)
 texture = ExtResource("26_824lx")
+
+[node name="StonePlat2" type="Sprite2D" parent="World/Map"]
+position = Vector2(-926, 167)
+texture = ExtResource("27_s8w2n")
+
+[node name="StonePlat3" type="Sprite2D" parent="World/Map"]
+position = Vector2(-1551, 119)
+texture = ExtResource("17_fjst0")
+
+[node name="StonePlat4" type="Sprite2D" parent="World/Map"]
+position = Vector2(1495, 110)
+texture = ExtResource("17_fjst0")
+
+[node name="StonePlat5" type="Sprite2D" parent="World/Map"]
+position = Vector2(-1811, -173)
+rotation = 1.58918
+texture = ExtResource("27_s8w2n")
+
+[node name="StoneWall1" type="Sprite2D" parent="World/Map"]
+position = Vector2(-1817, -761)
+texture = ExtResource("10_n0psc")
+
+[node name="StoneWall4" type="Sprite2D" parent="World/Map"]
+position = Vector2(2281, -156)
+rotation = 3.11872
+texture = ExtResource("11_anpym")
+
+[node name="StoneWall2" type="Sprite2D" parent="World/Map"]
+position = Vector2(2123, -1038)
+rotation = -1.10843
+texture = ExtResource("19_lbuli")
 
 [node name="Collision" type="Node2D" parent="World"]
 
